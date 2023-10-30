@@ -11,7 +11,7 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <!-- favicon -->
-  <link rel="shortcut icon" href="../img/logo_crud.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" href="../style.css" />
 
@@ -23,7 +23,7 @@
 
   <header>
     <div class="logo">
-      <img src="../img/logo_crud.png" alt="logo" />
+      <img src="../img-all/logo_crud.png" alt="logo" />
     </div>
     <nav>
       <a href="../index.html">INICIO</a>

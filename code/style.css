@@ -72,15 +72,15 @@ header nav a:hover {
 }
 
 .firstScreen {
-    background-image: url(./img/background_containre.jpg);
+    background-image: url(./img-all/background_containre.jpg);
 }
 
 .secondScreen {
-    background-image: url(./img/red_login.png);
+    background-image: url(./img-all/red_login.png);
 }
 
 .thirdScreen {
-    background-image: url(./img/red_signup.jpg);
+    background-image: url(./img-all/red_signup.jpg);
 }
 
 /* footer */
