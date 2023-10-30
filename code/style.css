@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Font_title';
+    src: url(./fonts/secrcode.ttf);
+}
+
+@font-face {
+    font-family: 'Font_text';
+    src: url(./fonts/Champagne\ &\ Limousines.ttf);
+}
+
+:root {
+    --font-title: 'Font-title';
+    --font-text: 'Font_text';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-family: var(--font-text);
+}
+
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    padding: 30px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.575);
+    top: 0;
+    left: 0;
+    z-index: 998;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(150%);
+
+}
+
+header nav a {
+    font-weight: bold;
+    margin: 0px 20px;
+    padding-bottom: 5px;
+}
+
+header nav a:hover {
+    font-weight: bolder;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+/* MAIN - CONFIG */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+.firstScreen {
+    background-image: url(./img/background_containre.jpg);
+}
+
+.secondScreen {
+    background-image: url(./img/red_login.png);
+}
+
+.thirdScreen {
+    background-image: url(./img/red_signup.jpg);
+}
+
+/* footer */
+
+footer {
+    color: white;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+}
+
+footer ion-icon {
+    font-size: 20px;
+}
+
+footer ion-icon:hover {
+    color: rgb(187, 59, 59);
+}
+
+#samuel_seven {
+    font-weight: bolder;
+}
+
+#samuel_seven:hover {
+    color: rgb(187, 59, 59);
+    cursor: pointer;
+}
+
+.start_website {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left,
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text > * {
+    margin: 30px;
+}
+.text h1 {
+    font-size: 50pt;
+    margin-bottom: 25px;
+}
+
+.text a {
+    background: none;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 30px 20px 0px 0px ;
+    font-size: 13pt;
+    padding: 10px 20px;
+}
+
+.text a:nth-child(1) {
+    background-color: rgb(187, 59, 59);
+    border: 1px solid rgb(187, 59, 59);
+}
+
+.text a:nth-child(1):hover {
+    background-color: rgb(150, 10, 10);
+    border: 1px solid rgb(150, 10, 10);
+}
+
+.text a:nth-child(2):hover {
+    background-color: rgb(150, 10, 10);
+    border: 1px solid rgb(150, 10, 10);
+}
+
+
+
+#data_img {
+    width: 450px;
+    height: 450px;
+}
+
+.active_menu {
+    border-bottom: 1px solid rgb(187, 59, 59);
+    color: rgb(187, 59, 59);
+}
+
+b {
+    color: rgb(222, 102, 102);
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 20px;
+    width: 400px;
+    
+    text-align: left;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.card input[type="email"],
+.card input[type="password"], 
+.card input[type="date"], 
+.card input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.card input[type="text"]::placeholder,
+.card input[type="password"]::placeholder {
+    color: #aaa;
+}
+
+.card input[type="submit"] {
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
