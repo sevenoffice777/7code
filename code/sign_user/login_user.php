@@ -1,3 +1,43 @@
+<?php
+
+  session_start();
+
+  require '../conn_host.php';
+  require '../prepare.php';
+  
+  if (isset($_POST['login_sbmt'])) {
+
+    if (isset($_POST['email']) && isset($_POST['password'])) {
+
+      $emailUser = $_POST['email'];
+      $passwordUser = $_POST['password'];
+      
+      $queryLogin = 'SELECT EMAIL, SENHA FROM USER WHERE EMAIL = ? AND SENHA = ?';
+
+      $params_user = array($emailUser, $passwordUser);
+
+      $res = prepareAndExecute($conn, $queryLogin, $params_user, "ss");
+
+
+      if ($res) {
+        $linhas = $conn->query("SELECT NOME FROM USER WHERE EMAIL = '{$emailUser}'");
+
+        if ($linhas == true) {
+          if ($linhas->num_rows > 0) {
+            $row = $linhas->fetch_assoc();
+            $_SESSION['NOME'] = $row['NOME'];
+
+            header("Location: ./logs/sucssesLog.php?origem=" . urlencode("login"));
+
+          }
+        }
+      } else if(!$res) {
+        header("Location: ./logs/errorLog.php?origem=". urlencode("erroLogin"));
+      }
+    }
+  }
+  ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,10 +55,11 @@
   <!-- css -->
   <link rel="stylesheet" href="../style.css" />
 
+  
 </head>
 
 <body>
-  <!--  -->
+  
 
 
   <header>
@@ -65,46 +106,7 @@
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
 
-  <?php
-
-  session_start();
-
-  require '../conn_host.php';
-  require '../prepare.php';
-
-
-  if (isset($_POST['login_sbmt'])) {
-
-    if (isset($_POST['email']) && isset($_POST['password'])) {
-
-      $emailUser = $_POST['email'];
-      $passwordUser = $_POST['password'];
-
-      $queryLogin = 'SELECT EMAIL, SENHA FROM USER WHERE EMAIL = ? AND SENHA = ?';
-
-      $params_user = array($emailUser, $passwordUser);
-
-      $res = prepareAndExecute($conn, $queryLogin, $params_user, "ss");
-
-
-      if ($res) {
-        $linhas = $conn->query("SELECT NOME FROM USER WHERE EMAIL = '{$emailUser}'");
-
-        if ($linhas == true) {
-          if ($linhas->num_rows > 0) {
-            $row = $linhas->fetch_assoc();
-            $_SESSION['NOME'] = $row['NOME'];
-
-            header("Location: ./logs/sucssesLog.php/?origem=" . urlencode("login"));
-
-          }
-        }
-      } else if(!$res) {
-        header("Location: ./logs/errorLog.php/?origem=". urlencode("erroLogin"));
-      }
-    }
-  }
-  ?>
+  
 </body>
 
 </html>

@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Font_title';
-    src: url(../fonts/secrcode.ttf);
+    font-family: 'Font-title';
+    src: url('../../fonts/font-title.ttf');
 }
 
 @font-face {
-    font-family: 'Font_text';
-    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+    font-family: 'Font-text';
+    src: url('../../fonts/font_text.ttf');
 }
 
 :root {
     --font-title: 'Font-title';
-    --font-text: 'Font_text';
+    --font-text: 'Font-text';
 }
 
 * {
@@ -30,7 +30,6 @@ body {
 
 
 .full_black_background {
-    transition: 1s;
     position: fixed;
     top: 0;
     left: 0;

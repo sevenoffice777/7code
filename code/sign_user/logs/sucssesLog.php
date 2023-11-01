@@ -17,7 +17,7 @@
       <div class="contain_log  load_msg">
         <div class="log">
           <h1>Aguarde enquanto conectamos ao banco de dados...</h1>
-          <img src="./img-alls_logs/load.gif" alt="load">
+          <img src="./imgS_logs/load.gif" alt="load">
         </div>
       </div>
       <div class="contain_log display_none  sucsses_msg">
