@@ -1,3 +1,42 @@
+<?php 
+  include '../conn_host.php';
+  include '../prepare.php';
+
+  if(isset($_POST['signup_sbmt'])) {
+    $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    //todos os dados que vieram com o methodo post;
+    $senha_hash = password_hash($data['password'], PASSWORD_BCRYPT); 
+    // criptografia do $data['password'];
+    
+    $querySql = 'CALL INSERT_USER(?,?,?,?)';
+
+    $stmt = $conn->prepare($querySql);
+
+    $dataFilter = [
+      'nome' => $data['name'],
+      'email' => $data['email'],
+      'dt_nasc' => $data['dt_nasc'],
+      'password'=> $senha_hash
+    ];
+
+    
+
+    $stmt->bind_param("ssss", $dataFilter['nome'] ,$dataFilter['dt_nasc'], $dataFilter['email'],$dataFilter['password']);
+    
+    if($stmt->execute()) {
+       header("location: ./logs/sucssesLog.php?res=true");
+    } else {
+      header("location: ./logs/errorLog.php?res=false");
+    }
+
+  }
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -13,7 +52,7 @@
   <!-- favicon -->
   <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" type="text/css" href="../style.css" />
 
 </head>
 
@@ -67,7 +106,6 @@
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
 
-  <script src="validaForm.js"></script>
 </body>
 
 </html>

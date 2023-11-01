@@ -4,14 +4,23 @@ const sucsses_msg = document.querySelector('.sucsses_msg');
 const link = document.querySelector('#btn_login');
 
 
-
 window.onload = function () {
-    processaLogin();
+    let urlParams = new URLSearchParams(window.location.search);
+    let res = urlParams.get('res');
+    if(res === true) {
+        processaLogin('../login_user.php');
+    } 
+    let origem = urlParams.get('origem');
+    if(origem == true) {
+        processaLogin('../../7tech_company')
+    }
+
 }
 
-function processaLogin() {
+function processaLogin(caminho) {
     setTimeout(() => {
         load_msg.classList.add('display_none');
+        link.href= caminho;
         sucsses_msg.classList.remove('display_none');
     }, 3000);
 }
