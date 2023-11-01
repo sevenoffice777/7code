@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Font_title';
-    src: url(./fonts/secrcode.ttf);
+    src: url(fonts/font-title.ttf);
 }
 
 @font-face {
     font-family: 'Font_text';
-    src: url(./fonts/Champagne\ &\ Limousines.ttf);
+    src: url(fonts/font_text.ttf);
 }
 
 :root {
@@ -180,13 +180,17 @@ b {
 }
 
 .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #fff;
-    padding: 20px;
+    padding: 50px 20px;
     width: 400px;
-    
     text-align: left;
 }
 
@@ -227,3 +231,8 @@ b {
     background-color: #2980b9;
 }
 
+#log_error {
+    text-align:center !important;
+    margin-top: 10px;
+    color: rgb(158, 15, 15);
+  }

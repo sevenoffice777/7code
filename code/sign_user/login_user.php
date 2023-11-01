@@ -28,11 +28,11 @@
             $_SESSION['NOME'] = $row['NOME'];
 
             header("Location: ./logs/sucssesLog.php?origem=" . urlencode("login"));
-
+            // Nunca por a merda da barra em passagem de parametro pela url() --> obs: alivia dores de cabeça...
           }
         }
       } else if(!$res) {
-        header("Location: ./logs/errorLog.php?origem=". urlencode("erroLogin"));
+        $erroLogin = 'E-mail ou Senha Invalidos';
       }
     }
   }
@@ -93,6 +93,13 @@
               <input type="password" name="password" placeholder="Senha" id="password">
               <input type="submit" value="Entrar" name="login_sbmt" id="btn_login">
             </form>
+              <?php 
+                if(isset($erroLogin)) {
+                  echo "<span id='log_error'>
+                    $erroLogin
+                  </span>";
+                }
+              ?>
           </div>
         </div>
       </div>
