@@ -122,11 +122,11 @@ if (isset($_POST['signup_sbmt'])) {
             <h2>Formulário de Cadastro</h2>
             <form action="" method="post">
               <label for="name">Nome</label>
-              <input type="text" name="name" placeholder="Nome">
+              <input type="text" name="name" placeholder="Nome" value="<?php if(isset($data['name'])){echo $data['name'];} ?>">
               <label for="email">E-mail</label>
-              <input type="email" name="email" placeholder="E-mail">
+              <input type="email" name="email" placeholder="E-mail" value="<?php if(isset($data['email'])){echo $data['email'];} ?>">
               <label for="dt_nasc">Data de Nascimento</label>
-              <input type="date" name="dt_nasc" placeholder="Data de Nascimento">
+              <input type="date" name="dt_nasc" placeholder="Data de Nascimento" value="<?php if(isset($data['dt_nasc'])){echo $data['dt_nasc'];} ?>">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha">
               <input type="submit" value="Cadastrar" name="signup_sbmt" id="btn_sigup">

@@ -23,13 +23,13 @@ if (isset($_POST['login_sbmt'])) {
       if (password_verify($passwordUser, $res['SENHA'])) {
         $_SESSION['NOME'] = $res['NOME'];
 
-        header("Location: ./logs/sucssesLog.php?origem=true");
+        header("Location: ./logs/sucssesLog.php?origem=true&res=true");
       } else {
         $erroLogin = 'E-mail ou Senha Invalidos';
       }
       // Nunca por a merda da barra em passagem de parametro pela url() --> obs: alivia dores de cabeça...
     }else {
-      $erroLogin = 'SENHA INVALIDA';
+      $erroLogin = 'E-mail ou Senha Invalidos';
     }
   } 
 }
@@ -86,7 +86,7 @@ if (isset($_POST['login_sbmt'])) {
             <h2>Formulário de Login</h2>
             <form method="post" action="">
               <label for="name">E-mail</label>
-              <input type="email" name="email" placeholder="E-mail" id="email">
+              <input type="email" name="email" placeholder="E-mail" id="email" value="<?php if(isset($emailUser)){echo $emailUser;}?>">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha" id="password">
               <input type="submit" value="Entrar" name="login_sbmt" id="btn_login">
