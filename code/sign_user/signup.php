@@ -61,7 +61,7 @@ if (isset($_POST['signup_sbmt'])) {
 
     $stmt = $conn->prepare($querySql);
 
-    $stmt->bind_param("ssss", $data['name'], $data['dt_nasc'], $data['email'], $senha_hash);
+    $stmt->bind_param("ssss", $data['name'], $data['email'], $data['dt_nasc'], $senha_hash);
 
     if ($stmt->execute()) {
       header("location: ./logs/sucssesLog.php?res=true");

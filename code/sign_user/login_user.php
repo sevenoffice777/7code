@@ -20,7 +20,6 @@ if (isset($_POST['login_sbmt'])) {
     $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
     
     if($res){
-
       if (password_verify($passwordUser, $res['SENHA'])) {
         $_SESSION['NOME'] = $res['NOME'];
 
