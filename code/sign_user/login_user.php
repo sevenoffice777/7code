@@ -11,7 +11,8 @@
 
       $emailUser = $_POST['email'];
       $passwordUser = $_POST['password'];
-      
+
+
       $queryLogin = 'SELECT EMAIL, SENHA FROM USER WHERE EMAIL = ? AND SENHA = ?';
 
       $params_user = array($emailUser, $passwordUser);
@@ -27,7 +28,7 @@
             $row = $linhas->fetch_assoc();
             $_SESSION['NOME'] = $row['NOME'];
 
-            header("Location: ./logs/sucssesLog.php?origem=" . urlencode("login"));
+            header("Location: ./logs/sucssesLog.php?origem=true");
             // Nunca por a merda da barra em passagem de parametro pela url() --> obs: alivia dores de cabeça...
           }
         }
