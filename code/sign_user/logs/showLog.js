@@ -6,18 +6,15 @@ const link = document.querySelector('#login_btn');
 
 window.onload = function () {
     let urlParams = new URLSearchParams(window.location.search);
-    let res = urlParams.get('res');
-    if(res) {
+    
+    if(urlParams.get('statusLogin') == 'sucesso') {
+        processaLogin('../../7tech-company/index.php');
+    } 
+
+    if(urlParams.get('statusSignup') == 'sucesso') {
         processaLogin('../login_user.php');
-    } else if(!res) {
-        setTimeout(()=>{
-            window.location.href = '../signup.php';
-        }, 3000);        
     }
-    let origem = urlParams.get('origem');
-    if(origem) {
-        processaLogin('../../7tech-company/index.php')
-    }
+   
 
 }
 

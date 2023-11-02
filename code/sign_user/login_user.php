@@ -23,7 +23,7 @@ if (isset($_POST['login_sbmt'])) {
       if (password_verify($passwordUser, $res['SENHA'])) {
         $_SESSION['NOME'] = $res['NOME'];
 
-        header("Location: ./logs/sucssesLog.php?origem=true&res=true");
+        header("Location: ./logs/sucssesLog.php?statusLogin=sucesso");
       } else {
         $erroLogin = 'E-mail ou Senha Invalidos';
       }

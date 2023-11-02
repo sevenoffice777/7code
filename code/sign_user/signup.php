@@ -64,10 +64,8 @@ if (isset($_POST['signup_sbmt'])) {
     $stmt->bind_param("ssss", $data['name'], $data['email'], $data['dt_nasc'], $senha_hash);
 
     if ($stmt->execute()) {
-      header("location: ./logs/sucssesLog.php?res=true");
-    } else {
-      header("location: ./logs/errorLog.php?res=false");
-    }
+      header("location: ./logs/sucssesLog.php?statusSignup=sucesso");
+    } 
   }
 }
 
