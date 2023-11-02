@@ -10,11 +10,11 @@
         $stmt->bind_param($types, ...$params); // DIZEMOS QUAIS OS DADOS Q SERAO SUBSTITUIDOS
         $stmt->execute();
 
-         if($stmt->fetch()) {
-            return true;
-         } else {
-            return false;
-         }
+        $resultado = $stmt->get_result()->fetch_assoc(); 
+        
+        return $resultado;
+
+         
     }
 
 ?>

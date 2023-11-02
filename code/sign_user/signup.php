@@ -1,36 +1,75 @@
-<?php 
-  include '../conn_host.php';
-  include '../prepare.php';
+<?php
+include '../conn_host.php';
+include '../prepare.php';
 
-  if(isset($_POST['signup_sbmt'])) {
-    $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-    //todos os dados que vieram com o methodo post;
-    $senha_hash = password_hash($data['password'], PASSWORD_BCRYPT); 
-    // criptografia do $data['password'];
-    
-    $querySql = 'CALL INSERT_USER(?,?,?,?)';
+$erro = false;
+if (isset($_POST['signup_sbmt'])) {
+  $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-    $stmt = $conn->prepare($querySql);
+  $msg = 'Dados Informados Incorretamente ( ';
 
-    $dataFilter = [
-      'nome' => $data['name'],
-      'email' => $data['email'],
-      'dt_nasc' => $data['dt_nasc'],
-      'password'=> $senha_hash
-    ];
+  if (!isset($data['name']) || empty($data['name'])) {
+    $erro = true;
+    $msg .= 'Nome, ';
+    // para concatenar usa-se .=
+  }
 
-    
+  if (!isset($data['dt_nasc']) || empty($data['dt_nasc'])) {
+    $erro = true;
+    $msg .= 'Data De Nascimento, ';
+  } else {
+    $dateTime = DateTime::createFromFormat('Y-m-d', $data['dt_nasc']);
 
-    $stmt->bind_param("ssss", $dataFilter['nome'] ,$dataFilter['dt_nasc'], $dataFilter['email'],$dataFilter['password']);
-    
-    if($stmt->execute()) {
-       header("location: ./logs/sucssesLog.php?res=true");
-    } else {
-      header("location: ./logs/errorLog.php?res=false");
+    if (!$dateTime) {
+      $erro = true;
+      $msg .= 'Data De Nascimento';
+    }
+  }
+  if (!isset($data['email']) || empty($data['email'])) {
+    $erro = true;
+    $msg .= 'Email, ';
+  } else {
+    $queryLogin = 'SELECT EMAIL FROM USER WHERE EMAIL = ?';
+
+    $params_user = array($data['email']);
+
+    $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
+
+    if($res) {
+      $erro = true;
+      $msg .= 'Email[Já existe], '; 
     }
 
   }
 
+  if (!isset($data['password']) || empty($data['password'])) {
+    $erro = true;
+    $msg .= 'Senha, ';
+  }
+
+  $msg = substr($msg, 0, -2);
+  $msg .= ' )';
+
+  if (!$erro) {
+
+
+    //todos os dados que vieram com o methodo post;
+    $senha_hash = password_hash($data['password'], PASSWORD_DEFAULT);
+    // criptografia do $data['password'];
+
+    $querySql = 'CALL INSERT_USER(?,?,?,?)';
+
+    $stmt = $conn->prepare($querySql);
+
+    $stmt->bind_param("ssss", $data['name'], $data['dt_nasc'], $data['email'], $senha_hash);
+
+    if ($stmt->execute()) {
+      header("location: ./logs/sucssesLog.php?res=true");
+    } else {
+      header("location: ./logs/errorLog.php?res=false");
+    }
+  }
+}
 
 
 
@@ -92,6 +131,13 @@
               <input type="password" name="password" placeholder="Senha">
               <input type="submit" value="Cadastrar" name="signup_sbmt" id="btn_sigup">
             </form>
+            <?php
+            if ($erro) {
+              echo "<span id='log_error'>
+                  $msg
+                </span>";
+            }
+            ?>
           </div>
         </div>
       </div>

@@ -1,43 +1,41 @@
 <?php
 
-  session_start();
+session_start();
 
-  require '../conn_host.php';
-  require '../prepare.php';
-  
-  if (isset($_POST['login_sbmt'])) {
+require '../conn_host.php';
+require '../prepare.php';
 
-    if (isset($_POST['email']) && isset($_POST['password'])) {
+if (isset($_POST['login_sbmt'])) {
 
-      $emailUser = $_POST['email'];
-      $passwordUser = $_POST['password'];
+  if (isset($_POST['email']) && isset($_POST['password'])) {
 
-
-      $queryLogin = 'SELECT EMAIL, SENHA FROM USER WHERE EMAIL = ? AND SENHA = ?';
-
-      $params_user = array($emailUser, $passwordUser);
-
-      $res = prepareAndExecute($conn, $queryLogin, $params_user, "ss");
+    $emailUser = $_POST['email'];
+    $passwordUser = $_POST['password'];
 
 
-      if ($res) {
-        $linhas = $conn->query("SELECT NOME FROM USER WHERE EMAIL = '{$emailUser}'");
+    $queryLogin = 'SELECT * FROM USER WHERE EMAIL = ? ';
 
-        if ($linhas == true) {
-          if ($linhas->num_rows > 0) {
-            $row = $linhas->fetch_assoc();
-            $_SESSION['NOME'] = $row['NOME'];
+    $params_user = array($emailUser);
 
-            header("Location: ./logs/sucssesLog.php?origem=true");
-            // Nunca por a merda da barra em passagem de parametro pela url() --> obs: alivia dores de cabeça...
-          }
-        }
-      } else if(!$res) {
+    $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
+    
+    if($res){
+
+      if (password_verify($passwordUser, $res['SENHA'])) {
+        $_SESSION['NOME'] = $res['NOME'];
+
+        header("Location: ./logs/sucssesLog.php?origem=true");
+      } else {
         $erroLogin = 'E-mail ou Senha Invalidos';
       }
+      // Nunca por a merda da barra em passagem de parametro pela url() --> obs: alivia dores de cabeça...
+    }else {
+      $erroLogin = 'SENHA INVALIDA';
     }
-  }
-  ?>
+  } 
+}
+  
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -56,11 +54,11 @@
   <!-- css -->
   <link rel="stylesheet" href="../style.css" />
 
-  
+
 </head>
 
 <body>
-  
+
 
 
   <header>
@@ -94,13 +92,13 @@
               <input type="password" name="password" placeholder="Senha" id="password">
               <input type="submit" value="Entrar" name="login_sbmt" id="btn_login">
             </form>
-              <?php 
-                if(isset($erroLogin)) {
-                  echo "<span id='log_error'>
+            <?php
+            if (isset($erroLogin)) {
+              echo "<span id='log_error'>
                     $erroLogin
                   </span>";
-                }
-              ?>
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -114,7 +112,7 @@
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
 
-  
+
 </body>
 
 </html>
