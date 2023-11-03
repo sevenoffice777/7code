@@ -2,8 +2,8 @@
 
 session_start();
 
-require '../conn_host.php';
-require '../prepare.php';
+require './conn_host.php';
+require './prepare.php';
 
 if (isset($_POST['login_sbmt'])) {
 
@@ -23,7 +23,7 @@ if (isset($_POST['login_sbmt'])) {
       if (password_verify($passwordUser, $res['SENHA'])) {
         $_SESSION['NOME'] = $res['NOME'];
 
-        header("Location: ./logs/sucssesLog.php?statusLogin=sucesso");
+        header("Location: ./sucssesLog.php?statusLogin=sucesso");
       } else {
         $erroLogin = 'E-mail ou Senha Invalidos';
       }
@@ -51,7 +51,7 @@ if (isset($_POST['login_sbmt'])) {
   <!-- favicon -->
   <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 
 
 </head>
@@ -65,7 +65,7 @@ if (isset($_POST['login_sbmt'])) {
       <img src="../img-all/logo_crud.png" alt="logo" />
     </div>
     <nav>
-      <a href="../index.html">INICIO</a>
+      <a href="../../index.html">INICIO</a>
       <a href="#" class="active_menu">ENTRAR</a>
       <a href="./signup.php">CADASTRO</a>
     </nav>

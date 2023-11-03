@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Font-title';
-    src: url('../../fonts/font-title.ttf');
+    src: url('../fonts/font-title.ttf');
 }
 
 @font-face {
     font-family: 'Font-text';
-    src: url('../../fonts/font_text.ttf');
+    src: url('../fonts/font_text.ttf');
 }
 
 :root {

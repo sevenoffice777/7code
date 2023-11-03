@@ -1,6 +1,6 @@
 <?php
-include '../conn_host.php';
-include '../prepare.php';
+require './conn_host.php';
+require './prepare.php';
 
 $erro = false;
 
@@ -65,7 +65,7 @@ if (isset($_POST['signup_sbmt'])) {
     $stmt->bind_param("ssss", $data['name'], $data['email'], $data['dt_nasc'], $senha_hash);
 
     if ($stmt->execute()) {
-      header("location: ./logs/sucssesLog.php?statusSignup=sucesso");
+      header("location: ./sucssesLog.php?statusSignup=sucesso");
     }
   }
 }
@@ -90,7 +90,7 @@ if (isset($_POST['signup_sbmt'])) {
   <!-- favicon -->
   <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
 </head>
 
@@ -100,7 +100,7 @@ if (isset($_POST['signup_sbmt'])) {
       <img src="../img-all/logo_crud.png" alt="logo" />
     </div>
     <nav>
-      <a href="../index.html">INICIO</a>
+      <a href="../../index.html">INICIO</a>
       <a href="./login_user.php">ENTRAR</a>
       <a href="#" class="active_menu">CADASTRO</a>
     </nav>
@@ -159,9 +159,6 @@ if (isset($_POST['signup_sbmt'])) {
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
-
-
-  <script src="validateData.js"></script>
 </body>
 
 </html>

@@ -27,8 +27,3 @@ BEGIN
     );
 END;
 //
-DELIMITER ;
-
-SELECT * FROM USER;
-
-drop database 7tech
