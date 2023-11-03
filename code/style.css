@@ -189,8 +189,8 @@ b {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #fff;
     margin-top: 20px;
-    padding: 50px 20px;
-    width: 560px;
+    padding: 20px 20px;
+    width: 460px;
     text-align: left;
 }
 
@@ -205,9 +205,11 @@ b {
 .card input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    font-size: 13pt;
+    margin: 10px 0px 15px 0px;
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
     color: #fff;
 }

@@ -84,7 +84,7 @@ if (isset($_POST['login_sbmt'])) {
         <div class="right">
           <div class="card">
             <h2>Formulário de Login</h2>
-            <form method="post" action="">
+            <form method="post" action="" >
               <label for="name">E-mail</label>
               <input type="email" name="email" placeholder="E-mail" id="email" value="<?php if(isset($emailUser)){echo $emailUser;}?>">
               <label for="password">Senha</label>
@@ -110,8 +110,6 @@ if (isset($_POST['login_sbmt'])) {
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
-
-
 </body>
 
 </html>

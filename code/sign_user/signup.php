@@ -3,6 +3,7 @@ include '../conn_host.php';
 include '../prepare.php';
 
 $erro = false;
+
 if (isset($_POST['signup_sbmt'])) {
   $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -35,9 +36,9 @@ if (isset($_POST['signup_sbmt'])) {
 
     $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
 
-    if($res) {
+    if ($res) {
       $erro = true;
-      $msg .= 'Email[Já existe], '; 
+      $msg .= 'Email[Já existe], ';
     }
 
   }
@@ -65,7 +66,7 @@ if (isset($_POST['signup_sbmt'])) {
 
     if ($stmt->execute()) {
       header("location: ./logs/sucssesLog.php?statusSignup=sucesso");
-    } 
+    }
   }
 }
 
@@ -118,13 +119,22 @@ if (isset($_POST['signup_sbmt'])) {
         <div class="right">
           <div class="card">
             <h2>Formulário de Cadastro</h2>
-            <form action="" method="post">
+            <form action="" method="post" id="signupForm">
               <label for="name">Nome</label>
-              <input type="text" name="name" placeholder="Nome" value="<?php if(isset($data['name'])){echo $data['name'];} ?>">
+              <input type="text" name="name" placeholder="Nome"
+                value="<?php if (isset($data['name'])) {
+                  echo $data['name'];
+                } ?>">
               <label for="email">E-mail</label>
-              <input type="email" name="email" placeholder="E-mail" value="<?php if(isset($data['email'])){echo $data['email'];} ?>">
+              <input type="email" name="email" placeholder="E-mail"
+                value="<?php if (isset($data['email'])) {
+                  echo $data['email'];
+                } ?>">
               <label for="dt_nasc">Data de Nascimento</label>
-              <input type="date" name="dt_nasc" placeholder="Data de Nascimento" value="<?php if(isset($data['dt_nasc'])){echo $data['dt_nasc'];} ?>">
+              <input type="date" name="dt_nasc" placeholder="Data de Nascimento"
+                value="<?php if (isset($data['dt_nasc'])) {
+                  echo $data['dt_nasc'];
+                } ?>">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha">
               <input type="submit" value="Cadastrar" name="signup_sbmt" id="btn_sigup">
@@ -150,6 +160,8 @@ if (isset($_POST['signup_sbmt'])) {
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
 
+
+  <script src="validateData.js"></script>
 </body>
 
 </html>
