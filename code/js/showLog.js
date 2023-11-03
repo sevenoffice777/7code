@@ -12,7 +12,7 @@ window.onload = function () {
     } 
 
     if(urlParams.get('statusSignup') == 'sucesso') {
-        processaLogin('../login_user.php');
+        processaLogin('../php/login_user.php');
     }
    
 
