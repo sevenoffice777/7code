@@ -15,6 +15,9 @@
   <!-- css -->
   <link rel="stylesheet" href="../css/style.css" />
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+  </script>
+
 
 </head>
 
@@ -46,20 +49,17 @@
         <div class="right">
           <div class="card">
             <h2>Formulário de Login</h2>
-            <form method="post" action="login_verify.php" >
+            <form dataForm='./login_verify.php'>
               <label for="name">E-mail</label>
-              <input type="email" name="email" placeholder="E-mail" id="email" value="<?php if(isset($emailUser)){echo $emailUser;}?>">
+              <input type="email" name="email" placeholder="E-mail" id="email"
+                value="<?php if (isset($emailUser)) {
+                  echo $emailUser;
+                } ?>">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha" id="password">
-              <input type="submit" value="Entrar" name="login_sbmt" id="btn_login">
+              <input type="submit" value="Entrar" btn-sbmt name="login_sbmt" id="btn_login">
+              <span class="log_error"></span>
             </form>
-            <?php
-            if (isset($erroLogin)) {
-              echo "<span id='log_error'>
-                    $erroLogin
-                  </span>";
-            }
-            ?>
           </div>
         </div>
       </div>
@@ -72,6 +72,7 @@
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
+  <script src="../js/submitBack.js"></script>
 </body>
 
 </html>

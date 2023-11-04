@@ -23,15 +23,18 @@ if (isset($_POST['login_sbmt'])) {
       if (password_verify($passwordUser, $res['SENHA'])) {
         $_SESSION['NOME'] = $res['NOME'];
 
-        header("Location: ./sucssesLog.php?statusLogin=sucesso");
+
+        $jsonData = ["url"=>"./sucssesLog.php?statusLogin=sucesso"];
       } else {
-        $erroLogin = 'E-mail ou Senha Invalidos';
+        $jsonData = ["msg_erro"=>"E-mail ou senha Invalidos"];
       }
       // Nunca por a merda da barra em passagem de parametro pela url() --> obs: alivia dores de cabeça...
     }else {
-      $erroLogin = 'E-mail ou Senha Invalidos';
+      $jsonData = ["msg_erro"=>"E-mail ou senha Invalidos"];
     }
   } 
 }
-  
+
+echo json_encode($jsonData);
+
 ?>
