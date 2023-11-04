@@ -4,7 +4,7 @@ $('[btn-sbmt]').each(function () {
     $(this).click((event)=>{
         event.preventDefault()
 
-        let  log_error = $(this).nextAll('.log_error').first();
+        let  log_error = $(this).next('.log_error');
         console.log(log_error)
         
         let parent = $(this).closest('[dataForm]');

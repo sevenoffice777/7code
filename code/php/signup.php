@@ -60,13 +60,8 @@
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha">
               <input type="submit" value="Cadastrar" btn-sbmt name="signup_sbmt" id="btn_signup">
+              <span class='log_error'></span>
             </form>
-
-            <span class='log_error'>
-              
-            </span>
-
-
           </div>
         </div>
       </div>
