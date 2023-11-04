@@ -1,7 +1,3 @@
-
-
-<?php $erro = false ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -19,6 +15,8 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -46,33 +44,27 @@
         <div class="right">
           <div class="card">
             <h2>Formulário de Cadastro</h2>
-            <form action="signup_verify.php" method="post" id="signupForm">
+            <form dataForm="./signup_verify.php" id="signupForm">
               <label for="name">Nome</label>
-              <input type="text" name="name" placeholder="Nome"
-                value="<?php if (isset($data['name'])) {
-                  echo $data['name'];
-                } ?>">
+              <input type="text" name="name" placeholder="Nome" value="<?php if (isset($data['name'])) {
+                echo $data['name'];
+              } ?>">
               <label for="email">E-mail</label>
-              <input type="email" name="email" placeholder="E-mail"
-                value="<?php if (isset($data['email'])) {
-                  echo $data['email'];
-                } ?>">
+              <input type="email" name="email" placeholder="E-mail" value="<?php if (isset($data['email'])) {
+                echo $data['email'];
+              } ?>">
               <label for="dt_nasc">Data de Nascimento</label>
-              <input type="date" name="dt_nasc" placeholder="Data de Nascimento"
-                value="<?php if (isset($data['dt_nasc'])) {
-                  echo $data['dt_nasc'];
-                } ?>">
+              <input type="date" name="dt_nasc" placeholder="Data de Nascimento" value="<?php if (isset($data['dt_nasc'])) {
+                echo $data['dt_nasc'];
+              } ?>">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha">
-              <input type="submit" value="Cadastrar" name="signup_sbmt" id="btn_sigup">
+              <input type="submit" value="Cadastrar" btn-sbmt name="signup_sbmt" id="btn_signup">
             </form>
-            <?php
-            if ($erro) {
-              echo "<span id='log_error'>
-                  $msg
-                </span>";
-            }
-            ?>
+
+            <span id='log_error'></span>
+
+
           </div>
         </div>
       </div>
@@ -86,6 +78,8 @@
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
+
+  <script src="../js/submitBack.js"></script>
 </body>
 
 </html>
