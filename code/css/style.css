@@ -233,7 +233,7 @@ b {
     background-color: #2980b9;
 }
 
-#log_error {
+.log_error {
     text-align:center !important;
     margin-top: 20px;
     font-weight: bolder;

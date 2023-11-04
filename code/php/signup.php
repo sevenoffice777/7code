@@ -62,7 +62,9 @@
               <input type="submit" value="Cadastrar" btn-sbmt name="signup_sbmt" id="btn_signup">
             </form>
 
-            <span id='log_error'></span>
+            <span class='log_error'>
+              
+            </span>
 
 
           </div>

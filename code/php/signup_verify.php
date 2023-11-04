@@ -1,84 +1,78 @@
+<?php
+require './conn_host.php';
+require './prepare.php';
 
-<?php 
+$erro = false;
+  $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-echo json_encode(['teste'=>'ola mundo']);
+  $msg = 'Dados Incorretos ( ';
 
-?>
+  if (!isset($data['name']) || empty($data['name'])) {
+    $erro = true;
+    $msg .= 'Nome, ';
+    // para concatenar usa-se .=
+  }
 
-<!-- <?php
-// require './conn_host.php';
-// require './prepare.php';
+  if (!isset($data['dt_nasc']) || empty($data['dt_nasc'])) {
+    $erro = true;
+    $msg .= 'Data De Nascimento, ';
+  } else {
+    $dateTime = DateTime::createFromFormat('Y-m-d', $data['dt_nasc']);
 
-// $erro = false;
+    if (!$dateTime) {
+      $erro = true;
+      $msg .= 'Data De Nascimento';
+    }
+  }
 
-// if (isset($_POST['signup_sbmt'])) {
-//   $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+  if (!isset($data['email']) || empty($data['email'])) {
+    $erro = true;
+    $msg .= 'Email, ';
 
-//   $msg = 'Dados Incorretos ( ';
+  } else {
+    $queryLogin = 'SELECT EMAIL FROM USER WHERE EMAIL = ?';
 
-//   if (!isset($data['name']) || empty($data['name'])) {
-//     $erro = true;
-//     $msg .= 'Nome, ';
-//     // para concatenar usa-se .=
-//   }
+    $params_user = array($data['email']);
 
-//   if (!isset($data['dt_nasc']) || empty($data['dt_nasc'])) {
-//     $erro = true;
-//     $msg .= 'Data De Nascimento, ';
-//   } else {
-//     $dateTime = DateTime::createFromFormat('Y-m-d', $data['dt_nasc']);
+    $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
 
-//     if (!$dateTime) {
-//       $erro = true;
-//       $msg .= 'Data De Nascimento';
-//     }
-//   }
+    if ($res) {
+      $erro = true;
+      $msg .= 'Email[Já existe], ';
+    }
 
-//   if (!isset($data['email']) || empty($data['email'])) {
-//     $erro = true;
-//     $msg .= 'Email, ';
+  }
 
-//   } else {
-//     $queryLogin = 'SELECT EMAIL FROM USER WHERE EMAIL = ?';
+  if (!isset($data['password']) || empty($data['password'])) {
+    $erro = true;
+    $msg .= 'Senha, ';
+  } else {
+    $resRegex = preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{5,}$/', $data['password']);
+    if (!$resRegex) {
+      $erro = true;
+      $msg .= 'Senha Invalida, ';
+    }
+  }
+  $msg = substr($msg, 0, -2);
+  $msg .= ' )';
 
-//     $params_user = array($data['email']);
+  if (!$erro) {
+    //todos os dados que vieram com o methodo post;
+    $senha_hash = password_hash($data['password'], PASSWORD_DEFAULT);
+    // criptografia do $data['password'];
 
-//     $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
+    $querySql = 'CALL INSERT_USER(?,?,?,?)';
 
-//     if ($res) {
-//       $erro = true;
-//       $msg .= 'Email[Já existe], ';
-//     }
+    $stmt = $conn->prepare($querySql);
 
-//   }
+    $stmt->bind_param("ssss", $data['name'], $data['email'], $data['dt_nasc'], $senha_hash);
 
-//   if (!isset($data['password']) || empty($data['password'])) {
-//     $erro = true;
-//     $msg .= 'Senha, ';
-//   } else {
-//     $resRegex = preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{5,}$/', $data['password']);
-//     if (!$resRegex) {
-//       $erro = true;
-//       $msg .= 'Senha Invalida, ';
-//     }
-//   }
-//   $msg = substr($msg, 0, -2);
-//   $msg .= ' )';
+    if ($stmt->execute()) {
+      $jsonData = ["url"=>"./sucssesLog.php?statusSignup=sucesso"];
+    } 
+  } else {
+    $jsonData = ["msg_erro"=>$msg];
+  }
 
-//   if (!$erro) {
-//     //todos os dados que vieram com o methodo post;
-//     $senha_hash = password_hash($data['password'], PASSWORD_DEFAULT);
-//     // criptografia do $data['password'];
 
-//     $querySql = 'CALL INSERT_USER(?,?,?,?)';
-
-//     $stmt = $conn->prepare($querySql);
-
-//     $stmt->bind_param("ssss", $data['name'], $data['email'], $data['dt_nasc'], $senha_hash);
-
-//     if ($stmt->execute()) {
-//       header("location: ./sucssesLog.php?statusSignup=sucesso");
-//     }
-//   }
-// }
-?> -->
+echo json_encode($jsonData);
