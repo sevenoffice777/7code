@@ -55,7 +55,7 @@
               <input type="email" name="email" placeholder="E-mail" id="email">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha" id="password">
-              <input type="submit" value="Entrar" btn-sbmt name="login_sbmt" id="btn_login">
+              <button btn-sbmt name="login_sbmt" id="btn_login">Cadastrar</button>
               <span class="log_error"></span>
             </form>
           </div>

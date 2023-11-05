@@ -1,3 +1,15 @@
+<?php
+session_start();
+$_SESSION['tokenUser'] = bin2hex(random_bytes(32));
+
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -59,8 +71,12 @@
               } ?>">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha">
-              <input type="submit" value="Cadastrar" btn-sbmt name="signup_sbmt" id="btn_signup">
+              <button btn-sbmt name="signup_sbmt" id="btn_signup">Cadastrar</button>
               <span class='log_error'></span>
+
+              <input type="text" name="tokenUser" hidden="hidden" value="<?php
+              echo $_SESSION['tokenUser'];
+              ?>">
             </form>
           </div>
         </div>

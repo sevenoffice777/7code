@@ -219,7 +219,7 @@ b {
     color: #aaa;
 }
 
-.card input[type="submit"] {
+.card button {
     background-color: #3498db;
     border: none;
     border-radius: 5px;
@@ -229,7 +229,7 @@ b {
     cursor: pointer;
 }
 
-.card input[type="submit"]:hover {
+.card button:hover {
     background-color: #2980b9;
 }
 
