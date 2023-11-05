@@ -242,3 +242,69 @@ b {
     font-size: 11pt;
     text-align: center;
 }
+
+
+
+.full_black_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70vw;
+    padding: 50px;
+    background-color: rgba(37, 4, 4, 0.801);
+    border: 1px solid rgb(150, 10, 10);
+    color: white;
+    border-radius: 10px;
+  }
+
+  .log h1 {
+    text-align: center;
+  }
+
+  .log * {
+    margin: 30px;
+  }
+
+  .log img {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .display_none {
+    display: none;
+  }
+
+  .full_black_background a {
+    border-radius: 10px;
+    background-color: rgb(158, 15, 15);
+    padding: 10px ;
+    width: 40%;
+    text-align: center;
+    font-size: 15pt;
+    border: 3px solid rgb(158, 15, 15);
+    text-transform: uppercase;
+
+  }
+
+  .full_black_background a:hover {
+    background-color: rgb(105, 5, 5);
+    border-color:rgb(105, 5, 5);
+    color: white;
+  }
+
+ 

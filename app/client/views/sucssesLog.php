@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>7TECH - Carregando</title>
   <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="../css/logs.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 
