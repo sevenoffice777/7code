@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>7TECH - Carregando</title>
-  <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../styles/style.css">
 
 </head>
 
@@ -17,7 +17,7 @@
       <div class="contain_log  load_msg">
         <div class="log">
           <h1>Aguarde enquanto conectamos ao banco de dados...</h1>
-          <img src="../img-all/load.gif" alt="load">
+          <img src="../assets/img/load.gif" alt="load">
         </div>
       </div>
       <div class="contain_log display_none  sucsses_msg">
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <script src="../js/showLog.js"></script>
+  <script src="../scripts/showLog.js"></script>
 </body>
 
 </html>

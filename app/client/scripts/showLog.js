@@ -8,11 +8,11 @@ window.onload = function () {
     let urlParams = new URLSearchParams(window.location.search);
     
     if(urlParams.get('statusLogin') == 'sucesso') {
-        processaLogin('../7tech-company/index.php');
+        processaLogin('./7tech-company/index.php');
     } 
 
     if(urlParams.get('statusSignup') == 'sucesso') {
-        processaLogin('../php/login_user.php');
+        processaLogin('./login_user.php');
     }
    
 

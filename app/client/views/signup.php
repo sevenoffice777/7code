@@ -1,12 +1,6 @@
 <?php
 session_start();
-$_SESSION['tokenUser'] = bin2hex(random_bytes(32));
-
-
-
-
-
-
+$_SESSION['tokenUser'] = bin2hex(random_bytes(32)); 
 ?>
 
 
@@ -23,9 +17,9 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <!-- favicon -->
-  <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/style.css" />
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -34,10 +28,10 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
 <body>
   <header>
     <div class="logo">
-      <img src="../img-all/logo_crud.png" alt="logo" />
+      <img src="../assets/img/logo_crud.png" alt="logo" />
     </div>
     <nav>
-      <a href="../../index.html">INICIO</a>
+      <a href="./index.html">INICIO</a>
       <a href="./login_user.php">ENTRAR</a>
       <a href="#" class="active_menu">CADASTRO</a>
     </nav>
@@ -92,7 +86,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
 
-  <script src="../js/submitBack.js"></script>
+  <script src="../scripts/submitBack.js"></script>
 </body>
 
 </html>

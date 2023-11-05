@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+ 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,9 +11,9 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <!-- favicon -->
-  <link rel="shortcut icon" href="../img-all/logo_crud.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
@@ -28,10 +28,10 @@
 
   <header>
     <div class="logo">
-      <img src="../img-all/logo_crud.png" alt="logo" />
+      <img src="../assets/img/logo_crud.png" alt="logo" />
     </div>
     <nav>
-      <a href="../../index.html">INICIO</a>
+      <a href="./index.html">INICIO</a>
       <a href="#" class="active_menu">ENTRAR</a>
       <a href="./signup.php">CADASTRO</a>
     </nav>
@@ -50,7 +50,7 @@
         <div class="right">
           <div class="card">
             <h2>Formulário de Login</h2>
-            <form dataForm='./login_verify.php'>
+            <form dataForm='../../server/controllers/loginController.php'>
               <label for="name">E-mail</label>
               <input type="email" name="email" placeholder="E-mail" id="email">
               <label for="password">Senha</label>
@@ -70,7 +70,7 @@
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
-  <script src="../js/submitBack.js"></script>
+  <script src="../scripts/submitBack.js"></script>
 </body>
 
 </html>

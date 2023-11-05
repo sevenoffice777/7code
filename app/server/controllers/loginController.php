@@ -2,8 +2,8 @@
 
 session_start();
 
-require './conn_host.php';
-require './prepare.php';
+require '../services/conn_host.php';
+require '../services/prepare.php';
 
 
 if (isset($_POST['email']) && isset($_POST['password'])) {

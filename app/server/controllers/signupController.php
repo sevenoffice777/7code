@@ -1,6 +1,6 @@
 <?php
-require './conn_host.php';
-require './prepare.php';
+require '../services/conn_host.php';
+require '../services/prepare.php';
 session_start();
 
 $erro = false;

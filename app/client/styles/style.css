@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Font_title';
-    src: url(../fonts/font-title.ttf);
+    src: url(../assets/fonts/font-title.ttf);
 }
 
 @font-face {
     font-family: 'Font_text';
-    src: url(../fonts/font-text.ttf);
+    src: url(../assets/fonts/font-text.ttf);
 }
 
 :root {
@@ -72,15 +72,15 @@ header nav a:hover {
 }
 
 .firstScreen {
-    background-image: url(../img-all/background_container.jpg);
+    background-image: url(../assets/img/background_container.jpg);
 }
 
 .secondScreen {
-    background-image: url(../img-all/red_login.png);
+    background-image: url(../assets/img/red_login.png);
 }
 
 .thirdScreen {
-    background-image: url(../img-all/red_signup.jpg);
+    background-image: url(../assets/img/red_signup.jpg);
 }
 
 /* footer */
