@@ -12,7 +12,7 @@ window.onload = function () {
     } 
 
     if(urlParams.get('statusSignup') == 'sucesso') {
-        processaLogin('./login_user.php');
+        processaLogin('./signin.php');
     }
    
 
@@ -43,7 +43,7 @@ function processaLogin(caminho) {
     //     console.log('Logado com sucesso');
     // } else if (origem == 'signup') {
     //     document.querySelector('.log>h1').innerHTML = 'Cadastro realizado com Sucesso';
-    //     link.href = './login_user.php';
+    //     link.href = './signin.php';
     //     link.innerHTML = 'Fazer Login'
 
     // }

@@ -32,7 +32,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
     </div>
     <nav>
       <a href="./index.html">INICIO</a>
-      <a href="./login_user.php">ENTRAR</a>
+      <a href="./signin.php">ENTRAR</a>
       <a href="#" class="active_menu">CADASTRO</a>
     </nav>
   </header>
