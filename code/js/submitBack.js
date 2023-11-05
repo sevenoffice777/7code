@@ -3,7 +3,10 @@
 $('[btn-sbmt]').each(function () {
     $(this).click((event) => {
         event.preventDefault()
-        enableOrDisabledButton(true, $(this))
+
+        var btnSbmt = $(this)
+
+        enableOrDisabledButton(true, btnSbmt)
 
         let log_error = $(this).next('.log_error');//  elemento que apresenta mensagens de erro no form
 
@@ -28,7 +31,7 @@ $('[btn-sbmt]').each(function () {
                 } else {
                     log_error.html(response.msg_erro);
                 }
-                    enableOrDisabledButton(false, $(this),'Cadastrar');
+                enableOrDisabledButton(false, btnSbmt, 'Cadastrar');
             },
             error: function (xhr, statusServer, errorName) {
                 console.log(`${xhr} - ${statusServer}, ${errorName}`)
@@ -39,8 +42,7 @@ $('[btn-sbmt]').each(function () {
 }) // --> e a mesma coisa que o document.querySelector........
 
 
-function enableOrDisabledButton(option, element, valueButton=null) {
-   element.attr('disabled', option);
-   console.log(option)
-   !option?element.html(valueButton):element.html('<img style="width:20px; height:20px;" src="../img-all/load.gif"></img>');
+function enableOrDisabledButton(option, element, valueButton = null) {
+    element.attr('disabled', option);
+    !option ? element.html(valueButton) : element.html('<img style="width:20px; height:20px;" src="../img-all/load.gif"></img>');
 }
