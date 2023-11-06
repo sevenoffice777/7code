@@ -1,12 +1,15 @@
 <?php
 require '../services/conn_host.php';
-require '../services/prepare.php';
+require '../services/prepareAndExecute.php';
+
 session_start();
 
 $erro = false;
 $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
 $msg = 'Dados Incorretos ( ';
+
+// Numero Aleatorio da Conta
+
 
 if($_SESSION['tokenUser'] == $data['tokenUser']) {
   
@@ -80,10 +83,10 @@ if (!$erro) {
 
   $stmt = $conn->prepare($querySql);
 
-  $stmt->bind_param("ssss", $data['name'], $data['email'], $data['dt_nasc'], $senha_hash);
+  $stmt->bind_param("ssss", $data['name'], $data['email'],$data['dt_nasc'],$senha_hash);
 
   if ($stmt->execute()) {
-    $jsonData = ["url" => "./sucssesLog.php?statusSignup=sucesso"];
+    $jsonData = ["url" => "../views/successLog.php?statusSignup=sucesso"];
   }
 } else {
   $jsonData = ["msg_erro" => $msg];

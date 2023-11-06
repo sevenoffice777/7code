@@ -20,7 +20,7 @@
           <img src="../assets/img/load.gif" alt="load">
         </div>
       </div>
-      <div class="contain_log display_none  sucsses_msg">
+      <div class="contain_log display_none success_msg">
         <div class="log">
           <h1>Conexão realizada com Sucesso!</h1>
           <a href="" id='login_btn'>Entrar</a>

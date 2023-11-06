@@ -50,7 +50,7 @@
         <div class="right">
           <div class="card">
             <h2>Formulário de Login</h2>
-            <form dataForm='../../server/controllers/signin.php'>
+            <form dataForm='../../server/controllers/signinController.php'>
               <label for="name">E-mail</label>
               <input type="email" name="email" placeholder="E-mail" id="email">
               <label for="password">Senha</label>

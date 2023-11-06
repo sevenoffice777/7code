@@ -50,7 +50,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
         <div class="right">
           <div class="card">
             <h2>Formulário de Cadastro</h2>
-            <form dataForm="./signup_verify.php" id="signupForm">
+            <form dataForm="../../server/controllers/signupController.php" id="signupForm">
               <label for="name">Nome</label>
               <input type="text" name="name" placeholder="Nome" value="<?php if (isset($data['name'])) {
                 echo $data['name'];

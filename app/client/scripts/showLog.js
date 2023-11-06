@@ -1,6 +1,6 @@
 const container_full_black = document.querySelector('.full_black_container');
 const load_msg = document.querySelector('.load_msg');
-const sucsses_msg = document.querySelector('.sucsses_msg');
+const sucsses_msg = document.querySelector('.success_msg');
 const link = document.querySelector('#login_btn');
 
 

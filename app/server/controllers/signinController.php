@@ -3,7 +3,7 @@
 session_start();
 
 require '../services/conn_host.php';
-require '../services/prepare.php';
+require '../services/prepareAndExecute.php';
 
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
@@ -23,7 +23,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
       $_SESSION['NOME'] = $res['NOME'];
 
 
-      $jsonData = ["url" => "./sucssesLog.php?statusLogin=sucesso"];
+      $jsonData = ["url" => "../views/successLog.php?statusLogin=sucesso"];
     } else {
       $jsonData = ["msg_erro" => "E-mail ou senha Invalidos"];
     }

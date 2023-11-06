@@ -26,6 +26,7 @@ $('[btn-sbmt]').each(function () {
             processData: false,
             data: formData,
             success: function (response) {
+                console.log(response)
                 if (response.url) {
                     window.location.href = response.url
                 } else {
@@ -44,5 +45,5 @@ $('[btn-sbmt]').each(function () {
 
 function enableOrDisabledButton(option, element, valueButton = null) {
     element.attr('disabled', option);
-    !option ? element.html(valueButton) : element.html('<img style="width:20px; height:20px;" src="../img-all/load.gif"></img>');
+    !option ? element.html(valueButton) : element.html('<img style="width:20px; height:20px;" src="../assets/img/load.gif"></img>');
 }
