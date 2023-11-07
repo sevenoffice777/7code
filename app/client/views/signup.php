@@ -20,7 +20,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../styles/style.css" />
-  <link rel="stylesheet" media="screen and (max-width: 700px)" href="../styles/responsive/styles-responsive.css">
+  <link rel="stylesheet" media="screen and (max-width: 950px)" href="../styles/responsive/styles-responsive.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -50,7 +50,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
       <div class="start_website">
         <div class="left">
           <div class="text">
-            <h1>Cadastro de Dados</h1>
+            <h1>Cadastro</h1>
             <p>Insira seus dados para realizar o cadastro na <b>7TECH</b></p>
 
           </div>

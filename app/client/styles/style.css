@@ -112,11 +112,6 @@ header nav a:hover, .header-responsive a:hover {
 
 
 
-@media (max-width: 863px) {
-    
-}
-
-
 /* MAIN - CONFIG */
 
 .container {
@@ -143,23 +138,6 @@ header nav a:hover, .header-responsive a:hover {
 
 /* footer */
 
-footer {
-    color: white;
-    width: 100vw;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(0, 0, 0);
-}
-
-footer ion-icon {
-    font-size: 20px;
-}
-
-footer ion-icon:hover {
-    color: rgb(187, 59, 59);
-}
 
 #samuel_seven {
     font-weight: bolder;
@@ -176,7 +154,6 @@ footer ion-icon:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .left,
@@ -366,3 +343,20 @@ b {
   }
 
  
+    footer {
+        color: white;
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    footer ion-icon {
+        font-size: 20px;
+    }
+    
+    footer ion-icon:hover {
+        color: rgb(187, 59, 59);
+    }

@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" media="screen and (max-width: 700px)" href="../styles/responsive/styles-responsive.css">
+  <link rel="stylesheet" media="screen and (max-width: 950px)" href="../styles/responsive/styles-responsive.css">
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
