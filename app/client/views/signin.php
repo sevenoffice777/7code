@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- 
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="../styles/responsive/styles-responsive.css">
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
@@ -24,17 +25,23 @@
 
 <body>
 
-
-
-  <header>
-    <div class="logo">
-      <img src="../assets/img/logo_crud.png" alt="logo" />
-    </div>
-    <nav>
-      <a href="./index.html">INICIO</a>
+  <div class="header-responsive h-r-ngtv-pos">
+    <div class="nav-responsive">
+      <a href="../../../index.html">INICIO</a>
       <a href="#" class="active_menu">ENTRAR</a>
       <a href="./signup.php">CADASTRO</a>
+    </div>
+  </div>
+  <header>
+    <div class="logo">
+      <img src="../assets/img/logo_crud.png" alt="logo">
+    </div>
+    <nav>
+      <a href="../../../index.html" >INICIO</a>
+      <a href="#" class="active_menu" >ENTRAR</a>
+      <a href="./signup.php">CADASTRO</a>
     </nav>
+    <ion-icon name="menu-outline" class="element-none"></ion-icon>
   </header>
 
   <div class="container secondScreen">
@@ -71,6 +78,7 @@
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
   <script src="../scripts/submitBack.js"></script>
+  <script src="../scripts/functions.js"></script>
 </body>
 
 </html>

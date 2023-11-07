@@ -12,21 +12,30 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./app/client/assets/img/logo_crud.png" type="image/x-icon">
     <!-- css -->
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="./app/client/styles/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="./app/client/styles/responsive/styles-responsive.css">
 </head>
 
 <body>
+    <div class="header-responsive h-r-ngtv-pos">
+        <div class="nav-responsive">
+            <a href="#" class="active_menu">INICIO</a>
+            <a href="./app/client/views/signin.php">ENTRAR</a>
+            <a href="./app/client/views/signup.php">CADASTRO</a>
+        </div>
+    </div>
     <header>
         <div class="logo">
-            <img src="../assets/img/logo_crud.png" alt="logo">
+            <img src="./app/client/assets/img/logo_crud.png" alt="logo">
         </div>
         <nav>
             <a href="#" class="active_menu">INICIO</a>
-            <a href="./signin.php">ENTRAR</a>
-            <a href="./signup.php">CADASTRO</a>
+            <a href="./app/client/views/signin.php">ENTRAR</a>
+            <a href="./app/client/views/signup.php">CADASTRO</a>
         </nav>
+        <ion-icon name="menu-outline" class="element-none"></ion-icon>
     </header>
     <div class="container firstScreen">
         <main>
@@ -36,13 +45,13 @@
                         <h1>7TECH</h1>
                         <p>Meu Projeto para aprender a manipular <b>Banco de Dados</b></p>
                         <div class="buttons_init">
-                            <a href="./signin.php" class="btn">Entrar</a>
-                            <a href="./signup.php" class="btn">Cadastrar</a>
+                            <a href="./app/client/views/signin.php" class="btn">Entrar</a>
+                            <a href="./app/client/views/signup.php" class="btn">Cadastrar</a>
                         </div>
                     </div>
                 </div>
                 <div class="right">
-                    <img src="../assets/img/database_animat.png" alt="database_animate" id="data_img">
+                    <img src="./app/client/assets/img/database_animat.png" alt="database_animate" id="data_img">
                 </div>
             </div>
         </main>
@@ -50,11 +59,12 @@
     </div>
     <footer>
         <ion-icon name="logo-github" onclick="irPara('https://github.com/SevenOfice777')"></ion-icon>
-        <p>Site criado e desenvolvido por &copy;<a href="https://www.instagram.com/samuel_seven777/" target="_blank" id="samuel_seven"> Samuel Seven</a></p>
+        <p>Site criado e desenvolvido por &copy;<a href="https://www.instagram.com/samuel_seven777/" target="_blank"
+                id="samuel_seven"> Samuel Seven</a></p>
         <ion-icon name="logo-linkedin" onclick="irPara('https://br.linkedin.com/in/samuel-seven-88565a242')"></ion-icon>
     </footer>
 
-    <script src="../scripts/main.js"></script>
+    <script src="./app/client/scripts/functions.js"></script>
 </body>
 
 </html>

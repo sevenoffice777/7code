@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['tokenUser'] = bin2hex(random_bytes(32)); 
+$_SESSION['tokenUser'] = bin2hex(random_bytes(32));
 ?>
 
 
@@ -20,21 +20,29 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../styles/style.css" />
-
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="../styles/responsive/styles-responsive.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <div class="header-responsive h-r-ngtv-pos">
+    <div class="nav-responsive">
+      <a href="../../../index.html">INICIO</a>
+      <a href="./signin.php">ENTRAR</a>
+      <a href="#" class="active_menu">CADASTRO</a>
+    </div>
+  </div>
   <header>
     <div class="logo">
-      <img src="../assets/img/logo_crud.png" alt="logo" />
+      <img src="../assets/img/logo_crud.png" alt="logo">
     </div>
     <nav>
-      <a href="./index.html">INICIO</a>
+      <a href="../../../index.html">INICIO</a>
       <a href="./signin.php">ENTRAR</a>
       <a href="#" class="active_menu">CADASTRO</a>
     </nav>
+    <ion-icon name="menu-outline" class="element-none"></ion-icon>
   </header>
 
   <div class="container thirdScreen">
@@ -60,9 +68,10 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
                 echo $data['email'];
               } ?>">
               <label for="dt_nasc">Data de Nascimento</label>
-              <input type="date" name="dt_nasc" max="<?php echo date('Y-m-d'); ?>" placeholder="Data de Nascimento" value="<?php if (isset($data['dt_nasc'])) {
-                echo $data['dt_nasc'];
-              } ?>">
+              <input type="date" name="dt_nasc" max="<?php echo date('Y-m-d'); ?>" placeholder="Data de Nascimento"
+                value="<?php if (isset($data['dt_nasc'])) {
+                  echo $data['dt_nasc'];
+                } ?>">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha">
               <button btn-sbmt name="signup_sbmt" id="btn_signup">Cadastrar</button>
@@ -85,7 +94,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
-
+  <script src="../scripts/functions.js"></script>
   <script src="../scripts/submitBack.js"></script>
 </body>
 
