@@ -8,8 +8,10 @@
     src: url(../assets/fonts/font-text.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 :root {
-    --font-title: 'Font-title';
+    --font-title: 'Oswald', sans-serif;
     --font-text: 'Font_text';
 }
 
@@ -35,7 +37,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.575);
+    background-color: rgba(0, 0, 0, 0.92);
     top: 0;
     left: 0;
     z-index: 998;
@@ -116,7 +118,6 @@ header nav a:hover, .header-responsive a:hover {
 
 .container {
     width: 100vw;
-    height: 100vh;
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -149,7 +150,7 @@ header nav a:hover, .header-responsive a:hover {
 }
 
 .start_website {
-    width: 100vw;
+     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -219,9 +220,9 @@ b {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.782);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.223);
     color: #fff;
     margin-top: 20px;
     padding: 20px 20px;

@@ -25,12 +25,16 @@ nav {
 .container
  {
     padding: 100px 0px;
-    height: 100%;
 }
  .left,  .right {
     width: 100%;
     height: 50%;
 }
+
+.start_website {
+    height: 100%;
+}
+
 
  #data_img {
     width: 350px;
@@ -46,6 +50,11 @@ nav {
 
 .text * {
     margin: 20px 0px;
+}
+
+.text h1 {
+    font-family: var(--font-title);
+    font-weight: bolder;
 }
 
 .card {
