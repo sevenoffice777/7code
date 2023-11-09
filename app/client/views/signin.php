@@ -62,7 +62,7 @@
               <input type="email" name="email" placeholder="E-mail" id="email">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha" id="password">
-              <button btn-sbmt name="login_sbmt" id="btn_login">Cadastrar</button>
+              <button btn-sbmt name="login_sbmt" id="btn_login">Entrar</button>
               <span class="log_error"></span>
             </form>
           </div>
