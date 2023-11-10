@@ -1,8 +1,7 @@
 USE 7TECH;
 
-DROP DATABASE 7TECH;
-
-DROP TABLE USER;
-
 SELECT * FROM USER;
 
+SELECT * FROM accountinfo;
+
+SELECT * FROM bankaccount;
