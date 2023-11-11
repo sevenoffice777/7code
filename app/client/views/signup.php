@@ -82,6 +82,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
               ?>">
             </form>
           </div>
+          <a href="./signin.php"> Já tem uma conta? Entrar</a>
         </div>
       </div>
     </main>

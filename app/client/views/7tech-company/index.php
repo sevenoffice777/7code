@@ -1,6 +1,6 @@
-<?php 
-    session_start() 
-?>
+<?php
+session_start()
+    ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -20,6 +20,9 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="../../assets/img/logo_crud.png" type="image/x-icon">
 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- ion-icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -35,7 +38,7 @@
                 <div class="user-data-container">
                     <span name="username">
                         <?php
-                        echo $_SESSION["USER"]["NAME"];
+                        echo $_SESSION["USER"]["NOME"];
                         ?>
                     </span>
                     <img src="../../assets/img/user-picture.png" name="user-picture" alt="user-pictuer">
@@ -63,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <ion-icon name="log-out-outline" id="logout-icon"></ion-icon>
+            <ion-icon name="log-out-outline" logout="../../../server/controller/logout.php" class="logout-icon"></ion-icon>
         </div>
     </header>
 

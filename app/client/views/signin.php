@@ -66,6 +66,7 @@
               <span class="log_error"></span>
             </form>
           </div>
+          <a href="./signup.php">É novo? Cadastrar</a>
         </div>
       </div>
     </main>
