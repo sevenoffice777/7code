@@ -1,6 +1,4 @@
-<?php
-session_start()
-    ?>
+<?php session_start() ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -66,7 +64,8 @@ session_start()
                     </div>
                 </div>
             </div>
-            <ion-icon name="log-out-outline" logout="../../../server/controller/logout.php" class="logout-icon"></ion-icon>
+            <ion-icon name="log-out-outline" logout="../../../server/controller/logout.php"
+                class="logout-icon"></ion-icon>
         </div>
     </header>
 
