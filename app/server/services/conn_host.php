@@ -11,6 +11,9 @@
 
     $conn = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE);
 
+    
+
+
     class ConnectHost {
         private $hostName, $userName, $password, $dataBase;
         protected $conn;

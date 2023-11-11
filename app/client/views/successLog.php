@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <script src="../scripts/showLog.js"></script>
+  <script src="../scripts/functions/showLog.js"></script>
 </body>
 
 </html>

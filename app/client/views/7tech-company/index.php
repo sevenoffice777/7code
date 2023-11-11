@@ -7,9 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 7TECH - BEM-VINDO
-        <?php echo $_SESSION["USER"]["NOME"] ?>
-    </title>
+    <title> 7TECH - </title>
 
     <!-- css -->
     <link rel="stylesheet" href="../../styles/style.css">
@@ -46,25 +44,19 @@
                         <img src="../../assets/img/user-picture.png" name="user-picture" alt="user-pictuer">
                         <div class="user-data-info">
                             <span class="username">
-                                <?php
-                                echo $_SESSION["USER"]["NOME"];
-                                ?>
+                                <!-- dados do banco de dados diretamente -->
                             </span>
                             <span class="useremail">
-                                <?php
-                                echo $_SESSION["USER"]["EMAIL"];
-                                ?>
+                                <!-- dados do banco de dados diretamente -->
                             </span>
                             <span class="usersaldo">
-                                <?php
-                                echo $_SESSION["USER"]["SALDO"];
-                                ?>
+                                <!-- dados do banco de dados diretamente -->
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <ion-icon name="log-out-outline" logout="../../../server/controller/logout.php"
+            <ion-icon name="log-out-outline" logout="../../../server/models/logout.php"
                 class="logout-icon"></ion-icon>
         </div>
     </header>
@@ -74,6 +66,7 @@
 
         </div>
     </div>
+    <script src="../../scripts/ajax_requests/logout.js"></script>
 </body>
 
 </html>

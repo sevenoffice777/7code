@@ -57,7 +57,7 @@
         <div class="right">
           <div class="card">
             <h2>Formulário de Login</h2>
-            <form dataForm='../../server/controllers/signinController.php'>
+            <form dataForm='../../server/models/signin_verify.php'>
               <label for="name">E-mail</label>
               <input type="email" name="email" placeholder="E-mail" id="email">
               <label for="password">Senha</label>
@@ -78,8 +78,8 @@
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
-  <script src="../scripts/submitBack.js"></script>
-  <script src="../scripts/functions.js"></script>
+  <script src="../scripts/ajax_requests/submitBack.js"></script>
+  <script src="../scripts/functions/functions.js"></script>
 </body>
 
 </html>

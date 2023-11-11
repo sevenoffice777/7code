@@ -58,7 +58,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
         <div class="right">
           <div class="card">
             <h2>Formulário de Cadastro</h2>
-            <form dataForm="../../server/controllers/signupController.php" id="signupForm">
+            <form dataForm="../../server/models/signup_verify.php" id="signupForm">
               <label for="name">Nome</label>
               <input type="text" name="name" placeholder="Nome" value="<?php if (isset($data['name'])) {
                 echo $data['name'];
@@ -95,8 +95,8 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
-  <script src="../scripts/functions.js"></script>
-  <script src="../scripts/submitBack.js"></script>
+  <script src="../scripts/functions/functions.js"></script>
+  <script src="../scripts/ajax_requests/submitBack.js"></script>
 </body>
 
 </html>
