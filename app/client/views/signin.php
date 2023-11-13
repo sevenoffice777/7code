@@ -37,8 +37,8 @@
       <img src="../assets/img/logo_crud.png" alt="logo">
     </div>
     <nav>
-      <a href="../../../index.html" >INICIO</a>
-      <a href="#" class="active_menu" >ENTRAR</a>
+      <a href="../../../index.html">INICIO</a>
+      <a href="#" class="active_menu">ENTRAR</a>
       <a href="./signup.php">CADASTRO</a>
     </nav>
     <ion-icon name="menu-outline" class="element-none"></ion-icon>
@@ -61,7 +61,10 @@
               <label for="name">E-mail</label>
               <input type="email" name="email" placeholder="E-mail" id="email">
               <label for="password">Senha</label>
-              <input type="password" name="password" placeholder="Senha" id="password">
+              <div class="password-container">
+                <input type="password" name="password" class="password-input" placeholder="Senha">
+                <ion-icon name="eye-outline" class="hover-password"></ion-icon>
+              </div>
               <button btn-sbmt name="login_sbmt" id="btn_login">Entrar</button>
               <span class="log_error"></span>
             </form>

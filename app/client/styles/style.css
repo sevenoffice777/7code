@@ -87,60 +87,8 @@ header nav a:hover, .header-responsive a:hover {
     cursor: pointer;
 }
 
-.user-data:hover .user-data-container {
-    font-weight: bolder; 
-    cursor: pointer;
-    color: rgb(250, 51, 51);
-}
 
-.user-data-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
 
-.user-data {
-    position: relative;
-}
-.user-data-div {
-    position: absolute;
-    top: 50px;
-    left: -300px;
-    width: 350px;
-    height: 450px;
-    background-color: rgba(0, 0, 0, 0.829);
-    border: 1px solid rgb(156, 12, 12);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    
-}
-
-.user-data-div img {
-    width: 100px;
-    height: 100px;
-
-}
-
-.user-data-div span.username {
-    font-size: 20pt;
-}
-.user-data-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.user-data-info *{
-    margin: 10px 0px ;
-    text-align: center;
-}
-
-.usersaldo {
-    font-size: 18pt;
-}
 /* Responsivo */
 .element-none {
     display: none;
@@ -343,6 +291,24 @@ b {
 .card input[type="text"]::placeholder,
 .card input[type="password"]::placeholder {
     color: #aaa;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.hover-password{
+    position: absolute;
+    top: 20px;
+    right:10px;
+    font-size: 15pt;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.hover-password:hover{ 
+    cursor:pointer;
 }
 
 .card button {

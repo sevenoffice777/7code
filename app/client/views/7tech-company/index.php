@@ -33,31 +33,12 @@
             <div class="user-picture user-data">
                 <div class="user-data-container">
                     <span name="username">
-                        <?php
-                        echo $_SESSION["USER"]["NOME"];
-                        ?>
+                        
                     </span>
                     <img src="../../assets/img/user-picture.png" name="user-picture" alt="user-pictuer">
                 </div>
-                <div class="user-data-div-container">
-                    <div class="user-data-div">
-                        <img src="../../assets/img/user-picture.png" name="user-picture" alt="user-pictuer">
-                        <div class="user-data-info">
-                            <span class="username">
-                                <!-- dados do banco de dados diretamente -->
-                            </span>
-                            <span class="useremail">
-                                <!-- dados do banco de dados diretamente -->
-                            </span>
-                            <span class="usersaldo">
-                                <!-- dados do banco de dados diretamente -->
-                            </span>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <ion-icon name="log-out-outline" logout="../../../server/models/logout.php"
-                class="logout-icon"></ion-icon>
+            <ion-icon name="log-out-outline" logout="../../../server/models/logout.php" class="logout-icon"></ion-icon>
         </div>
     </header>
 

@@ -68,7 +68,7 @@ if (!isset($data['password']) || empty($data['password'])) {
   $resRegex = preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{5,}$/', $data['password']);
   if (!$resRegex) {
     $erro = true;
-    $msg .= 'Senha Invalida, ';
+    $msg .= 'Por Favor, A senha deve ter pelo menos uma letra maiuscula, uma minuscula, um numero, e no minimo 5 caracteres ,';
   }
 }
 $msg = substr($msg, 0, -2);

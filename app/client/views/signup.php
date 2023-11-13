@@ -73,7 +73,11 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
                   echo $data['dt_nasc'];
                 } ?>">
               <label for="password">Senha</label>
-              <input type="password" name="password" placeholder="Senha">
+              <div class="password-container">
+                <input type="password" name="password" class="password-input" placeholder="Senha">
+              <ion-icon name="eye-outline" class="hover-password"></ion-icon>
+              </div>
+
               <button btn-sbmt name="signup_sbmt" id="btn_signup">Cadastrar</button>
               <span class='log_error'></span>
 
