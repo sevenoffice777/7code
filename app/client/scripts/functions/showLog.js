@@ -9,10 +9,12 @@ window.onload = function () {
     
     if(urlParams.get('statusLogin') == 'sucesso') {
         processaLogin('./7tech-company/index.php');
+        link.innerHTML = "Seja Bem-Vindo(a)";
     } 
 
     if(urlParams.get('statusSignup') == 'sucesso') {
         processaLogin('./signin.php');
+        link.innerHTML = "Fazer Login no Site";
     }
    
 
@@ -33,17 +35,3 @@ function processaLogin(caminho) {
 
 
 
-
-    // let urlParams = new URLSearchParams(window.location.search);
-
-    // let origem = urlParams.get('origem');
-    
-    // if (origem === 'login') {
-    //     link.href = '../7TECH_company/index.html'
-    //     console.log('Logado com sucesso');
-    // } else if (origem == 'signup') {
-    //     document.querySelector('.log>h1').innerHTML = 'Cadastro realizado com Sucesso';
-    //     link.href = './signin.php';
-    //     link.innerHTML = 'Fazer Login'
-
-    // }
