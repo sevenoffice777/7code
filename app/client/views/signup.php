@@ -100,7 +100,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
   <script src="../scripts/functions/functions.js"></script>
-  <script src="../scripts/ajax_requests/submitBack.js"></script>
+  <script src="../scripts/ajax_requests/ajax.js"></script>
 </body>
 
 </html>

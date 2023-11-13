@@ -81,7 +81,7 @@
         id="samuel_seven"> Samuel Seven</a></p>
     <ion-icon name="logo-linkedin"></ion-icon>
   </footer>
-  <script src="../scripts/ajax_requests/submitBack.js"></script>
+  <script src="../scripts/ajax_requests/ajax.js"></script>
   <script src="../scripts/functions/functions.js"></script>
 </body>
 

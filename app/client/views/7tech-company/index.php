@@ -47,7 +47,7 @@
 
         </div>
     </div>
-    <script src="../../scripts/ajax_requests/logout.js"></script>
+    <script src="../../scripts/ajax_requests/ajax.js"></script>
 </body>
 
 </html>

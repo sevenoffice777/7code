@@ -24,7 +24,7 @@ function processaLogin(caminho) {
         sucsses_msg.classList.remove('display_none');
         link.setAttribute('href', caminho);
         // link.href = caminho;
-    }, 3000);
+    }, 1500);
 }
 
 
