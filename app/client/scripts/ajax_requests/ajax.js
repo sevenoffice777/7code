@@ -5,7 +5,7 @@ function enableOrDisabledButton(option, element, valueButton = null) {
 
 // Função ajax request
 
-function ajaxRequest(urlRequest, methodRequest, dataTypeRequest = null, dataRequest = null, successCallback, errorCallBack) {
+function ajaxRequest(urlRequest, methodRequest, dataTypeRequest, dataRequest, successCallback, errorCallBack) {
     $.ajax({
         url: urlRequest,
         method: methodRequest,
@@ -27,18 +27,20 @@ function ajaxRequest(urlRequest, methodRequest, dataTypeRequest = null, dataRequ
 
 $('.logout-icon').each((index, element) => {
     $(element).click(() => {
-        ajaxRequest(
-            $(element).attr('logout'),
-            "POST",
-            null,
-            null,
-            function () {
-                window.location.href = '../../../../index.html';
-            },
-            function () {
-                console.log("ERRO")
-            }
-        );
+        if (confirm("Tem certeza que deseja fazer LOGOUT da sua conta?")) {
+            ajaxRequest(
+                $(element).attr('logout'),
+                "POST",
+                null,
+                null,
+                function () {
+                    window.location.href = '../../../../index.html';
+                },
+                function () {
+                    console.log("ERRO")
+                }
+            )
+        }
     })
 })
 
@@ -56,7 +58,7 @@ $('[btn-sbmt]').each(function () {
 
         // Ajax --> Request Sever-side and client-side
         //Ajax --> url, method, cache, dataType, contentType, processData, data, --> sucsses, error
-       
+
 
         ajaxRequest(
             parent.attr('dataForm'),
