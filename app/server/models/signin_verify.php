@@ -20,7 +20,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
   if ($res) {
     if (password_verify($passwordUser, $res['SENHA'])) {
-      $_SESSION['ID_USER'] = $res['ID_USER'];
+      $_SESSION['cpf'] = $res['cpf'];
 
 
       $jsonData = ["url" => "../views/successLog.php?statusLogin=sucesso"];

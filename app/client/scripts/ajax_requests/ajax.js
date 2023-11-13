@@ -72,7 +72,7 @@ $('[btn-sbmt]').each(function () {
                 } else {
                     log_error.html(response.msg_erro);    // Exibe a mensagem de erro no elemento com a classe 'log_error'
                 }
-                enableOrDisabledButton(false, btnSbmt, 'Cadastrar');
+                enableOrDisabledButton(false, btnSbmt, 'Entrar');
             },
             function () {
                 console.log(`${xhr} - ${statusServer}, ${errorName}`);

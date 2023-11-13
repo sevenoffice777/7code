@@ -68,7 +68,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
                 echo $data['email'];
               } ?>">
               <label for="cpf">CPF</label>
-              <input type="number" name="cpf" placeholder="CPF" value="<?php if (isset($data['CPF'])) {
+              <input type="number" name="cpf" placeholder="CPF" value="<?php if (isset($data['cpf'])) {
                 echo $data['CPF'];
               } ?>">
               <label for="dt_nasc">Data de Nascimento</label>
