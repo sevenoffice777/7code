@@ -79,11 +79,11 @@ if (!$erro) {
   $senha_hash = password_hash($data['password'], PASSWORD_DEFAULT);
   // criptografia do $data['password'];
 
-  $querySql = 'CALL INSERT_USER(?,?,?,?)';
+  $querySql = 'CALL INSERT_USER(?,?,?,?,?)';
 
   $stmt = $conn->prepare($querySql);
 
-  $stmt->bind_param("ssss", $data['name'], $data['email'],$data['dt_nasc'],$senha_hash);
+  $stmt->bind_param("sssss", $data['cpf'], $data['name'], $data['email'],$data['dt_nasc'],$senha_hash);
 
   if ($stmt->execute()) {
     $jsonData = ["url" => "../views/successLog.php?statusSignup=sucesso"];

@@ -67,6 +67,10 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
               <input type="email" name="email" placeholder="E-mail" value="<?php if (isset($data['email'])) {
                 echo $data['email'];
               } ?>">
+              <label for="cpf">CPF</label>
+              <input type="number" name="cpf" placeholder="CPF" value="<?php if (isset($data['CPF'])) {
+                echo $data['CPF'];
+              } ?>">
               <label for="dt_nasc">Data de Nascimento</label>
               <input type="date" name="dt_nasc" max="<?php echo date('Y-m-d'); ?>" placeholder="Data de Nascimento"
                 value="<?php if (isset($data['dt_nasc'])) {

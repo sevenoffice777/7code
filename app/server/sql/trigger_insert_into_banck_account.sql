@@ -6,9 +6,10 @@ BEGIN
     -- Gera um ACCOUNT_ID aleatório
     SET @account_id := FLOOR(RAND() * 1000000) + 1;
 
+
     -- Insere os dados na tabela BANKACCOUNT
-    INSERT INTO BANKACCOUNT (ID_USER, ACCOUNT_ID)
-    VALUES (NEW.ID_USER, @account_id);
+    INSERT INTO BANKACCOUNT (CPF, ACCOUNT_ID)
+    VALUES (NEW.CPF, @account_id);
 
 END;
 //

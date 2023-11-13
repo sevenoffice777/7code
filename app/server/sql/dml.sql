@@ -1,4 +1,4 @@
--- Active: 1699889862379@@127.0.0.1@3306@7tech
+-- Active: 1699891795929@@127.0.0.1@3306@7tech
 USE 7TECH;
 
 SELECT * FROM USER;
@@ -7,4 +7,7 @@ SELECT * FROM accountinfo;
 
 SELECT * FROM bankaccount;
 
+drop DATABASE 7tech;
+
 DROP TABLE ACCOUNTINFO
+

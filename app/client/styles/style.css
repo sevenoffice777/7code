@@ -280,6 +280,7 @@ b {
 .card input[type="email"],
 .card input[type="password"], 
 .card input[type="date"], 
+.card input[type="number"], 
 .card input[type="text"] {
     width: 100%;
     padding: 10px;
