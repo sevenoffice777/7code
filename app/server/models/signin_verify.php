@@ -20,7 +20,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
   if ($res) {
     if (password_verify($passwordUser, $res['SENHA'])) {
-      $_SESSION[] = $res['cpf'];
+      $_SESSION[] = $res['CPF'];
 
 
       $jsonData = ["url" => "../views/successLog.php?statusLogin=sucesso"];
@@ -32,7 +32,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $jsonData = ["msg_erro" => "E-mail ou senha Invalidos"];
   }
 }
-
 echo json_encode($jsonData);
 
 ?>

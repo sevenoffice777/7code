@@ -83,7 +83,7 @@ if (!$erro) {
 
   $stmt = $conn->prepare($querySql);
 
-  $stmt->bind_param("sssss", $data['cpf'], $data['name'], $data['email'],$data['dt_nasc'],$senha_hash);
+  $stmt->bind_param("sssss", $data['CPF'], $data['name'], $data['email'],$data['dt_nasc'],$senha_hash);
 
   if ($stmt->execute()) {
     $jsonData = ["url" => "../views/successLog.php?statusSignup=sucesso"];

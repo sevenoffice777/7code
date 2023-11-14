@@ -63,6 +63,5 @@ END;
 //
 DELIMITER ;
 
-
-
+SELECT * FROM USER;
 SELECT * FROM bankaccount;
