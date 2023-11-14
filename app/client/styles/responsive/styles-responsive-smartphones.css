@@ -1,0 +1,84 @@
+/* Nav Responsivo */
+
+nav {
+    display: none;
+}
+
+.element-none {
+    display: block;
+}
+
+/*  Container */
+
+.firstScreen .start_website {
+    flex-direction: column-reverse;
+    
+}
+
+.secondScreen .start_website , .thirdScreen .start_website{
+    flex-direction: column;
+    
+}
+
+/* FirstScreen */
+
+.container
+ {
+    padding: 100px 0px;
+}
+ .left,  .right {
+    width: 100%;
+    height: 50%;
+}
+
+.start_website {
+    padding: 0;
+    height: 100%;
+}
+
+
+ #data_img {
+    width: 250px;
+    height: 250px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text * {
+    margin: 20px 0px;
+}
+
+.text h1 {
+    font-family: var(--font-title);
+    font-weight: bolder;
+}
+
+.card {
+    width: 70%;
+}
+
+footer .columns {
+    flex-direction: column;
+}
+
+.column {
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text p {
+    width: 70%;
+    text-align: center;
+}

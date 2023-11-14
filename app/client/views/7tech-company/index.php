@@ -12,7 +12,8 @@
     <!-- css -->
     <link rel="stylesheet" href="../../styles/style.css">
     <!-- response -->
-    <link rel="stylesheet" media="screen and (max-width: 950px)" href="../../styles/responsive/styles-responsive.css">
+    <link rel="stylesheet" media="screen and (max-width: 950px)" href="../../styles/responsive/styles-responsive-tablets.css">
+    <link rel="stylesheet" media="screen and (max-width: 550px)" href="../../styles/responsive/styles-responsive-smartphones.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="../../assets/img/logo_crud.png" type="image/x-icon">
 

@@ -9,12 +9,12 @@ window.onload = function () {
     
     if(urlParams.get('statusLogin') == 'sucesso') {
         processaLogin('./7tech-company/index.php');
-        link.innerHTML = "Seja Bem-Vindo(a)";
+        link.innerHTML = "Bem-Vindo(a)";
     } 
 
     if(urlParams.get('statusSignup') == 'sucesso') {
         processaLogin('./signin.php');
-        link.innerHTML = "Fazer Login no Site";
+        link.innerHTML = "Fazer Login";
     }
    
 

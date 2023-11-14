@@ -12,31 +12,34 @@ nav {
 
 .firstScreen .start_website {
     flex-direction: column-reverse;
-    
+
 }
 
-.secondScreen .start_website , .thirdScreen .start_website{
+.secondScreen .start_website,
+.thirdScreen .start_website {
     flex-direction: column;
-    
+
 }
 
 /* FirstScreen */
 
-.container
- {
+.container {
     padding: 100px 0px;
 }
- .left,  .right {
+
+.left,
+.right {
     width: 100%;
     height: 50%;
 }
 
 .start_website {
     height: 100%;
+    padding: 0;
 }
 
 
- #data_img {
+#data_img {
     width: 350px;
     height: 350px;
 }
@@ -58,5 +61,9 @@ nav {
 }
 
 .card {
+    width: 70%;
+}
+
+.full_black_background a {
     width: 70%;
 }

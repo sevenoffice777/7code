@@ -20,7 +20,8 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../styles/style.css" />
-  <link rel="stylesheet" media="screen and (max-width: 950px)" href="../styles/responsive/styles-responsive.css">
+  <link rel="stylesheet" media="screen and (max-width: 950px)" href="../styles/responsive/styles-responsive-tablets.css">
+  <link rel="stylesheet" media="screen and (max-width: 550px)" href="../styles/responsive/styles-responsive-smartphones.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -97,12 +98,30 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   </div>
 
 
-  <footer>
-    <ion-icon name="logo-github"></ion-icon>
-    <p>Site criado e desenvolvido por &copy;<a href="https://br.linkedin.com/in/samuel-seven-88565a242"
-        id="samuel_seven"> Samuel Seven</a></p>
-    <ion-icon name="logo-linkedin"></ion-icon>
-  </footer>
+  
+    <footer>
+        <div class="columns">
+            <div class="column">
+                <div class="logo">
+                    <img src="../assets/img/logo_crud.png" alt="logo">
+                </div>
+                <span>7Tech - Company</span>
+            </div>
+            <div class="column">
+                <ul>
+                    <li><h2>Redes Sociais</h2></li>
+                    <li><a href="https://br.linkedin.com/in/samuel-seven-88565a242" target="_blank">Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/samuel_seven777/" target="_blank">Instagram</a></li>
+                    <li><a href="https://github.com/SevenOfice777" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Contato</h2>
+                <span>Email : sevenofice777@gmail.com </span>
+                <span>Telefone : +5514997814551</span>
+            </div>
+        </div>
+    </footer>
   <script src="../scripts/functions/functions.js"></script>
   <script src="../scripts/ajax_requests/ajax.js"></script>
 </body>

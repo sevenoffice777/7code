@@ -3,6 +3,7 @@
     src: url(../assets/fonts/font-title.ttf);
 }
 
+
 @font-face {
     font-family: 'Font_text';
     src: url(../assets/fonts/font-text.ttf);
@@ -182,6 +183,7 @@ header nav a:hover, .header-responsive a:hover {
 .start_website {
      width: 100vw;
     height: 100vh;
+    padding: 30% 0%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,20 +407,44 @@ b {
   }
 
  
-    footer {
-        color: white;
-        width: 100vw;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color: rgb(0, 0, 0);
-    }
+footer {
+    width: 100vw;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+footer .columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.column img {
+    width: 50px;
+}
+
+.column ul {
+    list-style: none;
     
-    footer ion-icon {
-        font-size: 20px;
-    }
-    
-    footer ion-icon:hover {
-        color: rgb(187, 59, 59);
-    }
+}
+
+.column a:hover, .column li:hover {
+    color: rgb(150, 10, 10);
+}
+footer * {
+    font-size: 10pt;
+}
+
+.column * {
+    margin: 10px 0px;
+}
