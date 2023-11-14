@@ -1,11 +1,11 @@
-export default function enableOrDisabledButton(option, element, valueButton = null) {
+function enableOrDisabledButton(option, element, valueButton = null) {
     element.attr('disabled', option);
     !option ? element.html(valueButton) : element.html('<img style="width:20px; height:20px;" src="../assets/img/load.gif"></img>');
 }
 
 // Função ajax request
 
-export default function ajaxRequest(urlRequest, methodRequest, dataTypeRequest, dataRequest, opt) {
+function ajaxRequest(urlRequest, methodRequest, dataTypeRequest, dataRequest, opt) {
     $.ajax({
         url: urlRequest,
         method: methodRequest,

@@ -1,4 +1,4 @@
-import { ajaxRequest, enableOrDisabledButton } from './ajax';
+
 
 $('[btn-sbmt]').each(function () {
     $(this).click((event) => {

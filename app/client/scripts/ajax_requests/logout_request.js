@@ -1,4 +1,3 @@
-import { ajaxRequest } from './ajax';
 
 $('.logout-icon').each(( element) => {
     $(element).click(() => {

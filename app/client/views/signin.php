@@ -106,6 +106,7 @@ session_start();
         </div>
     </footer>
   <script src="../scripts/ajax_requests/ajax.js"></script>
+  <script src="../scripts/ajax_requests/signuser_request.js"></script>
   <script src="../scripts/functions/functions.js"></script>
 </body>
 
