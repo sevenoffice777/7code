@@ -162,6 +162,7 @@ header nav a:hover, .header-responsive a:hover {
 }
 
 .thirdScreen {
+    padding: 5% 0% 0% 0%;
     background-image: url(../assets/img/red_signup.png);
 }
 
