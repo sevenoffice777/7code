@@ -154,7 +154,7 @@ header nav a:hover, .header-responsive a:hover {
 }
 
 .firstScreen {
-    background-image: url(../assets/img/background_container.jpg);
+    background-image: url(../assets/img/background_container.png);
 }
 
 .secondScreen {
@@ -162,11 +162,11 @@ header nav a:hover, .header-responsive a:hover {
 }
 
 .thirdScreen {
-    background-image: url(../assets/img/red_signup.jpg);
+    background-image: url(../assets/img/red_signup.png);
 }
 
 .user-area-screen {
-    background-image: url(../assets/img/background_container.jpg);
+    background-image: url(../assets/img/background_container.png);
 }
 /* footer */
 
@@ -220,7 +220,7 @@ header nav a:hover, .header-responsive a:hover {
     padding: 10px;
     border-radius: 20px;
     margin: 30px 20px 0px 0px ;
-    font-size: 13pt;
+    font-size: 16pt;
     padding: 10px 20px;
 }
 
@@ -410,7 +410,7 @@ b {
 footer {
     width: 100vw;
     padding: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.993);
 }
 
 footer .columns {

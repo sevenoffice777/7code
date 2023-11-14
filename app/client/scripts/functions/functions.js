@@ -6,9 +6,7 @@ const headerResponsive = document.querySelector('.header-responsive');
 const btnHeaderResponsive = document.querySelector('.element-none');
 btnHeaderResponsive.addEventListener('click', () => {
     toggleClass(headerResponsive, 'h-r-ngtv-pos', 'h-r-pstv-pos')
-    setTimeout(() => {
-        toggleClass(headerResponsive, 'h-r-ngtv-pos', 'h-r-pstv-pos')
-    }, 3000)
+    
 });
 
 

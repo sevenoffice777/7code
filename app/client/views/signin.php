@@ -10,7 +10,7 @@ session_start();
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> 7TECH- Inicio</title>
+  <title>  7Code Hub- Inicio</title>
 
   <!-- scripts -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -19,7 +19,7 @@ session_start();
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" media="screen and (max-width: 950px)" href="../styles/responsive/styles-responsive-tablets.css">
+  <link rel="stylesheet" media="screen and (max-width: 1000px)" href="../styles/responsive/styles-responsive-tablets.css">
     <link rel="stylesheet" media="screen and (max-width: 550px)" href="../styles/responsive/styles-responsive-smartphones.css">
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -56,7 +56,7 @@ session_start();
         <div class="left">
           <div class="text">
             <h1>Login</h1>
-            <p>Insira seu e-mail e senha para entrar na <b>7TECH</b></p>
+            <p>Insira seu e-mail e senha para entrar na <b> 7Code Hub</b></p>
 
           </div>
         </div>
@@ -88,7 +88,7 @@ session_start();
                 <div class="logo">
                     <img src="../assets/img/logo_crud.png" alt="logo">
                 </div>
-                <span>7Tech - Company</span>
+                <span> 7Code Hub - Company</span>
             </div>
             <div class="column">
                 <ul>

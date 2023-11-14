@@ -2,12 +2,12 @@
     // $hostName = 'localhost';
     // $userName = 'root';
     // $password = '';
-    // $database = '7TECH';
+    // $database = ' 7Code Hub';
     
     define('HOSTNAME', 'localhost');
     define('USERNAME', 'root');
     define('PASSWORD', '');
-    define('DATABASE', '7TECH');
+    define('DATABASE', '7Code');
 
     $conn = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE);
 
