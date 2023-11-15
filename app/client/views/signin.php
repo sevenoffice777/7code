@@ -18,7 +18,7 @@ session_start();
   <!-- favicon -->
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/geral.css" />
   <link rel="stylesheet" media="screen and (max-width: 1000px)" href="../styles/responsive/styles-responsive-tablets.css">
     <link rel="stylesheet" media="screen and (max-width: 550px)" href="../styles/responsive/styles-responsive-smartphones.css">
 
@@ -107,6 +107,7 @@ session_start();
     </footer>
   <script src="../scripts/ajax_requests/ajax.js"></script>
   <script src="../scripts/ajax_requests/signuser_request.js"></script>
+  <script src="../scripts/functions/callbacks.js"></script>
   <script src="../scripts/functions/functions.js"></script>
 </body>
 

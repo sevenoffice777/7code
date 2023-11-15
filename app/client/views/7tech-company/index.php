@@ -10,12 +10,13 @@
     <title> </title>
 
     <!-- css -->
-    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/geral.css">
     <!-- response -->
     <link rel="stylesheet" media="screen and (max-width: 950px)"
         href="../../styles/responsive/styles-responsive-tablets.css">
     <link rel="stylesheet" media="screen and (max-width: 550px)"
         href="../../styles/responsive/styles-responsive-smartphones.css">
+    <link rel="stylesheet" href="../../styles/7code.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="../../assets/img/logo_crud.png" type="image/x-icon">
 
@@ -29,7 +30,10 @@
 
 <body>
     <div class="user-data-card display_none">
-        <img src="../../assets/img/user-picture.png" alt="photo-user" class="photo-user">
+        <div class="photo-user">
+            <img src="../../assets/img/user-picture.png" alt="photo-user" class="photo-user">
+            <img src="../../assets/img/edit.png" alt="edit" class="overlay-edit-photo">
+        </div>
         <div class="user-data-info">
             <div class="data-user-campo">
                 <span class="realce-span">Nº Conta: </span>
@@ -45,7 +49,7 @@
             </div>
         </div>
         <span name="saldo">R$ </span>
-        <button logout="../../../server/models/logout.php" class="logout btn-logout">Log out <ion-icon
+        <button logout="../../../server/models/logout.php" btn-logout class="logout btn-logout">Log out <ion-icon
                 name="log-out-outline"></ion-icon></button>
     </div>
     <header>
@@ -69,22 +73,22 @@
     </div>
 
 
-    <script src="../../scripts/ajax_requests/ajax.js"></script>
-    <script src="../../scripts/ajax_requests/datauser_request.js"></script>
-    <script src="../../scripts/ajax_requests/logout_request.js"></script>
-    <script src="../../scripts/functions/functions.js"></script>
-
     <script>
-        
-        
+        document.querySelector('.user-data-container').addEventListener("click", () => {
+            toggleClass(document.querySelector('.user-data-card'), 'display_none')
+        })
+
         //  O evento abaixo e focado pra clique fora de qualquer div, por exemplo, clicando fora do card ele desaparece;
-        document.querySelector('.container').addEventListener('click', () => {
+        document.querySelector('.container').addEventListener("click", () => {
             if (!document.querySelector('.user-data-card').classList.contains('display_none')) {
                 toggleClass(document.querySelector('.user-data-card'), 'display_none')
             }
         })
-
     </script>
+    <script src="../../scripts/functions/functions.js"></script>
+    <script src="../../scripts/ajax_requests/ajax.js"></script>
+    <script src="../../scripts/ajax_requests/7code_request.js"></script>
+
 </body>
 
 </html>

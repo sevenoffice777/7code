@@ -19,7 +19,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <!-- favicon -->
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/geral.css" />
   <link rel="stylesheet" media="screen and (max-width: 1000px)" href="../styles/responsive/styles-responsive-tablets.css">
   <link rel="stylesheet" media="screen and (max-width: 550px)" href="../styles/responsive/styles-responsive-smartphones.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -123,6 +123,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
         </div>
     </footer>
   <script src="../scripts/functions/functions.js"></script>
+  <script src="../scripts/functions/callbacks.js"></script>
   <script src="../scripts/ajax_requests/signuser_request.js"></script>
   <script src="../scripts/ajax_requests/ajax.js"></script>
 </body>

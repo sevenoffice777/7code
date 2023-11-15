@@ -1,22 +1,3 @@
-//  JAVASCRIPT GERAL COM FUNÇÕES UTEIS PARA O DESENVOLVIMENTO DO PROJETO
-
-
-// Variaveis - Constantes
-const headerResponsive = document.querySelector('.header-responsive');
-const btnHeaderResponsive = document.querySelector('.element-none');
-
-// Eventos
-btnHeaderResponsive.addEventListener('click', () => {
-    toggleClass(headerResponsive, 'h-r-ngtv-pos', 'h-r-pstv-pos');
-});
-
-document.querySelector('.user-data-container').addEventListener('click', () => {
-    toggleClass(document.querySelector('.user-data-card'), 'display_none')
-})
-
-
-// Funções
-
 // - Função para redirecionar a pagina
 function irPara(endereco) {
     // window.location.href = endereco;
@@ -38,20 +19,6 @@ function toggleClass(element, classVerify, classAddOrRemove=null) {
         
     }
 }
-
-// FUNÇÃO PARA VER SENHA
-
-document.querySelectorAll(".hover-password").forEach((element) => {
-    element.addEventListener("click", () => {
-        if (element.name == "eye-outline") {
-            element.name = "eye-off-outline";
-            document.querySelector(".password-input").type="text"
-        } else {
-            element.name = "eye-outline";
-            document.querySelector(".password-input").type="password"
-        }
-    })
-})
 
 //  As funções userDataShow e setDataUser, servem para inserir os dados do cliente no FRONT END
 
