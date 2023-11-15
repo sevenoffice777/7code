@@ -1,4 +1,4 @@
-# Projeto CRUD (Create, Read, Update, Delete) 📝
+# 7Code Hub - Projeto CRUD (Create, Read, Update, Delete) 📝
 
 Bem-vindo ao meu projeto CRUD, onde transformo dados em ação! Este repositório é dedicado a um sistema de CRUD que estou desenvolvendo, permitindo que você crie, leia, atualize e delete dados de uma maneira eficiente.
 
