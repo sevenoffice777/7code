@@ -25,14 +25,12 @@
       <div class="contain_log display_none success_msg">
         <div class="log">
           <h1>Conexão realizada com Sucesso!</h1>
-          <a href="#" dataUser="../../server/models/datauser.php" id='login_btn'>Entrar</a>
+          <a href="#" id='login_btn'>Entrar</a>
         </div>
       </div>
     </div>
   </div>
   <script src="../scripts/functions/showLog.js"></script>
-  <script src="../scripts/ajax_requests/ajax.js"></script>
-  <script src="../scripts/ajax_requests/datauser_request.js"></script>
 </body>
 
 </html>

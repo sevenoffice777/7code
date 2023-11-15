@@ -70,28 +70,17 @@
 
 
     <script src="../../scripts/ajax_requests/ajax.js"></script>
+    <script src="../../scripts/ajax_requests/datauser_request.js"></script>
     <script src="../../scripts/ajax_requests/logout_request.js"></script>
     <script src="../../scripts/functions/functions.js"></script>
 
     <script>
-        // Get URL DATA
-        document.addEventListener('DOMContentLoaded', function () {
-            var dataString = window.location.search.split('Data=')[1];
-
-            if (dataString) {
-                dataString = decodeURIComponent(dataString);
-                var data = JSON.parse(dataString);
-                // Faça o que quiser com os dados aqui
-                userDataShow(data);
-            }
-        });
-
-        document.querySelector('.user-data-container').addEventListener('click', () => {
-            toggleClass(document.querySelector('.user-data-card'), 'display_none')
-        })
-        document.querySelector('.container').addEventListener('click', ()=>{
+        
+        
+        //  O evento abaixo e focado pra clique fora de qualquer div, por exemplo, clicando fora do card ele desaparece;
+        document.querySelector('.container').addEventListener('click', () => {
             if (!document.querySelector('.user-data-card').classList.contains('display_none')) {
-                toggleClass(document.querySelector('.user-data-card'),'display_none')
+                toggleClass(document.querySelector('.user-data-card'), 'display_none')
             }
         })
 

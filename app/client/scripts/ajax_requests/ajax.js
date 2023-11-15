@@ -15,8 +15,8 @@ function ajaxRequest(urlRequest, methodRequest, dataTypeRequest, dataRequest, op
         processData: false,
         data: dataRequest,
         success: function (response) {
-            successCallback(response, opt);
-            
+            successCallback(response, opt)
+             
         },
         error: function (xhr, statusServer, errorName) {
             console.log(`${xhr} - ${statusServer}, ${errorName}`)
@@ -44,10 +44,7 @@ function successCallback(response, opt) {
     }
 
     if(opt == 'loadingUserData'){
-        var DataString = encodeURIComponent(JSON.stringify(response));
-        window.location.href = './7tech-company/index.php?Data=' + DataString;
-        
-        // window.location.href = './7tech-company/index.php';
+        userDataShow(response)
     }
 }
 

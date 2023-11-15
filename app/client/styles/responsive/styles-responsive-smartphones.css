@@ -1,3 +1,22 @@
+
+
+.firstScreen {
+    background-image: url(../assets/img/background_container.png);
+}
+
+.secondScreen {
+    background-image: url(../assets/img/red_login.png);
+}
+
+.thirdScreen {
+    padding: 5% 0% 0% 0%;
+    background-image: url(../assets/img/red_signup.png);
+}
+
+.user-area-screen {
+    background-image: url(../assets/img/background_container.png);
+}
+
 /* Nav Responsivo */
 
 nav {

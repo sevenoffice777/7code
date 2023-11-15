@@ -8,7 +8,7 @@ window.onload = function () {
     let urlParams = new URLSearchParams(window.location.search);
     
     if(urlParams.get('statusLogin') == 'sucesso') {
-        processaLogin();
+        processaLogin('./7tech-company/index.php');
         link.innerHTML = "Bem-Vindo(a)";
     } 
 
@@ -25,7 +25,7 @@ function processaLogin(caminho = null) {
     setTimeout(() => {
         load_msg.classList.add('display_none');
         sucsses_msg.classList.remove('display_none');
-        // link.href = caminho;
+        link.href = caminho;
     }, 1500);
 }
 

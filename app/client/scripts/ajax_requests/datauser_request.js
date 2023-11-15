@@ -1,12 +1,9 @@
-$('#login_btn').click(() => {
-    
-    let btnGoToDataUser = $('#login_btn');
-
+document.addEventListener('DOMContentLoaded', function () {
     ajaxRequest(
-        btnGoToDataUser.attr('dataUser'),
+        '../../../server/models/datauser.php',
         "POST",
         'json',
         null,
         'loadingUserData'
     )
-})
+});
