@@ -1,14 +1,14 @@
 
-$('.logout-icon').each(( element) => {
-    $(element).click(() => {
+document.querySelectorAll('.logout-icon').forEach((e) => {
+    e.addEventListener('click', () => {
         if (confirm("Tem certeza que deseja fazer LOGOUT da sua conta?")) {
             ajaxRequest(
-                $(element).attr('logout'),
+                e.getAttribute('logout'),
                 "POST",
                 null,
                 null,
-                'prev'
-            )
+                'logoutUserReturn'
+            );
         }
     })
 })

@@ -19,13 +19,18 @@ function irPara(endereco) {
 }
 
 // - Função para add/remove class de alguma tag ou elemento
-function toggleClass(element, classVerify, classAddOrRemove) {
+function toggleClass(element, classVerify, classAddOrRemove=null) {
     if (element.classList.contains(classVerify)) {
         element.classList.remove(classVerify);
-        element.classList.add(classAddOrRemove);
+        if(!classAddOrRemove) {
+            element.classList.add(classAddOrRemove);
+        }
     } else {
         element.classList.add(classVerify);
-        element.classList.remove(classAddOrRemove);
+        if(!classAddOrRemove) {
+            element.classList.remove(classAddOrRemove);
+        }
+        
     }
 }
 
@@ -40,3 +45,20 @@ document.querySelectorAll(".hover-password").forEach((element) => {
         }
     })
 })
+
+
+function userDataShow(dataUser) {
+    document.title = `7Code Hub | ${dataUser.userAccount.NOME}`
+    setDataUser(dataUser, '[name=username]', 'userAccount', 'NOME');
+    setDataUser(dataUser, '[name=email]', 'userAccount', 'EMAIL');
+    setDataUser(dataUser, '[name=accountNumber]', 'bankAccount', 'ACCOUNT_ID');
+    setDataUser(dataUser, '[name=saldo]', 'bankAccount', 'SALDO');
+}
+
+function setDataUser(dataUser, element, paramName, atrName) {
+    let userdataSpan = document.querySelectorAll(element);
+
+    userdataSpan.forEach(element => {
+        element.textContent += `${dataUser[paramName][atrName]}`
+    });
+}

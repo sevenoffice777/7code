@@ -88,7 +88,78 @@ header nav a:hover, .header-responsive a:hover {
     cursor: pointer;
 }
 
+.user-data-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
+.user-data-container *:hover, .user-data-container:hover {
+    cursor:pointer;
+}
+/* menu-dataUser */
+
+.user-data-card {
+    position: fixed;
+    top: 100px;
+    right: 5%;
+    width: 350px;
+    height: 400px;
+    background-color: black;
+    border: 1px solid rgb(150, 10, 10);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-data-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.photo-user {
+    width: 50px;
+    height: 50px;
+}
+
+.logout {
+    width: 60%;
+    border:  1px solid rgb(105, 5, 5);
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+
+
+}
+.logout:hover {
+    background-color: rgb(105, 5, 5);
+}
+.logout > * {
+    margin: 0px 10px;
+}
+
+.realce-span {
+    margin-right: 15px;
+    font-weight: bolder;
+}
+
+.data-user-campo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:10px 0px;
+}
+
+span[name="saldo"]{
+    font-size: 20pt;
+    color: whuite;
+    font-weight: bolder;
+}
 
 /* Responsivo */
 .element-none {
@@ -448,3 +519,4 @@ footer * {
 .column * {
     margin: 10px 0px;
 }
+

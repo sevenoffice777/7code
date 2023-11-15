@@ -16,6 +16,7 @@ function ajaxRequest(urlRequest, methodRequest, dataTypeRequest, dataRequest, op
         data: dataRequest,
         success: function (response) {
             successCallback(response, opt);
+            
         },
         error: function (xhr, statusServer, errorName) {
             console.log(`${xhr} - ${statusServer}, ${errorName}`)
@@ -29,7 +30,7 @@ function successCallback(response, opt) {
     let log_error = $('.log_error');
     let btnSbmt = $('[btn-sbmt]');
 
-    if(opt == 'next') {
+    if(opt == 'signUserRequest') {
         if (response.url) {          // Verifica se a resposta possui uma propriedade 'url'
             window.location.href = response.url;  // Redireciona para a URL fornecida na resposta
         } else {
@@ -38,8 +39,15 @@ function successCallback(response, opt) {
         enableOrDisabledButton(false, btnSbmt, 'Entrar');
     }
 
-    if(opt == 'prev') {
+    if(opt == 'logoutUserReturn') {
         window.location.href = '../../../../index.html';
+    }
+
+    if(opt == 'loadingUserData'){
+        var DataString = encodeURIComponent(JSON.stringify(response));
+        window.location.href = './7tech-company/index.php?Data=' + DataString;
+        
+        // window.location.href = './7tech-company/index.php';
     }
 }
 

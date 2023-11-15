@@ -8,7 +8,9 @@
   <title> 7Code Hub - Carregando</title>
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="../styles/style.css">
-
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -23,12 +25,14 @@
       <div class="contain_log display_none success_msg">
         <div class="log">
           <h1>Conexão realizada com Sucesso!</h1>
-          <a href="" id='login_btn'>Entrar</a>
+          <a href="#" dataUser="../../server/models/datauser.php" id='login_btn'>Entrar</a>
         </div>
       </div>
     </div>
   </div>
   <script src="../scripts/functions/showLog.js"></script>
+  <script src="../scripts/ajax_requests/ajax.js"></script>
+  <script src="../scripts/ajax_requests/datauser_request.js"></script>
 </body>
 
 </html>

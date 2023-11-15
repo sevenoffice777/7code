@@ -8,23 +8,23 @@ window.onload = function () {
     let urlParams = new URLSearchParams(window.location.search);
     
     if(urlParams.get('statusLogin') == 'sucesso') {
-        processaLogin('./7tech-company/index.php');
+        processaLogin();
         link.innerHTML = "Bem-Vindo(a)";
     } 
 
     if(urlParams.get('statusSignup') == 'sucesso') {
-        processaLogin('./signin.php');
-        link.innerHTML = "Fazer Login";
+        setTimeout(()=>{
+            window.location.href = './signin.php';
+        }, 1500);
     }
    
 
 }
 
-function processaLogin(caminho) {
+function processaLogin(caminho = null) {
     setTimeout(() => {
         load_msg.classList.add('display_none');
         sucsses_msg.classList.remove('display_none');
-        link.setAttribute('href', caminho);
         // link.href = caminho;
     }, 1500);
 }
