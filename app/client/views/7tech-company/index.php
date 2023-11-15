@@ -29,8 +29,18 @@
 </head>
 
 <body>
+    <div class="card-default-centerscreen">
+        <div class="left-card-default-centerscreen">
+            <h1>Meu Perfil</h1>
+            <span>Fala upload da sua foto para 7Code</span>
+        </div>
+        <div class="right-card-default-centerscreen">
+            <img src="../../assets/img/edit.png" alt="imgUploadPhoto" class="photo-user" id="uploadPhoto">
+           <input type="file" name="uploadPhotoInput" id="uploadPhotoInput" class="display_none">
+        </div>
+    </div>
     <div class="user-data-card display_none">
-        <div class="photo-user">
+        <div class="photo-user" class="btn-photo-edit">
             <img src="../../assets/img/user-picture.png" alt="photo-user" class="photo-user">
             <img src="../../assets/img/edit.png" alt="edit" class="overlay-edit-photo">
         </div>

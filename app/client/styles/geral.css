@@ -421,3 +421,19 @@ footer * {
     margin: 10px 0px;
 }
 
+.card-default-centerscreen {
+    width: 500px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(105, 5, 5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #000000;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  

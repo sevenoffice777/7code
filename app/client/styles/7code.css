@@ -121,3 +121,17 @@ span[name="saldo"]{
 .display_none {
     display: none;
   }
+
+.card-default-centerscreen h1{
+    margin-bottom: 20px;
+  }
+
+#uploadPhoto {
+    filter:invert(100%);
+    border-radius:50%;
+}
+
+#uploadPhoto:hover {
+    cursor:pointer;
+    box-shadow:0px 0px 10px 1px black
+}
