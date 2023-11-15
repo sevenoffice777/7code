@@ -129,9 +129,29 @@ span[name="saldo"]{
 #uploadPhoto {
     filter:invert(100%);
     border-radius:50%;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 #uploadPhoto:hover {
     cursor:pointer;
     box-shadow:0px 0px 10px 1px black
+}
+
+.right-card-default-centerscreen {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.right-card-default-centerscreen button {
+    border:1px solid rgb(105, 5, 5);
+    background:black ;
+    padding: 5px 20px;
+}
+
+.right-card-default-centerscreen button:hover {
+    background:rgb(105, 5, 5);
+    cursor:pointer;
 }

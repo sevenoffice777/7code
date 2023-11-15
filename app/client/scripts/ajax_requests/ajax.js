@@ -31,6 +31,7 @@ function successCallback(response, opt) {
     let btnSbmt = $('[btn-sbmt]');
 
     if(opt == 'signUserRequest') {
+        console.log(response)
         if (response.url) {          // Verifica se a resposta possui uma propriedade 'url'
             window.location.href = response.url;  // Redireciona para a URL fornecida na resposta
         } else {
@@ -45,6 +46,10 @@ function successCallback(response, opt) {
 
     if(opt == 'loadingUserData'){
         userDataShow(response)
+    }
+
+    if(opt == "uploadPhoto") {
+        window.location.reload()
     }
 }
 
