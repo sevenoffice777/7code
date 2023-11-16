@@ -1,6 +1,6 @@
 <?php 
 
-    function prepareAndExecute($conn, $querySQL, $params, $types) 
+    function prepareAndExecute($conn, $querySQL, $params, $types, $crud = null) 
     {
         if (!$conn) {
             return false;
@@ -10,9 +10,13 @@
         $stmt->bind_param($types, ...$params); // DIZEMOS QUAIS OS DADOS Q SERAO SUBSTITUIDOS
         $stmt->execute();
 
-        $resultado = $stmt->get_result()->fetch_assoc(); 
+        if($crud == null) {
+            $resultado = $stmt->get_result()->fetch_assoc(); 
+            return $resultado;
+        } 
+
         
-        return $resultado;
+        
 
          
     }

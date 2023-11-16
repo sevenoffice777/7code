@@ -49,7 +49,9 @@ function successCallback(response, opt) {
     }
 
     if(opt == "uploadPhoto") {
-        window.location.reload()
+        toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
+        document.querySelector('#uploadPhoto').src = '../../assets/img/edit.png';
+        document.querySelector('#uploadPhotoInput').value = null;
     }
 }
 

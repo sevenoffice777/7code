@@ -28,6 +28,7 @@ function userDataShow(dataUser) {
     setDataUser(dataUser, '[name=email]', 'userAccount', 'EMAIL');
     setDataUser(dataUser, '[name=accountNumber]', 'bankAccount', 'ACCOUNT_ID');
     setDataUser(dataUser, '[name=saldo]', 'bankAccount', 'SALDO');
+    
 }
 
 function setDataUser(dataUser, element, paramName, atrName) {

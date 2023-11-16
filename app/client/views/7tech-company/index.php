@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="user-data-card display_none">
-        <div class="photo-user" >
+        <div class="photo-user">
             <img src="../../assets/img/user-picture.png" alt="photo-user" class="photo-user">
             <img src="../../assets/img/edit.png" alt="edit" class="overlay-edit-photo" id="btn-photo-edit">
         </div>
@@ -86,33 +86,38 @@
 
     <script>
 
-        document.querySelector('#uploadPhoto').addEventListener('click', () => {
-            // Aciona o clique no input de arquivo
-            document.querySelector('#uploadPhotoInput').click();
-        });
+        // SEÇÃO DE UPLOAD DA FOTO DO USUARIO
+        {
+            document.querySelector('#uploadPhoto').addEventListener('click', () => {
+                // Aciona o clique no input de arquivo
+                document.querySelector('#uploadPhotoInput').click();
+            });
 
-        // Adiciona um ouvinte de evento ao input de arquivo para lidar com a seleção do arquivo
-        document.querySelector('#uploadPhotoInput').addEventListener('change', () => {
-            // Verifica se um arquivo foi selecionado
-            if (document.querySelector('#uploadPhotoInput').files[0]) {
-                // Atualiza a src da imagem para '../../assets/img/success.png'
-                document.querySelector('#uploadPhoto').src = '../../assets/img/success.png';
-            }
-        });
+            document.querySelector('#uploadPhotoInput').addEventListener('change', () => {
+                // Verifica se um arquivo foi selecionado
+                if (document.querySelector('#uploadPhotoInput').files[0]) {
+                    // Atualiza a src da imagem para '../../assets/img/success.png'
+                    document.querySelector('#uploadPhoto').src = '../../assets/img/success.png';
+                }
+            });
+        }
 
+        
         document.querySelector('.user-data-container').addEventListener("click", () => {
             if (document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
                 toggleClass(document.querySelector('.user-data-card'), 'display_none')
             }
         })
-        
-        document.querySelector('#btn-photo-edit').addEventListener('click', ()=>{
+
+        // CLICOU EM UM O OUTRO SOME, DADOS DO USUARIO, CARD DE ENVIAR A IMAGEM PRO BANCO DE DADOS
+        document.querySelector('#btn-photo-edit').addEventListener('click', () => {
             toggleClass(document.querySelector('.user-data-card'), 'display_none')
             toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
 
         })
 
-        //  O evento abaixo e focado pra clique fora de qualquer div, por exemplo, clicando fora do card ele desaparece;
+        //  O evento abaixo e focado pra clique fora de qualquer div, 
+        // por exemplo, clicando fora do card ele desaparece;
         document.querySelector('.container').addEventListener("click", () => {
             if (!document.querySelector('.user-data-card').classList.contains('display_none')) {
                 toggleClass(document.querySelector('.user-data-card'), 'display_none')
@@ -120,13 +125,14 @@
             if (!document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
                 toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
             }
-            
+
         })
 
 
 
 
     </script>
+    
     <script src="../../scripts/functions/functions.js"></script>
     <script src="../../scripts/ajax_requests/ajax.js"></script>
     <script src="../../scripts/ajax_requests/7code_request.js"></script>
