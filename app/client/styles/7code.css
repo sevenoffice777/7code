@@ -63,6 +63,7 @@
     position: relative;
     width: 80px;
     height: 80px;
+    border-radius: 50%;
 }
 
 .overlay-edit-photo{
@@ -128,9 +129,11 @@ span[name="saldo"]{
 
 #uploadPhoto {
     filter:invert(100%);
-    border-radius:50%;
     padding: 20px;
     border: 1px solid rgb(0, 0, 0);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 #uploadPhoto:hover {

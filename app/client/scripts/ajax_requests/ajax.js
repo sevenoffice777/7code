@@ -46,6 +46,7 @@ function successCallback(response, opt) {
 
     if(opt == 'loadingUserData'){
         userDataShow(response)
+        window.location.reload()
     }
 
     if(opt == "uploadPhoto") {

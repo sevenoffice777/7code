@@ -35,14 +35,14 @@
             <span>Faça upload da sua foto para 7Code</span>
         </div>
         <div class="right-card-default-centerscreen">
-            <img src="../../assets/img/edit.png" alt="imgUploadPhoto" class="photo-user" id="uploadPhoto">
+            <img src="../../assets/img/edit.png" alt="imgUploadPhoto"id="uploadPhoto">
             <input type="file" name="uploadPhotoInput" id="uploadPhotoInput" class="display_none"><br>
             <button id="btn-upload" upload-photo="../../../server/models/uploadPhoto.php">CADASTRAR</button>
         </div>
     </div>
     <div class="user-data-card display_none">
         <div class="photo-user">
-            <img src="../../assets/img/user-picture.png" alt="photo-user" class="photo-user">
+            <img src="" alt="photo-user" class="photo-user">
             <img src="../../assets/img/edit.png" alt="edit" class="overlay-edit-photo" id="btn-photo-edit">
         </div>
         <div class="user-data-info">
@@ -70,7 +70,7 @@
         <div class="user-picture">
             <div class="user-data-container">
                 <span name="username"></span>
-                <img src="../../assets/img/user-picture.png" name="user-picture" alt="user-pictuer">
+                <img src="" name="user-picture" alt="user-pictuer" class="photo-user">
             </div>
             <ion-icon name="log-out-outline" logout="../../../server/models/logout.php" btn-logout
                 class="logout-icon"></ion-icon>

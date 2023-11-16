@@ -23,18 +23,32 @@ function toggleClass(element, classVerify, classAddOrRemove=null) {
 //  As funções userDataShow e setDataUser, servem para inserir os dados do cliente no FRONT END
 
 function userDataShow(dataUser) {
-    document.title = `7Code Hub | ${dataUser.userAccount.NOME}`
-    setDataUser(dataUser, '[name=username]', 'userAccount', 'NOME');
-    setDataUser(dataUser, '[name=email]', 'userAccount', 'EMAIL');
-    setDataUser(dataUser, '[name=accountNumber]', 'bankAccount', 'ACCOUNT_ID');
-    setDataUser(dataUser, '[name=saldo]', 'bankAccount', 'SALDO');
+    let nome = dataUser.userAccount.NOME.toUpperCase();
+    
+    document.title = `7Code Hub | ${nome}`
+    setDataUser(dataUser, '[name=username]', 'userAccount', 'NOME','txt');
+    setDataUser(dataUser, '[name=email]', 'userAccount', 'EMAIL','txt');
+    setDataUser(dataUser, '[name=accountNumber]', 'bankAccount', 'ACCOUNT_ID','txt');
+    setDataUser(dataUser, '[name=saldo]', 'bankAccount', 'SALDO','txt');
+    setDataUser(dataUser, '.photo-user', 'caminhoPhoto', 'CAMINHO','img')
+    
     
 }
 
-function setDataUser(dataUser, element, paramName, atrName) {
+function setDataUser(dataUser, element, paramName, atrName = null, typeContent) {
     let userdataSpan = document.querySelectorAll(element);
-
+    
     userdataSpan.forEach(element => {
-        element.textContent += `${dataUser[paramName][atrName]}`
+        if(typeContent == 'txt') {
+            if(atrName == 'NOME') {
+                element.textContent += `${dataUser.userAccount.NOME.toUpperCase()}`
+            } else {
+
+                element.textContent += `${dataUser[paramName][atrName]}`
+            }
+        }
+        if(typeContent == 'img') {
+            element.src = `../../uploads/${dataUser[paramName]}`
+        }
     });
 }
