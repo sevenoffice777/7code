@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .user-picture img {
@@ -59,29 +59,27 @@
     justify-content: center;
     flex-direction: column;
 }
-.photo-user {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
 
 .overlay-edit-photo{
     position: absolute;
     display: none;
     top: 50%;
-    left: 50%;
+    left: 52%;
     transform:translate(-50%,-50%);
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
+}
+.photo-user {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
     border-radius: 50%;
-    filter: invert(100%);
 }
 
 .photo-user:hover .overlay-edit-photo{
     display: block;
     cursor:pointer;
-    background-color: rgba(235, 235, 235, 0.849);
 }
 .logout {
     width: 60%;
@@ -113,8 +111,8 @@
     margin:10px 0px;
 }
 
-span[name="saldo"]{
-    font-size: 20pt;
+span[txtValue="saldo"]{
+    font-size: 16pt;
     color: whuite;
     font-weight: bolder;
 }
@@ -128,8 +126,6 @@ span[name="saldo"]{
   }
 
 #uploadPhoto {
-    filter:invert(100%);
-    padding: 20px;
     border: 1px solid rgb(0, 0, 0);
     width: 80px;
     height: 80px;

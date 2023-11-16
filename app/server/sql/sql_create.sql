@@ -71,3 +71,5 @@ DELIMITER ;
 
 SELECT * FROM USER;
 SELECT * FROM bankaccount;
+
+select * from userPhoto

@@ -25,11 +25,11 @@ function toggleClass(element, classVerify, classAddOrRemove=null) {
 function userDataShow(dataUser) {
     let nome = dataUser.userAccount.NOME.toUpperCase();
     
-    document.title = `7Code Hub | ${nome}`
-    setDataUser(dataUser, '[name=username]', 'userAccount', 'NOME','txt');
-    setDataUser(dataUser, '[name=email]', 'userAccount', 'EMAIL','txt');
-    setDataUser(dataUser, '[name=accountNumber]', 'bankAccount', 'ACCOUNT_ID','txt');
-    setDataUser(dataUser, '[name=saldo]', 'bankAccount', 'SALDO','txt');
+    document.title = `7Code Hub - ${nome}`
+    setDataUser(dataUser, '[txtValue=username]', 'userAccount', 'NOME','txt');
+    setDataUser(dataUser, '[txtValue=email]', 'userAccount', 'EMAIL','txt');
+    setDataUser(dataUser, '[txtValue=accountNumber]', 'bankAccount', 'ACCOUNT_ID','txt');
+    setDataUser(dataUser, '[txtValue=saldo]', 'bankAccount', 'SALDO','txt');
     setDataUser(dataUser, '.photo-user', 'caminhoPhoto', 'CAMINHO','img')
     
     

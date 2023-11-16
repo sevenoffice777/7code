@@ -46,10 +46,12 @@ function successCallback(response, opt) {
 
     if(opt == 'loadingUserData'){
         userDataShow(response)
-        window.location.reload()
     }
 
     if(opt == "uploadPhoto") {
+        
+        window.location.reload(true);
+
         toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
         document.querySelector('#uploadPhoto').src = '../../assets/img/edit.png';
         document.querySelector('#uploadPhotoInput').value = null;

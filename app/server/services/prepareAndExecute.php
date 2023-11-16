@@ -13,12 +13,7 @@
         if($crud == null) {
             $resultado = $stmt->get_result()->fetch_assoc(); 
             return $resultado;
-        } 
-
-        
-        
-
-         
+        }
     }
 
 ?>

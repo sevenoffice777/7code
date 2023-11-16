@@ -26,34 +26,38 @@ if (!file_exists($caminhoParaCadaUsuario)) {
 
 // Verifica quantos arquivos "profile" existem na pasta do usuário
 $arquivosProfile = glob($caminhoParaCadaUsuario . '/profile.*');
-$numArquivosProfile = count($arquivosProfile);
+$numArquivosProfile = count($arquivosProfile); // valor inteiro
 
+if ($numArquivosProfile > 0) {
+    // Exclui o arquivo existente
+    unlink($arquivosProfile[0]);
 
-if ($numArquivosProfile < 1) {
-    // Obtém a extensão do arquivo original
-    $extensao = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-
-    // Novo nome do arquivo
-    $novoNomeDoArquivo = 'profile.' . $extensao;
-
-    $caminhoCompletoDestino = $caminhoParaCadaUsuario . '/' . $novoNomeDoArquivo;
-    $caminhoDestinoParaSQL = $cpfUsuario . '/' . $novoNomeDoArquivo;
-
-    // Move o arquivo para o diretório de destino
-    if (move_uploaded_file($nomeTemporario, $caminhoCompletoDestino)) {
-        prepareAndExecute(
-            $conn,
-            'INSERT INTO USERPHOTO(CAMINHO, CPF) VALUES(?,?)',
-            array($caminhoDestinoParaSQL, intval($cpfUsuario)),
-            "si",
-            "opt-insert"
-        );
-        $jsonData = ["msg" => "Sucesso"];
-    } else {
-        $jsonData = ["msg" => "Erro"];
-    }
+    // Atualiza o caminho na tabela USERPHOTO
+    $novoCaminhoDestinoParaSQL = $cpfUsuario . '/' . 'profile.' . pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+    prepareAndExecute(
+        $conn,
+        'UPDATE USERPHOTO SET CAMINHO = ? WHERE CPF = ?',
+        array($novoCaminhoDestinoParaSQL, intval($cpfUsuario)),
+        "si",
+        "opt-update"
+    );
 } else {
-    $jsonData = ["msg" => "Você já tem um arquivo 'profile' na pasta."];
+    $novoCaminhoDestinoParaSQL = $cpfUsuario . '/' . 'profile.' . pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+}
+
+// Move o arquivo para o diretório de destino
+$caminhoCompletoDestino = $caminhoParaCadaUsuario . '/' . 'profile.' . pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+if (move_uploaded_file($nomeTemporario, $caminhoCompletoDestino)) {
+    prepareAndExecute(
+        $conn,
+        'INSERT INTO USERPHOTO(CAMINHO, CPF) VALUES(?,?)',
+        array($novoCaminhoDestinoParaSQL, intval($cpfUsuario)),
+        "si",
+        "opt-insert"
+    );
+    $jsonData = ["msg" => "Sucesso"];
+} else {
+    $jsonData = ["msg" => "Erro"];
 }
 
 echo json_encode($jsonData);

@@ -35,7 +35,7 @@
             <span>Faça upload da sua foto para 7Code</span>
         </div>
         <div class="right-card-default-centerscreen">
-            <img src="../../assets/img/edit.png" alt="imgUploadPhoto"id="uploadPhoto">
+            <img src="../../assets/img/edit.png" alt="imgUploadPhoto" id="uploadPhoto">
             <input type="file" name="uploadPhotoInput" id="uploadPhotoInput" class="display_none"><br>
             <button id="btn-upload" upload-photo="../../../server/models/uploadPhoto.php">CADASTRAR</button>
         </div>
@@ -48,18 +48,18 @@
         <div class="user-data-info">
             <div class="data-user-campo">
                 <span class="realce-span">Nº Conta: </span>
-                <span name="accountNumber"> </span>
+                <span txtValue="accountNumber"> </span>
             </div>
             <div class="data-user-campo">
                 <span class="realce-span">Nome de Usuario: </span>
-                <span name="username"> </span>
+                <span txtValue="username"> </span>
             </div>
             <div class="data-user-campo">
                 <span class="realce-span">Email: </span>
-                <span name="email"> </span>
+                <span txtValue="email"> </span>
             </div>
         </div>
-        <span name="saldo">R$ </span>
+        <span txtValue="saldo">R$ </span>
         <button logout="../../../server/models/logout.php" btn-logout class="logout btn-logout">Log out <ion-icon
                 name="log-out-outline"></ion-icon></button>
     </div>
@@ -68,8 +68,9 @@
             <img src="../../assets/img/logo_crud.png" alt="Logo">
         </div>
         <div class="user-picture">
+            <span txtValue="saldo">Saldo : R$ </span>
             <div class="user-data-container">
-                <span name="username"></span>
+                <span txtValue="username"></span>
                 <img src="" name="user-picture" alt="user-pictuer" class="photo-user">
             </div>
             <ion-icon name="log-out-outline" logout="../../../server/models/logout.php" btn-logout
@@ -94,15 +95,30 @@
             });
 
             document.querySelector('#uploadPhotoInput').addEventListener('change', () => {
-                // Verifica se um arquivo foi selecionado
+                const previewImage = document.querySelector('#uploadPhoto');
+
                 if (document.querySelector('#uploadPhotoInput').files[0]) {
-                    // Atualiza a src da imagem para '../../assets/img/success.png'
-                    document.querySelector('#uploadPhoto').src = '../../assets/img/success.png';
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        previewImage.src = e.target.result;
+                    }
+
+
+                    reader.readAsDataURL(document.querySelector('#uploadPhotoInput').files[0]);
                 }
+
+
+
+                // Verifica se um arquivo foi selecionado
+                // if (document.querySelector('#uploadPhotoInput').files[0]) {
+                //     // Atualiza a src da imagem para '../../assets/img/success.png'
+                //     document.querySelector('#uploadPhoto').src = document.querySelector('#uploadPhotoInput').files[0].tmp_name;
+                // }
             });
         }
 
-        
+
         document.querySelector('.user-data-container').addEventListener("click", () => {
             if (document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
                 toggleClass(document.querySelector('.user-data-card'), 'display_none')
@@ -132,7 +148,7 @@
 
 
     </script>
-    
+
     <script src="../../scripts/functions/functions.js"></script>
     <script src="../../scripts/ajax_requests/ajax.js"></script>
     <script src="../../scripts/ajax_requests/7code_request.js"></script>
