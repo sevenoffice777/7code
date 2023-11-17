@@ -119,9 +119,14 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
   if($erro == false) {
     $senha_hash = password_hash($data['password'], PASSWORD_DEFAULT);
     $resInsert = prepareAndExecute($conn, 'CALL INSERT_USER(?,?,?,?,?)',  array(intval($data['CPF']), $data['name'], $data['email'], $data['dt_nasc'], $senha_hash) , 'issss', 'opt-insert');
-    
-    $jsonData = ["msg_erro" => $resInsert];
-  }
+    if ($resInsert) {
+          $jsonData = ["url" => "../views/successLog.php?statusSignup=sucesso"];
+        }
+    }
+    else 
+    {
+       $jsonData = ["msg_erro" => $msg];
+    }
   
   // if (!$erro) {
   //   //todos os dados que vieram com o methodo post;
