@@ -27,6 +27,7 @@ if (!file_exists($caminhoParaCadaUsuario)) {
 // Verifica quantos arquivos "profile" existem na pasta do usuário
 $arquivosProfile = glob($caminhoParaCadaUsuario . '/profile.*');
 $numArquivosProfile = count($arquivosProfile); // valor inteiro
+$srcExists = false;
 
 if ($numArquivosProfile > 0) {
     // Exclui o arquivo existente
@@ -37,10 +38,12 @@ if ($numArquivosProfile > 0) {
     prepareAndExecute(
         $conn,
         'UPDATE USERPHOTO SET CAMINHO = ? WHERE CPF = ?',
-        array($novoCaminhoDestinoParaSQL, intval($cpfUsuario)),
-        "si",
+        array($novoCaminhoDestinoParaSQL, $cpfUsuario),
+        "ss",
         "opt-update"
     );
+    $srcExists = true;
+    
 } else {
     $novoCaminhoDestinoParaSQL = $cpfUsuario . '/' . 'profile.' . pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
 }
@@ -48,13 +51,15 @@ if ($numArquivosProfile > 0) {
 // Move o arquivo para o diretório de destino
 $caminhoCompletoDestino = $caminhoParaCadaUsuario . '/' . 'profile.' . pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
 if (move_uploaded_file($nomeTemporario, $caminhoCompletoDestino)) {
-    prepareAndExecute(
-        $conn,
-        'INSERT INTO USERPHOTO(CAMINHO, CPF) VALUES(?,?)',
-        array($novoCaminhoDestinoParaSQL, intval($cpfUsuario)),
-        "si",
-        "opt-insert"
-    );
+    if($srcExists == false) {
+        prepareAndExecute(
+            $conn,
+            'INSERT INTO USERPHOTO(CAMINHO, CPF) VALUES(?,?)',
+            array($novoCaminhoDestinoParaSQL, $cpfUsuario),
+            "ss",
+            "opt-insert"
+        );
+    }
     $jsonData = ["msg" => "Sucesso"];
 } else {
     $jsonData = ["msg" => "Erro"];
