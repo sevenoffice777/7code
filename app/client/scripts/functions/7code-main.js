@@ -23,11 +23,22 @@
 }
 
 
-document.querySelector('.user-data-container').addEventListener("click", () => {
-    if (document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
-        toggleClass(document.querySelector('.user-data-card'), 'display_none')
-    }
+document.querySelectorAll('.user-data-container').forEach((element) => {
+    element.addEventListener("click", () => {
+        let header_responsive = document.querySelector('.header-responsive-7code');
+        if (header_responsive.classList.contains('h-r-pstv-pos')) {
+            toggleClass(document.querySelector('.header-responsive-7code'), 'h-r-pstv-pos', 'h-r-ngtv-pos');
+            if (document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
+                toggleClass(document.querySelector('.user-data-card'), 'display_none')
+            }
+        } else if (document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
+            toggleClass(document.querySelector('.user-data-card'), 'display_none')
+        }
+    })
 })
+
+
+
 
 // CLICOU EM UM O OUTRO SOME, DADOS DO USUARIO, CARD DE ENVIAR A IMAGEM PRO BANCO DE DADOS
 document.querySelector('#btn-photo-edit').addEventListener('click', () => {

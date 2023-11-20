@@ -12,10 +12,8 @@
     <!-- css -->
     <link rel="stylesheet" href="../../styles/geral.css">
     <!-- response -->
-    <link rel="stylesheet" media="screen and (max-width: 950px)"
-        href="../../styles/responsive/styles-responsive-tablets.css">
-    <link rel="stylesheet" media="screen and (max-width: 550px)"
-        href="../../styles/responsive/styles-responsive-smartphones.css">
+    <link rel="stylesheet" media="screen and (max-width: 950px)" href="../../styles/responsive/styles-responsive.css">
+
     <link rel="stylesheet" href="../../styles/7code.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="../../assets/img/logo_crud.png" type="image/x-icon">
@@ -69,20 +67,40 @@
     </div>
 
 
+    <!-- RESPONSIVE HEADER -->
+
+    <div class="header-responsive-7code h-r-ngtv-pos">
+        <div class="nav-responsive-7code">
+            <div class="user-data-container">
+                <img src="" name="user-picture" alt="user-pictuer" class="photo-user">
+                <span txtValue="username"></span>
+            </div>
+            <span txtValue="saldo">R$ </span>
+            <button logout="../../../server/models/logout.php" btn-logout class="logout btn-logout">Log out <ion-icon
+                    name="log-out-outline"></ion-icon></button>
+        </div>
+    </div>
+
+
+    <!-- "BODY" -->
+
     <header>
         <div class="logo">
             <img src="../../assets/img/logo_crud.png" alt="Logo">
         </div>
 
-        <div class="user-picture">
-            <span txtValue="saldo">Saldo : R$ </span>
-            <div class="user-data-container">
-                <span txtValue="username"></span>
-                <img src="" name="user-picture" alt="user-pictuer" class="photo-user">
+        <nav>
+            <div class="user-picture">
+                <span txtValue="saldo">Saldo : R$ </span>
+                <div class="user-data-container">
+                    <span txtValue="username"></span>
+                    <img src="" name="user-picture" alt="user-pictuer" class="photo-user">
+                </div>
+                <ion-icon name="log-out-outline" logout="../../../server/models/logout.php" btn-logout
+                    class="logout-icon"></ion-icon>
             </div>
-            <ion-icon name="log-out-outline" logout="../../../server/models/logout.php" btn-logout
-                class="logout-icon"></ion-icon>
-        </div>
+        </nav>
+        <ion-icon name="menu-outline" class="element-none"></ion-icon>
 
     </header>
 
@@ -92,7 +110,19 @@
     </div>
 
 
+    <script>
+        document.querySelector('.element-none').addEventListener("click", () => {
+            toggleClass(document.querySelector('.header-responsive-7code'), 'h-r-ngtv-pos', 'h-r-pstv-pos');
+            if (!document.querySelector('.card-default-centerscreen').classList.contains('display_none') && document.querySelector('.user-data-card').classList.contains('display_none')) {
+                toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
 
+            }
+            if (document.querySelector('.card-default-centerscreen').classList.contains('display_none') && !document.querySelector('.user-data-card').classList.contains('display_none')) {
+                toggleClass(document.querySelector('.user-data-card'), 'display_none')
+
+            }
+        });
+    </script>
 
     <!-- Scripts -->
     <script src="../../scripts/functions/7code-main.js"></script>

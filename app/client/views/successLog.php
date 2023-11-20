@@ -8,6 +8,8 @@
   <title> 7Code Hub - Carregando</title>
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="../styles/geral.css">
+  <link rel="stylesheet" media="screen and (max-width: 1000px)"
+    href="../styles/responsive/styles-responsive.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
     </script>
@@ -18,13 +20,13 @@
     <div class="full_black_background">
       <div class="contain_log  load_msg">
         <div class="log">
-          <h1>Aguarde enquanto conectamos ao banco de dados...</h1>
+          <h1>Verificando . . .</h1>
           <img src="../assets/img/load.gif" alt="load">
         </div>
       </div>
       <div class="contain_log display_none success_msg">
         <div class="log">
-          <h1>Conexão realizada com Sucesso!</h1>
+          <h1>SUCESSO!</h1>
           <a href="#" id='login_btn'>Entrar</a>
         </div>
       </div>

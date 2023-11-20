@@ -1,18 +1,17 @@
-
+/* Estilos comuns para smartphones e tablets */
 
 .firstScreen {
-    background-image: url(../assets/img/background_container.png);
+    background-image: url(../../assets/img/background_container.png);
 }
 
 .secondScreen {
-    background-image: url(../assets/img/red_login.png);
+    background-image: url(../../assets/img/red_login.png);
 }
 
 .thirdScreen {
     padding: 5% 0% 0% 0%;
-    background-image: url(../assets/img/red_signup.png);
+    background-image: url(../../assets/img/red_signup.png);
 }
-
 
 /* Nav Responsivo */
 
@@ -24,41 +23,35 @@ nav {
     display: block;
 }
 
-/*  Container */
+/* Container */
 
 .firstScreen .start_website {
     flex-direction: column-reverse;
-    
 }
 
-.secondScreen .start_website , .thirdScreen .start_website{
+.secondScreen .start_website,
+.thirdScreen .start_website {
     flex-direction: column;
-    
 }
 
-/* FirstScreen */
-
-.container
- {
+.container {
     padding: 100px 0px;
 }
- .left,  .right {
+
+.left,
+.right {
     width: 100%;
     height: 50%;
 }
 
 .start_website {
-    padding: 0;
     height: 100%;
+    padding: 0;
 }
 
-header {
-    padding: 10px 40px;
-}
-
- #data_img {
-    width: 250px;
-    height: 250px;
+#data_img {
+    width: 350px;
+    height: 350px;
 }
 
 .text {
@@ -81,6 +74,7 @@ header {
     width: 70%;
 }
 
+
 footer .columns {
     flex-direction: column;
 }
@@ -97,7 +91,20 @@ footer ul {
     flex-direction: column;
 }
 
-.text p {
+#data_img {
+    width: 250px;
+    height: 250px;
+}
+
+text p {
     width: 70%;
     text-align: center;
+}
+
+.full_black_background a {
+    width: 200px;
+}
+
+.card-default-centerscreen {
+    width: 350px;
 }

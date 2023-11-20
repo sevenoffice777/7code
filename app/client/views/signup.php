@@ -21,9 +21,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../styles/geral.css" />
   <link rel="stylesheet" media="screen and (max-width: 1000px)"
-    href="../styles/responsive/styles-responsive-tablets.css">
-  <link rel="stylesheet" media="screen and (max-width: 550px)"
-    href="../styles/responsive/styles-responsive-smartphones.css">
+    href="../styles/responsive/styles-responsive.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>

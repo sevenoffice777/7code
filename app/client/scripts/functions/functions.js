@@ -8,12 +8,12 @@ function irPara(endereco) {
 function toggleClass(element, classVerify, classAddOrRemove=null) {
     if (element.classList.contains(classVerify)) {
         element.classList.remove(classVerify);
-        if(!classAddOrRemove) {
+        if(classAddOrRemove) {
             element.classList.add(classAddOrRemove);
         }
     } else {
         element.classList.add(classVerify);
-        if(!classAddOrRemove) {
+        if(classAddOrRemove) {
             element.classList.remove(classAddOrRemove);
         }
         
