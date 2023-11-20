@@ -29,6 +29,8 @@
 </head>
 
 <body>
+
+    <!-- Card Upload -->
     <div class="card-default-centerscreen display_none">
         <div class="left-card-default-centerscreen">
             <h1>Meu Perfil</h1>
@@ -40,6 +42,8 @@
             <button id="btn-upload" upload-photo="../../../server/models/uploadPhoto.php">CADASTRAR</button>
         </div>
     </div>
+
+    <!-- Card Upload -->
     <div class="user-data-card display_none">
         <div class="photo-user">
             <img src="" alt="photo-user" class="photo-user">
@@ -63,10 +67,13 @@
         <button logout="../../../server/models/logout.php" btn-logout class="logout btn-logout">Log out <ion-icon
                 name="log-out-outline"></ion-icon></button>
     </div>
+
+
     <header>
         <div class="logo">
             <img src="../../assets/img/logo_crud.png" alt="Logo">
         </div>
+
         <div class="user-picture">
             <span txtValue="saldo">Saldo : R$ </span>
             <div class="user-data-container">
@@ -76,79 +83,19 @@
             <ion-icon name="log-out-outline" logout="../../../server/models/logout.php" btn-logout
                 class="logout-icon"></ion-icon>
         </div>
+
     </header>
-    <div class="container">
-        <div class="container user-area-screen">
-            <div class="start_website">
-            </div>
+
+    <div class="container user-screen">
+        <div class="start_website">
         </div>
     </div>
 
 
-    <script>
-
-        // SEÇÃO DE UPLOAD DA FOTO DO USUARIO
-        {
-            document.querySelector('#uploadPhoto').addEventListener('click', () => {
-                // Aciona o clique no input de arquivo
-                document.querySelector('#uploadPhotoInput').click();
-            });
-
-            document.querySelector('#uploadPhotoInput').addEventListener('change', () => {
-                const previewImage = document.querySelector('#uploadPhoto');
-
-                if (document.querySelector('#uploadPhotoInput').files[0]) {
-                    const reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        previewImage.src = e.target.result;
-                    }
 
 
-                    reader.readAsDataURL(document.querySelector('#uploadPhotoInput').files[0]);
-                }
-
-
-
-                // Verifica se um arquivo foi selecionado
-                // if (document.querySelector('#uploadPhotoInput').files[0]) {
-                //     // Atualiza a src da imagem para '../../assets/img/success.png'
-                //     document.querySelector('#uploadPhoto').src = document.querySelector('#uploadPhotoInput').files[0].tmp_name;
-                // }
-            });
-        }
-
-
-        document.querySelector('.user-data-container').addEventListener("click", () => {
-            if (document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
-                toggleClass(document.querySelector('.user-data-card'), 'display_none')
-            }
-        })
-
-        // CLICOU EM UM O OUTRO SOME, DADOS DO USUARIO, CARD DE ENVIAR A IMAGEM PRO BANCO DE DADOS
-        document.querySelector('#btn-photo-edit').addEventListener('click', () => {
-            toggleClass(document.querySelector('.user-data-card'), 'display_none')
-            toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
-
-        })
-
-        //  O evento abaixo e focado pra clique fora de qualquer div, 
-        // por exemplo, clicando fora do card ele desaparece;
-        document.querySelector('.container').addEventListener("click", () => {
-            if (!document.querySelector('.user-data-card').classList.contains('display_none')) {
-                toggleClass(document.querySelector('.user-data-card'), 'display_none')
-            }
-            if (!document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
-                toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
-            }
-
-        })
-
-
-
-
-    </script>
-
+    <!-- Scripts -->
+    <script src="../../scripts/functions/7code-main.js"></script>
     <script src="../../scripts/functions/functions.js"></script>
     <script src="../../scripts/ajax_requests/ajax.js"></script>
     <script src="../../scripts/ajax_requests/7code_request.js"></script>

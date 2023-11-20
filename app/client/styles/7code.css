@@ -1,7 +1,24 @@
-.user-area-screen {
-    background-image: url(../assets/img/background_container.png);
+.user-screen {
+    background-image:url(../assets/img/background_container.png);
 }
 
+.card-default-centerscreen {
+    width: 500px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(105, 5, 5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #000000;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+  
 .user-picture {
     display: flex;
     align-items: center;
@@ -66,8 +83,8 @@
     top: 50%;
     left: 52%;
     transform:translate(-50%,-50%);
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
 }
 .photo-user {
     position: relative;

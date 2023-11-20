@@ -11,7 +11,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>  7Code Hub - Inicio</title>
+  <title> 7Code Hub - Inicio</title>
 
   <!-- scripts -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -20,8 +20,10 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   <link rel="shortcut icon" href="../assets/img/logo_crud.png" type="image/x-icon">
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../styles/geral.css" />
-  <link rel="stylesheet" media="screen and (max-width: 1000px)" href="../styles/responsive/styles-responsive-tablets.css">
-  <link rel="stylesheet" media="screen and (max-width: 550px)" href="../styles/responsive/styles-responsive-smartphones.css">
+  <link rel="stylesheet" media="screen and (max-width: 1000px)"
+    href="../styles/responsive/styles-responsive-tablets.css">
+  <link rel="stylesheet" media="screen and (max-width: 550px)"
+    href="../styles/responsive/styles-responsive-smartphones.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -80,7 +82,7 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
               <label for="password">Senha</label>
               <div class="password-container">
                 <input type="password" name="password" class="password-input" placeholder="Senha">
-              <ion-icon name="eye-outline" class="hover-password"></ion-icon>
+                <ion-icon name="eye-outline" class="hover-password"></ion-icon>
               </div>
 
               <button btn-sbmt name="signup_sbmt" id="btn_signup">Cadastrar</button>
@@ -98,32 +100,40 @@ $_SESSION['tokenUser'] = bin2hex(random_bytes(32));
   </div>
 
 
-  
-    <footer>
-        <div class="columns">
-            <div class="column">
-                <div class="logo">
-                    <img src="../assets/img/logo_crud.png" alt="logo">
-                </div>
-                <span> 7Code Hub - Company</span>
-            </div>
-            <div class="column">
-                <ul>
-                    <li><h2>Redes Sociais</h2></li>
-                    <li><a href="https://br.linkedin.com/in/samuel-seven-88565a242" target="_blank">Linkedin</a></li>
-                    <li><a href="https://www.instagram.com/samuel_seven777/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/SevenOfice777" target="_blank">Github</a></li>
-                </ul>
-            </div>
-            <div class="column">
-                <h2>Contato</h2>
-                <span>Email : sevenofice777@gmail.com </span>
-                <span>Telefone : +5514997814551</span>
-            </div>
+
+  <footer>
+    <div class="columns">
+      <div class="column">
+        <div class="logo">
+          <img src="../assets/img/logo_crud.png" alt="logo">
         </div>
-    </footer>
+        <span> 7Code Hub - Company</span>
+      </div>
+      <div class="column">
+        <ul>
+          <li>
+            <h2>Redes Sociais</h2>
+          </li>
+          <li><a href="https://br.linkedin.com/in/samuel-seven-88565a242" target="_blank">Linkedin</a></li>
+          <li><a href="https://www.instagram.com/samuel_seven777/" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/SevenOfice777" target="_blank">Github</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Contato</h2>
+        <span>Email : sevenofice777@gmail.com </span>
+        <span>Telefone : +5514997814551</span>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.querySelector('.element-none').addEventListener("click", () => {
+      toggleClass(document.querySelector('.header-responsive'), 'h-r-ngtv-pos', 'h-r-pstv-pos');
+    });
+  </script>
   <script src="../scripts/functions/functions.js"></script>
-  <script src="../scripts/functions/callbacks.js"></script>
+   
   <script src="../scripts/ajax_requests/signuser_request.js"></script>
   <script src="../scripts/ajax_requests/ajax.js"></script>
 </body>

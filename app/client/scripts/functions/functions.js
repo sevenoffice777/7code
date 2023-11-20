@@ -52,3 +52,15 @@ function setDataUser(dataUser, element, paramName, atrName = null, typeContent) 
         }
     });
 }
+
+document.querySelectorAll(".hover-password").forEach((element) => {
+    element.addEventListener("click", () => {
+        if (element.name == "eye-outline") {
+            element.name = "eye-off-outline";
+            document.querySelector(".password-input").type="text"
+        } else {
+            element.name = "eye-outline";
+            document.querySelector(".password-input").type="password"
+        }
+    });
+});
