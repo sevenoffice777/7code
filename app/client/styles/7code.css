@@ -5,6 +5,7 @@
 .card-default-centerscreen {
     width: 500px;
     height: 300px;
+    z-index: 999;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -60,6 +61,7 @@
 /* menu-dataUser */
 
 .user-data-card {
+    z-index: 999;
     position: fixed;
     top: 100px;
     right: 5%;
@@ -218,12 +220,14 @@ span[txtValue="saldo"]{
     font-weight: bolder;
 }
 
+
 .text * {
     text-align: center;
 }
 
 
-.optBank ion-icon {
+#optBank-icon {
+    z-index: 999;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -237,9 +241,45 @@ span[txtValue="saldo"]{
 
 }
 
-.optBank ion-icon:hover {
+#optBank-icon:hover {
     cursor: pointer;
     background-color: rgb(150, 10, 10);
     
 }
+
+.optBank-container {
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 50px;
+}
+
+.optBank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    transition: 0.5s;
+    height: 200px;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid rgb(148, 8, 8);
+}
+
+.optBank img {
+    filter: invert(100%);
+    width: 100px;
+    height: 100px;
+}
+
+.optBank:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgb(105, 5, 5);
+}
+
+
 

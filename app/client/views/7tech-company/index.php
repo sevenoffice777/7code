@@ -104,26 +104,29 @@
     </header>
 
     <div class="container user-screen">
-        <div class="optBank">
-            <ion-icon name="add-outline"></ion-icon>
-        </div>
+        
+            <ion-icon name="add-outline" id="optBank-icon"></ion-icon>
+        
         <div class="start_website">
-            <div class="left">
+            
                 <div class="text">
                     <h1>Olá, <span txtValue="username"></span></h1>
                 </div>
-                <div class="optBank">
-                    <img src="../../assets/img/deposit.png" alt="deposit-img">
-                </div>
-                <div class="optBank">
-
-                </div>
-                <div class="optBank">
-
-                </div>
-                <div class="optBank">
-
-                </div>
+                <div class="optBank-container">
+                    <div class="optBank">
+                        <img src="../../assets/img/deposit.png" alt="deposit-img">
+                    </div>
+                    <div class="optBank">
+                        <img src="../../assets/img/emprestimo.png" alt="">
+                    </div>
+                    <div class="optBank">
+                        <img src="../../assets/img/extrato.png" alt="">
+                    
+                    </div>
+                    <div class="optBank">
+                        <img src="../../assets/img/card.png" alt="">
+                    </div>
+                
             </div>
             
 
@@ -156,3 +159,5 @@
 </body>
 
 </html>
+
+

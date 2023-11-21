@@ -39,13 +39,19 @@ nav {
 }
 
 .left,
-.right {
+.right
+{
     width: 100%;
     height: 50%;
 }
 
+.center {
+    padding-top: 10%;
+}
+
 .start_website {
     height: 100%;
+    flex-direction: column;
     padding: 0;
 }
 
@@ -107,4 +113,9 @@ text p {
 
 .card-default-centerscreen {
     width: 350px;
+}
+
+.user-data-card {
+    width: 100vh;
+    height: 100vw;
 }
