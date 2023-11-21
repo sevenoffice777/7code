@@ -172,6 +172,7 @@ header nav a:hover, .header-responsive a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .right {
@@ -198,6 +199,11 @@ header nav a:hover, .header-responsive a:hover {
     margin: 30px 20px 0px 0px ;
     font-size: 16pt;
     padding: 10px 20px;
+}
+
+.text p {
+    font-size: 15pt;
+    font-weight: normal;
 }
 
 .text a:nth-child(1) {

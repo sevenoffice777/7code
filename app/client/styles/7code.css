@@ -217,3 +217,29 @@ span[txtValue="saldo"]{
     font-size: 20pt;
     font-weight: bolder;
 }
+
+.text * {
+    text-align: center;
+}
+
+
+.optBank ion-icon {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(185, 0, 0);
+    font-size: 16pt;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+
+}
+
+.optBank ion-icon:hover {
+    cursor: pointer;
+    background-color: rgb(150, 10, 10);
+    
+}
+

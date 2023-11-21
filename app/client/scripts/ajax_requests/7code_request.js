@@ -22,18 +22,18 @@ document.querySelectorAll('[btn-logout]').forEach((e) => {
     })
 })
 
-document.querySelector('#btn-upload').onclick = () => {
-    let formData = new FormData();
+// document.querySelector('#btn-upload').onclick = () => {
+//     let formData = new FormData();
     
-    formData.append('file', document.querySelector('#uploadPhotoInput').files[0]);
+//     formData.append('file', document.querySelector('#uploadPhotoInput').files[0]);
     
-    // console.log(formData.get('file').name);
+//     // console.log(formData.get('file').name);
 
-    ajaxRequest(
-        document.querySelector('#btn-upload').getAttribute('upload-photo'),
-        "POST",
-        "JSON",
-        formData,
-        "uploadPhoto"
-    )
-}
+//     ajaxRequest(
+//         document.querySelector('#btn-upload').getAttribute('upload-photo'),
+//         "POST",
+//         "JSON",
+//         formData,
+//         "uploadPhoto"
+//     )
+// }

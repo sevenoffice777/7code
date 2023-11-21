@@ -19,6 +19,22 @@
 
             reader.readAsDataURL(document.querySelector('#uploadPhotoInput').files[0]);
         }
+
+
+        let formData = new FormData();
+
+        formData.append('file', document.querySelector('#uploadPhotoInput').files[0]);
+
+        // console.log(formData.get('file').name);
+
+        ajaxRequest(
+            document.querySelector('#uploadPhotoInput').getAttribute('upload-photo'),
+            "POST",
+            "JSON",
+            formData,
+            "uploadPhoto"
+        )
+
     });
 }
 

@@ -32,12 +32,12 @@
     <div class="card-default-centerscreen display_none">
         <div class="left-card-default-centerscreen">
             <h1>Meu Perfil</h1>
-            <span>Faça upload da sua foto para 7Code</span>
+            <span>Faça upload da sua foto para 7Code --> </span>
         </div>
         <div class="right-card-default-centerscreen">
             <img src="../../assets/img/edit.png" alt="imgUploadPhoto" id="uploadPhoto">
-            <input type="file" name="uploadPhotoInput" id="uploadPhotoInput" class="display_none"><br>
-            <button id="btn-upload" upload-photo="../../../server/models/uploadPhoto.php">CADASTRAR</button>
+            <input type="file" name="uploadPhotoInput" upload-photo="../../../server/models/uploadPhoto.php" id="uploadPhotoInput" class="display_none"><br>
+            <!-- <button id="btn-upload" upload-photo="../../../server/models/uploadPhoto.php">CADASTRAR</button> -->
         </div>
     </div>
 
@@ -91,7 +91,6 @@
 
         <nav>
             <div class="user-picture">
-                <span txtValue="saldo">Saldo : R$ </span>
                 <div class="user-data-container">
                     <span txtValue="username"></span>
                     <img src="" name="user-picture" alt="user-pictuer" class="photo-user">
@@ -105,7 +104,29 @@
     </header>
 
     <div class="container user-screen">
+        <div class="optBank">
+            <ion-icon name="add-outline"></ion-icon>
+        </div>
         <div class="start_website">
+            <div class="left">
+                <div class="text">
+                    <h1>Olá, <span txtValue="username"></span></h1>
+                </div>
+                <div class="optBank">
+                    <img src="../../assets/img/deposit.png" alt="deposit-img">
+                </div>
+                <div class="optBank">
+
+                </div>
+                <div class="optBank">
+
+                </div>
+                <div class="optBank">
+
+                </div>
+            </div>
+            
+
         </div>
     </div>
 
@@ -122,6 +143,8 @@
 
             }
         });
+
+
     </script>
 
     <!-- Scripts -->
