@@ -12,9 +12,9 @@
     <!-- css -->
     <link rel="stylesheet" href="../../styles/geral.css">
     <!-- response -->
-    <link rel="stylesheet" media="screen and (max-width: 950px)" href="../../styles/responsive/styles-responsive.css">
-
     <link rel="stylesheet" href="../../styles/7code.css">
+
+    <link rel="stylesheet" media="screen and (max-width: 1050px)" href="../../styles/responsive/styles-responsive.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="../../assets/img/logo_crud.png" type="image/x-icon">
 
@@ -32,7 +32,7 @@
     <div class="card-default-centerscreen display_none">
         <div class="left-card-default-centerscreen">
             <h1>Meu Perfil</h1>
-            <span>Faça upload da sua foto para 7Code --> </span>
+            <span>Faça upload da sua foto para 7Code  </span>
         </div>
         <div class="right-card-default-centerscreen">
             <img src="../../assets/img/edit.png" alt="imgUploadPhoto" id="uploadPhoto">
@@ -104,32 +104,36 @@
     </header>
 
     <div class="container user-screen">
-        
-            <ion-icon name="add-outline" id="optBank-icon"></ion-icon>
-        
-        <div class="start_website">
-            
+        <ion-icon name="add-outline" id="optBank-icon"></ion-icon>
+        <div class="container-t-b">
+            <div class="top">
                 <div class="text">
-                    <h1>Olá, <span txtValue="username"></span></h1>
+                    <h1>Ola, <span txtValue="username"></span></h1>
+                    <p>Aqui na <b>7code</b> vocè pode fazer o que quiser! <br></p>
                 </div>
+            </div>
+            <div class="bottom">
                 <div class="optBank-container">
                     <div class="optBank">
-                        <img src="../../assets/img/deposit.png" alt="deposit-img">
+                        
                     </div>
                     <div class="optBank">
-                        <img src="../../assets/img/emprestimo.png" alt="">
-                    </div>
-                    <div class="optBank">
-                        <img src="../../assets/img/extrato.png" alt="">
-                    
-                    </div>
-                    <div class="optBank">
-                        <img src="../../assets/img/card.png" alt="">
-                    </div>
-                
-            </div>
-            
 
+                    </div>
+                    <div class="optBank">
+
+                    </div>
+                    <div class="optBank">
+
+                    </div>
+                    <div class="optBank">
+
+                    </div>
+                    <div class="optBank">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

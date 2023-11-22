@@ -69,6 +69,7 @@ nav {
 
 .text * {
     margin: 20px 0px;
+    width: 90%;
 }
 
 .text h1 {
@@ -80,6 +81,20 @@ nav {
     width: 70%;
 }
 
+.container-t-b {
+    height: 100%;
+    gap: 50px;
+}
+
+.optBank-container {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.top, .bottom {
+    width: 100%;
+    height: 100%;
+}
 
 footer .columns {
     flex-direction: column;
@@ -112,10 +127,6 @@ text p {
 }
 
 .card-default-centerscreen {
-    width: 350px;
+    width: 90%;
 }
 
-.user-data-card {
-    width: 100vh;
-    height: 100vw;
-}
