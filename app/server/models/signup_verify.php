@@ -48,9 +48,11 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
 
   if (!isset($data['name']) || empty($data['name'])) {
     $erro = true;
-    $msg .= 'Nome, ';
-    // para concatenar usa-se .=
-  }
+    $msg .= 'Nome é obrigatório, ';
+} else if (strlen($data['name']) > 15) {
+    $erro = true;
+    $msg .= 'O nome deve ter no máximo 10 caracteres, ';
+}
 
   if (!isset($data['dt_nasc']) || empty($data['dt_nasc'])) {
     $erro = true;
@@ -128,21 +130,6 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
        $jsonData = ["msg_erro" => $msg];
     }
   
-  // if (!$erro) {
-  //   //todos os dados que vieram com o methodo post;
-  //   $senha_hash = password_hash($data['password'], PASSWORD_DEFAULT);
-  //   // criptografia do $data['password'];
-
-  //   $resInsert = prepareAndExecute($conn, 'CALL INSERT_USER(?,?,?,?,?)',  array(intval($data['CPF']), $data['name'], $data['email'], $data['dt_nasc'], $senha_hash) , 'issss', 'opt-insert')
-
-  //   if ($resInsert) {
-  //     $jsonData = ["url" => "../views/successLog.php?statusSignup=sucesso"];
-  //   }
-  // } else {
-  //   $jsonData = ["msg_erro" => $msg];
-  // }
-
-
 } else {
   $jsonData = ["msg_erro" => $msg];
 }

@@ -244,7 +244,7 @@ span[txtValue="saldo"]{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 50vh;
+    margin: 5% 0%;
     width: 100%;
 }
 
@@ -284,18 +284,25 @@ span[txtValue="saldo"]{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 350px;
     transition: 0.5s;
     height: 200px;
+    gap: 50px;
     border-radius: 10px;
     background-color: black;
     border: 1px solid rgb(148, 8, 8);
 }
 
+.optBank img {
+    filter: invert(100%);
+    width: 80px;
+    height: 80px;
+}
 .optBank:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     cursor: pointer;
-    box-shadow: 2px 2px 10px rgb(105, 5, 5);
+    box-shadow: 2px 2px 10px rgba(105, 5, 5, 0.856);
 }
 
 .optBank-container {
@@ -305,4 +312,42 @@ span[txtValue="saldo"]{
     justify-content: center;
     gap: 50px;
     width: 80%;
+}
+
+.cardBank {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(148, 8, 8);
+    width: 350px;
+    height: 200px;
+    background-image:linear-gradient(120deg, rgba(87, 5, 5, 0.945), rgba(189, 3, 3, 0.856), rgb(82, 3, 3));
+    border-radius: 10px;
+}
+
+.bankName {
+    color: white;
+    font-weight: bolder;
+    font-size: 16pt;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.cardBank img {
+    width: 50px;
+    height: 33px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.user-card-data-container {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+}
+
+.user-card-data-container [txtValue="username"], [txtValue="cardNumber"] {
+    margin: 20px;
+    display: block;
 }

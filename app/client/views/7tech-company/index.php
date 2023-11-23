@@ -108,29 +108,42 @@
         <div class="container-t-b">
             <div class="top">
                 <div class="text">
-                    <h1>Ola, <span txtValue="username"></span></h1>
+                    <h1>Olá, <span txtValue="username"></span></h1>
                     <p>Aqui na <b>7code</b> vocè pode fazer o que quiser! <br></p>
                 </div>
             </div>
             <div class="bottom">
                 <div class="optBank-container">
                     <div class="optBank">
-                        
+                        <img src="../../assets/img/logos/pix.png" alt="PIX" class="optBank-img">
+                        <span>PIX</span>
                     </div>
                     <div class="optBank">
-
+                        <img src="../../assets/img/logos/investimento.png" alt="INVESTIMENTO" class="optBank-img">
+                        <span>INVESTIMENTO</span>
                     </div>
                     <div class="optBank">
-
+                        <img src="../../assets/img/logos/emprestimo.png" alt="EMPRESTIMO" class="optBank-img">
+                        <span>EMPRESTIMO</span>
                     </div>
                     <div class="optBank">
-
+                        <img src="../../assets/img/logos/extrato.png" alt="EXTRATO" class="optBank-img">
+                        <span>EXTRATO</span>
+                    </div>
+                    <div class="cardBank">
+                        <span class="bankName">7CODE</span>
+                        <img src="../../assets/img/chip_user.png" alt="chip">
+                        <div class="user-card-data-container">
+                            <span txtValue="cardNumber">
+                                0000 0000 0000 0000
+                            </span>
+                            
+                            <span txtValue="username"></span>
+                        </div>
                     </div>
                     <div class="optBank">
-
-                    </div>
-                    <div class="optBank">
-
+                        <img src="../../assets/img/logos/transferencia.png" alt="TRANSFERÊNCIA" class="optBank-img">
+                        <span>TRANSFERÊNCIA</span>
                     </div>
                 </div>
             </div>
