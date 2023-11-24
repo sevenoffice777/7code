@@ -24,9 +24,10 @@ function toggleClass(element, classVerify, classAddOrRemove=null) {
 
 function userDataShow(dataUser) {
     let nome = dataUser.userAccount.NOME.toUpperCase();
-    
+    console.log(dataUser.bankAccount);
     document.title = `7Code Hub - ${nome}`
     setDataUser(dataUser, '[txtValue=username]', 'userAccount', 'NOME','txt');
+    setDataUser(dataUser, '[txtValue=cardNumber]', 'bankAccount', 'NUM_CARD','cardNumber');
     setDataUser(dataUser, '[txtValue=email]', 'userAccount', 'EMAIL','txt');
     setDataUser(dataUser, '[txtValue=accountNumber]', 'bankAccount', 'ACCOUNT_ID','txt');
     setDataUser(dataUser, '[txtValue=saldo]', 'bankAccount', 'SALDO','txt');
@@ -42,7 +43,9 @@ function setDataUser(dataUser, element, paramName, atrName = null, typeContent) 
         if(typeContent == 'txt') {
             if(atrName == 'NOME') {
                 element.textContent += `${dataUser.userAccount.NOME.toUpperCase()}`
-            } else {
+            } else if(atrName == 'cardNumber') {
+                    // TERMINAR FEATURE
+            }  else {
 
                 element.textContent += `${dataUser[paramName][atrName]}`
             }

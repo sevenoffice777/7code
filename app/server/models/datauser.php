@@ -7,7 +7,7 @@ session_start();
 
 $jsonData = array();
 $userRow = prepareAndExecute($conn, 'SELECT NOME,EMAIL FROM USER WHERE CPF = ?', array($_SESSION['CPF']), 's');
-$accountBankRow = prepareAndExecute($conn, 'SELECT ACCOUNT_ID, SALDO FROM BANKACCOUNT WHERE CPF = ?', array($_SESSION['CPF']), 's');
+$accountBankRow = prepareAndExecute($conn, 'SELECT ACCOUNT_ID, SALDO, NUM_CARD FROM BANKACCOUNT WHERE CPF = ?', array($_SESSION['CPF']), 's');
 $caminhoPhoto = prepareAndExecute($conn, 'SELECT CAMINHO FROM USERPHOTO WHERE CPF = ?', array($_SESSION['CPF']), 's');
 
     $jsonData['userAccount'] = $userRow;
