@@ -69,7 +69,9 @@ header nav a:hover, .header-responsive a:hover {
 /* menu-hamburguer */
 .element-none {
     display: none;
-    font-size: 20pt;
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
     color: white;
     font-weight: bolder;
 }

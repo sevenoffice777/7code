@@ -47,7 +47,7 @@ session_start();
       <a href="#" class="active_menu">ENTRAR</a>
       <a href="./signup.php">CADASTRO</a>
     </nav>
-    <ion-icon name="menu-outline" class="element-none"></ion-icon>
+    <img src="../assets/img/menu_hamburguer.png" alt="menu_hamburguer" class="element-none">
   </header>
 
   <div class="container secondScreen">
