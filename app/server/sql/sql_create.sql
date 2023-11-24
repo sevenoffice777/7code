@@ -1,4 +1,4 @@
--- Active: 1700736655037@@127.0.0.1@3306@7code
+-- Active: 1700779393054@@127.0.0.1@3306@7code
 
 CREATE DATABASE 7Code;
 
@@ -81,8 +81,3 @@ FOR EACH ROW BEGIN
 
 DELIMITER ;
 
-SELECT * FROM USER;
-
-SELECT * FROM bankaccount;
-
-select * from userPhoto;

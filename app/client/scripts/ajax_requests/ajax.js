@@ -37,7 +37,7 @@ function successCallback(response, opt) {
         } else {
             log_error.html(response.msg_erro);    // Exibe a mensagem de erro no elemento com a classe 'log_error'
         }
-        enableOrDisabledButton(false, btnSbmt, 'Entrar');
+        enableOrDisabledButton(false, btnSbmt, 'Cadastrar Novamente');
     }
 
     if(opt == 'logoutUserReturn') {

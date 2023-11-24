@@ -5,9 +5,9 @@
     // $database = ' 7Code Hub';
     
     define('HOSTNAME', 'localhost');
-    define('USERNAME', 'root');
-    define('PASSWORD', '');
-    define('DATABASE', '7Code');
+    define('USERNAME', 'ROOT');
+    define('PASSWORD', 'SEVEN777');
+    define('DATABASE', '7code');
 
     $conn = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE);
 

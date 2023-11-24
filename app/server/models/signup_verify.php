@@ -49,10 +49,10 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
   if (!isset($data['name']) || empty($data['name'])) {
     $erro = true;
     $msg .= 'Nome é obrigatório, ';
-} else if (strlen($data['name']) > 15) {
+  } else if (strlen($data['name']) > 15) {
     $erro = true;
     $msg .= 'O nome deve ter no máximo 10 caracteres, ';
-}
+  }
 
   if (!isset($data['dt_nasc']) || empty($data['dt_nasc'])) {
     $erro = true;
@@ -118,20 +118,18 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
   $msg = substr($msg, 0, -2);
   $msg .= ' )';
 
-  if($erro == false) {
+  if ($erro == false) {
     $senha_hash = password_hash($data['password'], PASSWORD_DEFAULT);
-    $resInsert = prepareAndExecute($conn, 'CALL INSERT_USER(?,?,?,?,?)',  array(intval($data['CPF']), $data['name'], $data['email'], $data['dt_nasc'], $senha_hash) , 'issss', 'opt-insert');
+    $resInsert = prepareAndExecute($conn, 'CALL INSERT_USER(?,?,?,?,?)', array(intval($data['CPF']), $data['name'], $data['email'], $data['dt_nasc'], $senha_hash), 'issss', 'opt-insert');
     if ($resInsert) {
-          $jsonData = ["url" => "../views/successLog.php?statusSignup=sucesso"];
-        }
+      $jsonData = ["url" => "../views/successLog.php?statusSignup=sucesso"];
     }
-    else 
-    {
-       $jsonData = ["msg_erro" => $msg];
-    }
-  
+  } else {
+    $jsonData = ["msg_erro" => $msg];
+  }
+
 } else {
-  $jsonData = ["msg_erro" => $msg];
+  $jsonData = ["msg_erro" => 'Erro no servidor '];
 }
 
 echo json_encode($jsonData);

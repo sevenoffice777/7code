@@ -114,6 +114,17 @@
             </div>
             <div class="bottom">
                 <div class="optBank-container">
+                    <div class="cardBank">
+                        <span class="bankName">7CODE</span>
+                        <img src="../../assets/img/chip_user.png" alt="chip">
+                        <div class="user-card-data-container">
+                            <span txtValue="cardNumber">
+                                0000 0000 0000 0000
+                            </span>
+                            
+                            <span txtValue="username"></span>
+                        </div>
+                    </div>
                     <div class="optBank">
                         <img src="../../assets/img/logos/pix.png" alt="PIX" class="optBank-img">
                         <span>PIX</span>
@@ -129,17 +140,6 @@
                     <div class="optBank">
                         <img src="../../assets/img/logos/extrato.png" alt="EXTRATO" class="optBank-img">
                         <span>EXTRATO</span>
-                    </div>
-                    <div class="cardBank">
-                        <span class="bankName">7CODE</span>
-                        <img src="../../assets/img/chip_user.png" alt="chip">
-                        <div class="user-card-data-container">
-                            <span txtValue="cardNumber">
-                                0000 0000 0000 0000
-                            </span>
-                            
-                            <span txtValue="username"></span>
-                        </div>
                     </div>
                     <div class="optBank">
                         <img src="../../assets/img/logos/transferencia.png" alt="TRANSFERÊNCIA" class="optBank-img">
