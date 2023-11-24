@@ -1,5 +1,5 @@
 .user-screen {
-    background-image:url(../assets/img/background_container.png);
+    background-image:url(../assets/img/background_container.jpeg);
     padding: 5% 0%;
 }
 
@@ -72,7 +72,7 @@
     width: 350px;
     height: 400px;
     background-color: black;
-    border: 1px solid rgb(150, 10, 10);
+    border: 1px solid var(--corSite);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -274,7 +274,7 @@ span[txtValue="saldo"]{
 
 #optBank-icon:hover {
     cursor: pointer;
-    background-color: rgb(150, 10, 10);
+    background-color: var(--corSite);
     
 }
 

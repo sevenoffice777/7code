@@ -1,7 +1,7 @@
 /* Estilos comuns para smartphones e tablets */
 
 .firstScreen {
-    background-image: url(../../assets/img/background_container.png);
+    background-image: url(../../assets/img/background_container.jpeg);
 }
 
 .secondScreen {
@@ -58,6 +58,10 @@ nav {
 #data_img {
     width: 350px;
     height: 350px;
+}
+
+.container-database-animate {
+    display: block;
 }
 
 .text {
@@ -130,4 +134,5 @@ text p {
 .card-default-centerscreen {
     width: 90%;
 }
+
 

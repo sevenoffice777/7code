@@ -1,4 +1,4 @@
--- Active: 1700821377636@@127.0.0.1@3306@7code
+-- Active: 1700831298479@@127.0.0.1@3306@7code
 
 CREATE DATABASE 7Code;
 
