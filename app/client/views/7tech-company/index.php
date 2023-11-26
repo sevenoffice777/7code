@@ -32,11 +32,12 @@
     <div class="card-default-centerscreen display_none">
         <div class="left-card-default-centerscreen">
             <h1>Meu Perfil</h1>
-            <span>Faça upload da sua foto para 7Code  </span>
+            <span>Faça upload da sua foto para 7Code </span>
         </div>
         <div class="right-card-default-centerscreen">
             <img src="../../assets/img/edit.png" alt="imgUploadPhoto" id="uploadPhoto">
-            <input type="file" name="uploadPhotoInput" upload-photo="../../../server/models/uploadPhoto.php" id="uploadPhotoInput" class="display_none"><br>
+            <input type="file" name="uploadPhotoInput" upload-photo="../../../server/models/uploadPhoto.php"
+                id="uploadPhotoInput" class="display_none"><br>
             <!-- <button id="btn-upload" upload-photo="../../../server/models/uploadPhoto.php">CADASTRAR</button> -->
         </div>
     </div>
@@ -102,8 +103,32 @@
         <img src="../../assets/img/menu_hamburguer.png" alt="menu_hamburguer" class="element-none">
     </header>
 
+    <div class="optBank_chatbot">
+        <ion-icon name="chatbubble-outline" id="optBank-icon"></ion-icon>
+        <div class="chatbot chatbot-ngtv-pos">
+                <div class="chatbot-header">
+                    <h1>7codeChat</h1>
+                </div>
+                <div class="container-content-chatbot">
+                    <div>
+                        <p class="message-response">
+                            Olá, como posso ajudar você?
+                        </p>
+                    </div>
+                </div>
+                <div class="input-chatbot">
+                    <input type="text" name="input-chatbot" id="input-chatbot" placeholder="Digite aqui...">
+                    <ion-icon name="send-outline" id="send-icon"></ion-icon>
+                </div>
+
+
+            
+        </div>
+    </div>
+    
     <div class="container user-screen">
-        <ion-icon name="add-outline" id="optBank-icon"></ion-icon>
+        
+
         <div class="container-t-b">
             <div class="top">
                 <div class="text">
@@ -120,7 +145,7 @@
                             <span txtValue="cardNumber">
                                 0000 0000 0000 0000
                             </span>
-                            
+
                             <span txtValue="username"></span>
                         </div>
                     </div>
@@ -153,20 +178,30 @@
     <script>
         document.querySelector('.element-none').addEventListener("click", () => {
             toggleClass(document.querySelector('.header-responsive-7code'), 'h-r-ngtv-pos', 'h-r-pstv-pos');
-            if (!document.querySelector('.card-default-centerscreen').classList.contains('display_none') && document.querySelector('.user-data-card').classList.contains('display_none')) {
-                toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
+            let cardDefaultcenterscreen = document.querySelector('.card-default-centerscreen');
+            let userdatacard = document.querySelector('.user-data-card');
+            let chatbotcontainer = document.querySelector('.chatbot');
 
-            }
-            if (document.querySelector('.card-default-centerscreen').classList.contains('display_none') && !document.querySelector('.user-data-card').classList.contains('display_none')) {
-                toggleClass(document.querySelector('.user-data-card'), 'display_none')
+            if(!cardDefaultcenterscreen.classList.contains('display_none')) {
+                toggleClass(cardDefaultcenterscreen, 'display_none')
+            } 
 
+            if(!userdatacard.classList.contains('display_none')) {
+                toggleClass(userdatacard, 'display_none')
             }
+
+            if(chatbotcontainer.classList.contains('chatbot-pstv-pos')) {
+                toggleClass(chatbotcontainer, 'chatbot-pstv-pos', 'chatbot-ngtv-pos');
+            }
+        
+
         });
 
 
     </script>
 
     <!-- Scripts -->
+    <script src="../../scripts/functions/chatbot.js"></script>
     <script src="../../scripts/functions/7code-main.js"></script>
     <script src="../../scripts/functions/functions.js"></script>
     <script src="../../scripts/ajax_requests/ajax.js"></script>
@@ -175,5 +210,3 @@
 </body>
 
 </html>
-
-

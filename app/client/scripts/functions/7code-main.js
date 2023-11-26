@@ -1,4 +1,14 @@
 
+
+{
+    document.querySelector('#optBank-icon').addEventListener('click', () => {
+        if (document.querySelector('.chatbot').classList.contains('chatbot-ngtv-pos')) {
+            toggleClass(document.querySelector('.chatbot'), 'chatbot-ngtv-pos', 'chatbot-pstv-pos');
+        } else if (document.querySelector('.chatbot').classList.contains('chatbot-pstv-pos')) {
+            toggleClass(document.querySelector('.chatbot'), 'chatbot-pstv-pos', 'chatbot-ngtv-pos');
+        }
+    });
+}
 // SEÇÃO DE UPLOAD DA FOTO DO USUARIO
 {
     document.querySelector('#uploadPhoto').addEventListener('click', () => {
@@ -72,6 +82,13 @@ document.querySelector('.container').addEventListener("click", () => {
     if (!document.querySelector('.card-default-centerscreen').classList.contains('display_none')) {
         toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
     }
+
+    if (document.querySelector('.chatbot').classList.contains('chatbot-pstv-pos')) {
+        toggleClass(document.querySelector('.chatbot'), 'chatbot-pstv-pos', 'chatbot-ngtv-pos');
+
+    }
+
+
 
 })
 
