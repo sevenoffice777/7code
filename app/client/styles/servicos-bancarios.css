@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+[txtValue="saldo"], .logout-icon {
+    font-size: 18pt;
+}
+
+.logout-icon:hover{
+    cursor: pointer;
+    color: var(--corSite);
+}
+
+.logout {
+    width: 80%;
+    border:  1px solid rgb(105, 5, 5);
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+
+
+}
+.logout:hover {
+    background-color: rgb(105, 5, 5);
+    cursor: pointer;
+}
+.logout > * {
+    margin: 0px 10px;
+}
+
+
+.text p {
+    width: 90%;
+}

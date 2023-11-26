@@ -4,6 +4,10 @@ function irPara(endereco) {
     window.open(endereco, '_blank');
 }
 
+function irPara_localWindow(endereco) {
+    window.location.href = endereco;
+}
+
 // - Função para add/remove class de alguma tag ou elemento
 function toggleClass(element, classVerify, classAddOrRemove = null) {
     if (element.classList.contains(classVerify)) {

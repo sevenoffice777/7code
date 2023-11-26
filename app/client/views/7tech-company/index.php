@@ -149,23 +149,23 @@
                             <span txtValue="username"></span>
                         </div>
                     </div>
-                    <div class="optBank">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/pix.php')">
                         <img src="../../assets/img/logos/pix.png" alt="PIX" class="optBank-img">
                         <span>PIX</span>
                     </div>
-                    <div class="optBank">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/investimentos.php')">
                         <img src="../../assets/img/logos/investimento.png" alt="INVESTIMENTO" class="optBank-img">
                         <span>INVESTIMENTO</span>
                     </div>
-                    <div class="optBank">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/emprestimo.php')">
                         <img src="../../assets/img/logos/emprestimo.png" alt="EMPRESTIMO" class="optBank-img">
                         <span>EMPRESTIMO</span>
                     </div>
-                    <div class="optBank">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/extrato.php')">
                         <img src="../../assets/img/logos/extrato.png" alt="EXTRATO" class="optBank-img">
                         <span>EXTRATO</span>
                     </div>
-                    <div class="optBank">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/transferencia.php')">
                         <img src="../../assets/img/logos/transferencia.png" alt="TRANSFERÊNCIA" class="optBank-img">
                         <span>TRANSFERÊNCIA</span>
                     </div>

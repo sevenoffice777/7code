@@ -196,11 +196,10 @@ header nav a:hover, .header-responsive a:hover {
     color: var(--corSite);
 }
 .text > * {
-    margin: 30px;
+    margin-bottom: 30px;
 }
 .text h1 {
     font-size: 50pt;
-    margin-bottom: 25px;
 }
 
 .text a {
