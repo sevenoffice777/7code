@@ -332,7 +332,7 @@ span[txtValue="saldo"]{
 .input-chatbot input {
     
     outline: none !important;
-
+    font-size: 15pt;
     width: 90%;
     background: none;
     border: none;
@@ -356,7 +356,7 @@ span[txtValue="saldo"]{
     padding: 10px 15px;
     border-radius: 10px 0px 0px 10px;
     background-color: rgba(130, 4, 4, 0.856);
-    font-size: 15px;
+    font-size: 20px;
     margin:10px;
     text-align: right;
     color: white;
@@ -368,7 +368,7 @@ span[txtValue="saldo"]{
     padding: 10px 15px;
     border-radius: 0px 10px 10px 0px;
     background-color: rgba(71, 3, 3, 0.856);
-    font-size: 15px;
+    font-size: 20px;
     margin:10px;
     text-align: left;
     color: white;
