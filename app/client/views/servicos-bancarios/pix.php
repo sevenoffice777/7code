@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="../../styles/servicos-bancarios.css">
 
 
-    <link rel="stylesheet" media="screen and (max-width: 1050px)"
-        href="../../styles/responsive/styles-responsive.css">
+    <link rel="stylesheet" media="screen and (max-width: 1050px)" href="../../styles/responsive/styles-responsive.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="../../assets/img/logo_crud.png" type="image/x-icon">
 
@@ -60,7 +59,18 @@
                 </div>
             </div>
             <div class="right">
-
+                <div class="card">
+                    <h1>Pix</h1>
+                    <form>
+                        <label for="pixValue">Valor do PIX</label>
+                        <input type="number" name="pixValue" placeholder="Digite o valor do pix">
+                        <label for="to_account_id">CPF da pessoa que você quer enviar PIX</label>
+                        <input type="number" name="to_account_id" placeholder="Digite o CPF de quem você quer fazer o pix">
+                        <button type="submit" id="submitPix">
+                            FAZER O PIX
+                        </button>
+                    </form>
+                </div>
             </div>
 
         </div>
