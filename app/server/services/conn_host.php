@@ -1,8 +1,4 @@
 <?php 
-    // $hostName = 'localhost';
-    // $userName = 'root';
-    // $password = '';
-    // $database = ' 7Code Hub';
     
     define('HOSTNAME', 'localhost');
     define('USERNAME', 'ROOT');
