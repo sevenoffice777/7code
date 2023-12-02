@@ -27,15 +27,15 @@ function toggleClass(element, classVerify, classAddOrRemove = null) {
 //  As funções userDataShow e setDataUser, servem para inserir os dados do cliente no FRONT END
 
 function userDataShow(dataUser) {
-    let nome = dataUser.userAccount.NOME.toUpperCase();
+    let nome = dataUser.userAccount.nome.toUpperCase();
 
     document.title = `7Code Hub - ${nome}`
-    setDataUser(dataUser, '[txtValue=username]', 'userAccount', 'NOME', 'txt');
-    setDataUser(dataUser, '[txtValue=cardNumber]', 'bankAccount', 'NUM_CARD', 'txt');
-    setDataUser(dataUser, '[txtValue=email]', 'userAccount', 'EMAIL', 'txt');
-    setDataUser(dataUser, '[txtValue=accountNumber]', 'bankAccount', 'ACCOUNT_ID', 'txt');
-    setDataUser(dataUser, '[txtValue=saldo]', 'bankAccount', 'SALDO', 'txt');
-    setDataUser(dataUser, '.photo-user', 'caminhoPhoto', 'CAMINHO', 'img')
+    setDataUser(dataUser, '[txtValue=username]', 'userAccount', 'nome', 'txt');
+    setDataUser(dataUser, '[txtValue=cardNumber]', 'bankAccount', 'num_card', 'txt');
+    setDataUser(dataUser, '[txtValue=email]', 'userAccount', 'email', 'txt');
+    setDataUser(dataUser, '[txtValue=accountNumber]', 'bankAccount', 'account_id', 'txt');
+    setDataUser(dataUser, '[txtValue=saldo]', 'bankAccount', 'saldo', 'txt');
+    setDataUser(dataUser, '.photo-user', 'caminhoPhoto', 'caminho', 'img')
 
 
 }
@@ -44,9 +44,9 @@ function setDataUser(dataUser, element, paramName, atrName = null, typeContent) 
     let userdataSpan = document.querySelectorAll(element);
     userdataSpan.forEach(element => {
         if (typeContent == 'txt') {
-            if (atrName == 'NOME') {
-                element.textContent += `${dataUser.userAccount.NOME.toUpperCase()}`;
-            } else if (atrName == 'NUM_CARD') {
+            if (atrName == 'nome') {
+                element.textContent += `${dataUser.userAccount.nome.toUpperCase()}`;
+            } else if (atrName == 'num_card') {
                 let cardNumber = dataUser[paramName][atrName].toString();
                
                 // Use a função match com uma expressão regular para obter os grupos de quatro dígitos

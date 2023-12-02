@@ -19,7 +19,7 @@ function ajaxRequest(urlRequest, methodRequest, dataTypeRequest, dataRequest, op
              
         },
         error: function (xhr, statusServer, errorName) {
-            console.log(`${xhr} - ${statusServer}, ${errorName}`)
+            console.log(`${xhr.statusText} - ${statusServer}, ${errorName}`)
         }
     })
 }

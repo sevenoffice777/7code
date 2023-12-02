@@ -12,15 +12,15 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
   $passwordUser = $_POST['password'];
 
 
-  $queryLogin = 'SELECT * FROM USER WHERE EMAIL = ? ';
+  $queryLogin = 'SELECT * FROM `user` WHERE EMAIL = ? ';
 
   $params_user = array($emailUser);
 
   $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
 
   if ($res) {
-    if (password_verify($passwordUser, $res['SENHA'])) {
-      $_SESSION['CPF'] = $res['CPF'];
+    if (password_verify($passwordUser, $res['senha'])) {
+      $_SESSION['CPF'] = $res['cpf'];
 
 
       $jsonData = ["url" => "../views/successLog.php?statusLogin=sucesso"];

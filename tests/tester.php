@@ -1,17 +1,7 @@
 <?php 
-     define('DB_HOST', 'db.tacylyzccwclcdiivhpj.supabase.co');
-     define('DB_USER', 'postgres');
-     define('DB_PASSWORD', '83J7~En+ZmTUXfx'); // Substitua [YOUR-PASSWORD] pela senha real
-     define('DB_NAME', 'postgres');
-     define('DB_PORT', 5432);
+     require '../app/server/services/conn_host.php';
 
-     // Conectar usando pgsql ao invés de mysqli
-     $conn = pg_connect("host=" . DB_HOST . " port=" . DB_PORT . " dbname=" . DB_NAME . " user=" . DB_USER . " password=" . DB_PASSWORD);
-
-     if ($conn) {
-         echo "<script>console.log('Conexão bem-sucedida!')</script>";
-     }
-
+     
 
 ?>
 
@@ -110,8 +100,6 @@
     <div class="left">
         <form action="" method="post">
             <h1>My Tester APP</h1>
-            <label for="command">Valor de Teste:</label>
-            <input type="text" id="command" name="command" required>
             <input type="submit" name="btn_sbmt" placeholder="Verificar"></input>
         </form>
     </div>
@@ -123,23 +111,8 @@
                 <?php
                 // Backend
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    if (isset($_POST['btn_sbmt'])) {
-                        $user = $_POST['command'];
-
-                        $querySQL = "INSERT INTO public.userData(nome, email) values('samuel', 'samuel@gmail.com')";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-                        $resConnect = pg_query($conn, $querySQL);
-
-                        echo $resConnect;
-
-                        
-                        
-                        
-                        
-
-
-
-                    }
-
+                    
+                    
                 }
                 ?>
 

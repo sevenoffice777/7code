@@ -37,7 +37,7 @@ if ($numArquivosProfile > 0) {
     $novoCaminhoDestinoParaSQL = $cpfUsuario . '/' . 'profile.' . pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
     prepareAndExecute(
         $conn,
-        'UPDATE USERPHOTO SET CAMINHO = ? WHERE CPF = ?',
+        'UPDATE userphoto SET caminho = ? WHERE cpf = ?',
         array($novoCaminhoDestinoParaSQL, $cpfUsuario),
         "ss",
         "opt-update"
@@ -54,7 +54,7 @@ if (move_uploaded_file($nomeTemporario, $caminhoCompletoDestino)) {
     if($srcExists == false) {
         prepareAndExecute(
             $conn,
-            'INSERT INTO USERPHOTO(CAMINHO, CPF) VALUES(?,?)',
+            'INSERT INTO userphoto(caminho, cpf) VALUES(?,?)',
             array($novoCaminhoDestinoParaSQL, $cpfUsuario),
             "ss",
             "opt-insert"

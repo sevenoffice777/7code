@@ -4,8 +4,9 @@
     define('USERNAME', 'root');
     define('PASSWORD', '-4h4dgdb45ee4551ab1cdBghbCECcHCa');
     define('DATABASE', 'railway');
+    define('PORT', '35426');
 
-    $conn = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE);
+    $conn = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE, PORT);
 
     
 

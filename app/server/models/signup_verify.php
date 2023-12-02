@@ -83,7 +83,7 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
     $msg .= 'Email, ';
 
   } else {
-    $queryLogin = 'SELECT EMAIL FROM USER WHERE EMAIL = ?';
+    $queryLogin = 'SELECT EMAIL FROM `user` WHERE EMAIL = ?';
 
     $params_user = array($data['email']);
 
@@ -100,7 +100,7 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
     $erro = true;
     $msg .= 'CPF, ';
   } else if (strlen($data['CPF']) != 11 || preg_match('/(\d)\1{10}/', $data['CPF']) || !validarCPF($data['CPF'])) {
-    $queryCPF = 'SELECT CPF FROM USER WHERE CPF = ?';
+    $queryCPF = 'SELECT CPF FROM `user` WHERE CPF = ?';
     $params_cpf = array($data['CPF']);
     $res = prepareAndExecute($conn, $queryCPF, $params_cpf, 'i');
     if($res < 1) {
