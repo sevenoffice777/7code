@@ -149,14 +149,6 @@
                             <span txtValue="username"></span>
                         </div>
                     </div>
-                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/pix.php')">
-                        <img src="../../assets/img/logos/pix.png" alt="PIX" class="optBank-img">
-                        <span>PIX</span>
-                    </div>
-                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/investimentos.php')">
-                        <img src="../../assets/img/logos/investimento.png" alt="INVESTIMENTO" class="optBank-img">
-                        <span>INVESTIMENTO</span>
-                    </div>
                     <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/emprestimo.php')">
                         <img src="../../assets/img/logos/emprestimo.png" alt="EMPRESTIMO" class="optBank-img">
                         <span>EMPRESTIMO</span>
