@@ -106,28 +106,28 @@
     <div class="optBank_chatbot">
         <ion-icon name="chatbubble-outline" id="optBank-icon"></ion-icon>
         <div class="chatbot chatbot-ngtv-pos">
-                <div class="chatbot-header">
-                    <h1>7codeChat</h1>
+            <div class="chatbot-header">
+                <h1>7codeChat</h1>
+            </div>
+            <div class="container-content-chatbot">
+                <div>
+                    <p class="message-response">
+                        Olá, como posso ajudar você?
+                    </p>
                 </div>
-                <div class="container-content-chatbot">
-                    <div>
-                        <p class="message-response">
-                            Olá, como posso ajudar você?
-                        </p>
-                    </div>
-                </div>
-                <div class="input-chatbot">
-                    <input type="text" name="input-chatbot" id="input-chatbot" placeholder="Digite aqui...">
-                    <ion-icon name="send-outline" id="send-icon"></ion-icon>
-                </div>
+            </div>
+            <div class="input-chatbot">
+                <input type="text" name="input-chatbot" id="input-chatbot" placeholder="Digite aqui...">
+                <ion-icon name="send-outline" id="send-icon"></ion-icon>
+            </div>
 
 
-            
+
         </div>
     </div>
-    
+
     <div class="container user-screen">
-        
+
 
         <div class="container-t-b">
             <div class="top">
@@ -149,15 +149,15 @@
                             <span txtValue="username"></span>
                         </div>
                     </div>
-                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/emprestimo.php')">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios-views/emprestimo.php')">
                         <img src="../../assets/img/logos/emprestimo.png" alt="EMPRESTIMO" class="optBank-img">
                         <span>EMPRESTIMO</span>
                     </div>
-                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/extrato.php')">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios-views/extrato.php')">
                         <img src="../../assets/img/logos/extrato.png" alt="EXTRATO" class="optBank-img">
                         <span>EXTRATO</span>
                     </div>
-                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios/transferencia.php')">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios-views/transferencia.php')">
                         <img src="../../assets/img/logos/transferencia.png" alt="TRANSFERÊNCIA" class="optBank-img">
                         <span>TRANSFERÊNCIA</span>
                     </div>
@@ -174,18 +174,18 @@
             let userdatacard = document.querySelector('.user-data-card');
             let chatbotcontainer = document.querySelector('.chatbot');
 
-            if(!cardDefaultcenterscreen.classList.contains('display_none')) {
+            if (!cardDefaultcenterscreen.classList.contains('display_none')) {
                 toggleClass(cardDefaultcenterscreen, 'display_none')
-            } 
+            }
 
-            if(!userdatacard.classList.contains('display_none')) {
+            if (!userdatacard.classList.contains('display_none')) {
                 toggleClass(userdatacard, 'display_none')
             }
 
-            if(chatbotcontainer.classList.contains('chatbot-pstv-pos')) {
+            if (chatbotcontainer.classList.contains('chatbot-pstv-pos')) {
                 toggleClass(chatbotcontainer, 'chatbot-pstv-pos', 'chatbot-ngtv-pos');
             }
-        
+
 
         });
 

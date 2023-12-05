@@ -1,12 +1,12 @@
 <?php 
     
-    define('HOSTNAME', 'viaduct.proxy.rlwy.net');
-    define('USERNAME', 'root');
-    define('PASSWORD', '-4h4dgdb45ee4551ab1cdBghbCECcHCa');
-    define('DATABASE', 'railway');
-    define('PORT', '35426');
+    define('HOSTNAME', 'localhost');
+    define('USERNAME', 'ROOT');
+    define('PASSWORD', 'SEVEN777');
+    define('DATABASE', '7CODE');
+    
 
-    $conn = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE, PORT);
+    $conn = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE);
 
     
 

@@ -46,7 +46,7 @@ function IAresponse(message) {
         responseIA = `Se quiser saber mais sobre extratos, clique na opção EXTRATO. Lá, você pode fazer consultas das suas últimas compras por data, valor, entre outros...`;
     }
     // Pergunta sobre pagamento de contas
-    else if (searchInMessage('pagamento', message) || searchInMessage('conta', message)) {
+    else if (searchInMessage('pagamento', message)) {
         responseIA = 'Para efetuar o pagamento de contas, você pode usar o aplicativo móvel, internet banking ou um caixa eletrônico. Posso te ajudar com isso?';
     }
     // Pergunta sobre transferência
@@ -71,6 +71,8 @@ function IAresponse(message) {
     }
     else if(searchInMessage('saldo', message)) {
         responseIA = 'Pra descobrir seu saldo clique na sua foto no canto SUPERIOR DIREITO DA TELA';
+    } else if(searchInMessage('excluir conta', message)) {
+        responseIA = 'Excluir sua conta é uma opção perigosa, se tiver certeza que quer fazer isso, vá no menu '
     }
     // Caso nenhuma correspondência seja encontrada
     else {
