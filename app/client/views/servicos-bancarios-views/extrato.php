@@ -56,9 +56,10 @@
 
     <div class="container secondScreen">
         <div class="start_website">
-            <h1>Extratos</h1>
-            <div class="extrato_card">
-                <span id="showQuery">CLIQUE AQUI PARA FAZER SUA CONSULTA <ion-icon name="search-outline" class="queryExtrato"></ion-icon></span>
+            <div class="left">
+                <h1>Extratos</h1>
+                
+                
             </div>
         </div>
     </div>
