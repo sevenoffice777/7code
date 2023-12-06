@@ -1,3 +1,4 @@
+-- Active: 1700779393054@@127.0.0.1@3306
 -- Criar banco de dados
 CREATE DATABASE `7code`;
 

@@ -12,7 +12,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
   $passwordUser = $_POST['password'];
 
 
-  $queryLogin = 'SELECT * FROM `user` WHERE EMAIL = ? ';
+  $queryLogin = 'SELECT * FROM user WHERE email = ? ';
 
   $params_user = array($emailUser);
 

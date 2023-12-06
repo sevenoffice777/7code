@@ -59,7 +59,7 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
     $msg .= 'Data De Nascimento, ';
   } else {
     $dateTime = DateTime::createFromFormat('Y-m-d', $data['dt_nasc']);
-    $dateMin = date('Y-m-d', strtotime('-18 years'));
+    $dateMin = date('Y-m-d', strtotime('-16 years'));
     $dateMax = date('Y-m-d', strtotime('-100 years'));
 
     if (!$dateTime) {
@@ -68,12 +68,12 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
     }
 
     if ($data['dt_nasc'] > $dateMin) {
-      $msg .= "Idade Minima 18 anos, ";
+      $msg .= "Idade Minima 16 anos, ";
       $erro = true;
     }
 
     if ($data['dt_nasc'] < $dateMax) {
-      $msg .= "Idade Maxima 100 anos, ";
+      $msg .= "Limite de idade excedido!";
       $erro = true;
     }
   }
