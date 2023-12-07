@@ -38,6 +38,10 @@ nav {
     padding: 100px 0px;
 }
 
+.apr_container {
+    height: 100%;
+    padding-bottom: 5%;
+}
 .left,
 .right
 {

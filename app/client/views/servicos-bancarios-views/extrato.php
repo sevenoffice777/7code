@@ -55,14 +55,55 @@
     </header>
 
     <div class="container secondScreen">
-        <div class="start_website">
-            <h1>Menu de Extratos</h1>
-            <p>Acompanhe aqui os seus<b> gastos</b> e <b>transfêrencias</b></p>
+        <div class="apr_container">
+            <h1>Menu De Extratos</h1>
+            <p>Aqui você pode ver seus <b>gastos recentes</b></p>
         </div>
         <div class="start_website">
-            
+            <div class="container_extratos_card">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Conta do Usuário</th>
+                            <th>Saldo Atual</th>
+                            <th>Valor da Transação</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_add_transactions">
+                        <!-- Linhas da tabela serão adicionadas dinamicamente aqui -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
+
+    <footer>
+    <div class="columns">
+      <div class="column">
+        <div class="logo">
+          <img src="../../assets/img/logo_crud.png" alt="logo">
+        </div>
+        <span> 7Code Hub - Company</span>
+      </div>
+      <div class="column">
+        <ul>
+          <li>
+            <h2>Redes Sociais</h2>
+          </li>
+          <li><a href="https://br.linkedin.com/in/samuel-seven-88565a242" target="_blank">Linkedin</a></li>
+          <li><a href="https://www.instagram.com/samuel_seven777/" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/SevenOfice777" target="_blank">Github</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Contato</h2>
+        <span>Email : sevenofice777@gmail.com </span>
+        <span>Telefone : +5514997814551</span>
+      </div>
+    </div>
+  </footer>
 
     <script>
         document.querySelector('.element-none').addEventListener("click", () => {

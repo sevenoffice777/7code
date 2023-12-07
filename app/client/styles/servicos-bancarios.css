@@ -78,3 +78,72 @@ nav {
 .start_website h1 {
     font-size: 50pt;
 }
+
+
+.container_extratos_card {
+    overflow-y: scroll;
+    width: 90%;
+    height: 80;
+    border-radius: 1px;
+    background-color: rgba(0, 0, 0, 0.283);
+    
+}
+
+/* Estiliza a barra de rolagem */
+.container_extratos_card::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estiliza o polegar da barra de rolagem (a parte que você arrasta) */
+  .container_extratos_card::-webkit-scrollbar-thumb {
+    background-color: rgba(71, 2, 2, 0.816);
+    border-radius: 6px; /* Borda arredondada do polegar */
+  }
+  
+  /* Estiliza a trilha da barra de rolagem (a parte onde o polegar se move) */
+  .container_extratos_card::-webkit-scrollbar-track {
+    background-color: rgba(241, 241, 241, 0); /* Cor da trilha */
+  }
+  
+
+.apr_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.apr_container h1 {
+    text-align: center;
+    font-size: 60pt;
+    margin-bottom: 20px;
+}
+
+.start_website {
+    background-color: rgba(0, 0, 0, 0.663);
+}
+
+
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.transaction-table th, .transaction-table td {
+    border: 1px solid #520101;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-table th {
+    background-color: rgba(242, 242, 242, 0);
+    text-align: center;
+}
+
+.transaction-table tbody tr:hover {
+    background-color: rgba(245, 245, 245, 0);
+}
