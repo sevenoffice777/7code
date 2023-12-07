@@ -79,4 +79,14 @@ END;
 
 //
 
+DELIMITER //
+
+CREATE TRIGGER trig_bank_update 
+AFTER UPDATE ON bankaccount
+FOR EACH ROW 
+BEGIN 
+    INSERT INTO historyaccount(account_id, operation_type, value_transaction, data_operation)
+    VALUES (OLD.account_id, 'UPDATE', NEW.saldo - OLD.saldo, NOW());
+END;
+//
 DELIMITER ;

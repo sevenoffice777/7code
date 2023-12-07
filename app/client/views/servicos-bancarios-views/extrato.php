@@ -56,11 +56,11 @@
 
     <div class="container secondScreen">
         <div class="start_website">
-            <div class="left">
-                <h1>Extratos</h1>
-                
-                
-            </div>
+            <h1>Menu de Extratos</h1>
+            <p>Acompanhe aqui os seus<b> gastos</b> e <b>transfêrencias</b></p>
+        </div>
+        <div class="start_website">
+            
         </div>
     </div>
 
