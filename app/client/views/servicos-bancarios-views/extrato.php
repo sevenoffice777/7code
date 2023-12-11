@@ -58,10 +58,7 @@
         <div class="apr_container">
             <h1>Menu De Extratos</h1>
             <p>Aqui você pode ver seus <b>gastos recentes</b></p>
-        </div>
-        <div class="start_website">
-            <div class="container_extratos_card">
-                <table class="transaction-table">
+            <table class="transaction-table">
                     <thead>
                         <tr>
                             <th>Conta do Usuário</th>
@@ -74,8 +71,8 @@
                         <!-- Linhas da tabela serão adicionadas dinamicamente aqui -->
                     </tbody>
                 </table>
-            </div>
         </div>
+        
     </div>
 
 
