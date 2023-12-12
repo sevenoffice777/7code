@@ -44,6 +44,7 @@
         <div class="logo">
             <img src="../../assets/img/logo_crud.png" alt="Logo">
         </div>
+        <ion-icon name="home" onclick="irPara_localWindow('../7tech-company/index.php')"></ion-icon>
         <nav>
             <div class="user-picture">
                 <span txtValue="saldo">R$ </span>
@@ -61,19 +62,27 @@
         </div>
         <div class="start_website">
             <div class="container_extratos_card">
-                <table class="transaction-table">
-                    <thead>
-                        <tr>
-                            <th>Conta do Usuário</th>
-                            <th>Saldo Atual</th>
-                            <th>Valor da Transação</th>
-                            <th>Data</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody_add_transactions">
-                        <!-- Linhas da tabela serão adicionadas dinamicamente aqui -->
-                    </tbody>
-                </table>
+                <h1>Ultimos Lançamentos</h1>
+                <div class="container-transaction-table">
+                    <table class="transaction-table">
+                        <thead id="head_table">
+                            <tr>
+                                <th>Data</th> 
+                                <th>Conta de Destino</th>
+                                <th>Valor da Transação</th>
+                                <th>Saldo Atual</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_add_transactions">
+                            <tr>
+                                <th>12/12/2023</th>
+                                <th>03453456 - João de Almeida</th>
+                                <th>123,00</th>
+                                <th>2500,00</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

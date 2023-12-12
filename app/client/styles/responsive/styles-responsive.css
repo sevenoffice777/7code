@@ -39,12 +39,12 @@ nav {
 }
 
 .apr_container {
-    height: 100%;
+    height: 80vh;
     padding-bottom: 5%;
 }
+
 .left,
-.right
-{
+.right {
     width: 100%;
     height: 50%;
 }
@@ -81,9 +81,14 @@ nav {
     text-align: center;
 }
 
-.text h1 {
+/* h1 {
+    text-align: center;
     font-family: var(--font-title);
     font-weight: bolder;
+} */
+
+h1 {
+    text-align: center;
 }
 
 .card {
@@ -139,4 +144,6 @@ text p {
     width: 90%;
 }
 
-
+.container_extratos_card {
+    padding-top: 5%;
+}
