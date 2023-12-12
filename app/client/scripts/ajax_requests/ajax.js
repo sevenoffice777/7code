@@ -56,5 +56,9 @@ function successCallback(response, opt) {
         document.querySelector('#uploadPhoto').src = '../../assets/img/edit.png';
         document.querySelector('#uploadPhotoInput').value = null;
     }
+
+    if(opt == "rowHistory") {
+        
+    }
 }
 
