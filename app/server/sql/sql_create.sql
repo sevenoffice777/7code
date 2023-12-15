@@ -1,6 +1,7 @@
--- Active: 1702300399760@@127.0.0.1@3306@7code
+-- Active: 1700779393054@@127.0.0.1@3306@7code
 -- Criar banco de dados
 CREATE DATABASE `7code`;
+
 
 -- Usar o banco de dados
 USE `7code`;
@@ -38,12 +39,15 @@ CREATE TABLE userphoto (
 CREATE TABLE historyaccount (
     id_history_opr BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     account_id INT,
+    account_id_destiny INT,
     operation_type VARCHAR(20) NOT NULL,
     value_transaction DECIMAL(10, 2) NOT NULL,
     data_operation TIMESTAMP NOT NULL,
-    FOREIGN KEY (account_id) REFERENCES bankaccount(account_id)
+    FOREIGN KEY (account_id) REFERENCES bankaccount(account_id),
+    FOREIGN KEY (account_id_destiny) REFERENCES bankaccount(account_id)
 );
 
+-- 125479252 966679605
 -- Criar procedimento INSERT_USER
 DELIMITER //
 
@@ -79,14 +83,14 @@ END;
 
 //
 
-DELIMITER //
+-- DELIMITER //
 
-CREATE TRIGGER trig_bank_update 
-AFTER UPDATE ON bankaccount
-FOR EACH ROW 
-BEGIN 
-    INSERT INTO historyaccount(account_id, operation_type, value_transaction, data_operation)
-    VALUES (OLD.account_id, 'UPDATE', NEW.saldo - OLD.saldo, NOW());
-END;
-//
-DELIMITER ;
+-- CREATE TRIGGER trig_bank_update 
+-- AFTER UPDATE ON bankaccount
+-- FOR EACH ROW 
+-- BEGIN 
+--     INSERT INTO historyaccount(account_id, operation_type, value_transaction, data_operation)
+--     VALUES (OLD.account_id, 'UPDATE', NEW.saldo - OLD.saldo, NOW());
+-- END;
+-- //
+-- DELIMITER ;

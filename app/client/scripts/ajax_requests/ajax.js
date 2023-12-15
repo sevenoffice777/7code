@@ -58,7 +58,7 @@ function successCallback(response, opt) {
     }
 
     if(opt == "rowHistory") {
-        
+        console.log(response.linhas);
     }
 }
 
