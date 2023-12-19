@@ -16,7 +16,7 @@ function ajaxRequest(urlRequest, methodRequest, dataTypeRequest, dataRequest, op
         data: dataRequest,
         success: function (response) {
             successCallback(response, opt)
-             
+
         },
         error: function (xhr, statusServer, errorName) {
             console.log(`${xhr.statusText} - ${statusServer}, ${errorName}`)
@@ -30,7 +30,7 @@ function successCallback(response, opt) {
     let log_error = $('.log_error');
     let btnSbmt = $('[btn-sbmt]');
 
-    if(opt == 'signUserRequest') {
+    if (opt == 'signUserRequest') {
         console.log(response)
         if (response.url) {          // Verifica se a resposta possui uma propriedade 'url'
             window.location.href = response.url;  // Redireciona para a URL fornecida na resposta
@@ -40,16 +40,16 @@ function successCallback(response, opt) {
         enableOrDisabledButton(false, btnSbmt, 'Cadastrar Novamente');
     }
 
-    if(opt == 'logoutUserReturn') {
+    if (opt == 'logoutUserReturn') {
         window.location.href = '../../../../index.html';
     }
 
-    if(opt == 'loadingUserData'){
+    if (opt == 'loadingUserData') {
         userDataShow(response)
     }
 
-    if(opt == "uploadPhoto") {
-        
+    if (opt == "uploadPhoto") {
+
         window.location.reload(true);
 
         toggleClass(document.querySelector('.card-default-centerscreen'), 'display_none')
@@ -57,8 +57,26 @@ function successCallback(response, opt) {
         document.querySelector('#uploadPhotoInput').value = null;
     }
 
-    if(opt == "rowHistory") {
-        console.log(response.linhas);
+    if (opt == "rowHistory") {
+        let tbody = document.querySelector('#tbody_add_transactions');
+    
+
+
+        
+        
+
+        response.linhas.forEach(element => {
+            let newRow = document.createElement('tr');
+            let columnsHTML =
+                `<td>${element.data_operation}</td>
+                <td>${element.account_id_destiny}</td>
+                <td>R$ ${element.value_transaction}</td>
+                <td>R$ ${element.saldo_atual}</td>
+                `;
+            newRow.innerHTML = columnsHTML;
+            tbody.appendChild(newRow);
+        });
+
     }
 }
 

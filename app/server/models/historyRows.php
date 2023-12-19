@@ -6,10 +6,10 @@ require '../services/prepareAndExecute.php';
 session_start();
 
 $jsonData;
-
-$querySelect = 'SELECT data_operation, account_id_destiny, value_transaction FROM historyaccount WHERE account_id = ?';
+ 
+$querySelect = 'SELECT data_operation, account_id_destiny, value_transaction, saldo_atual FROM historyaccount WHERE account_id = ?';
 $params = array($_SESSION['account_id']);
-$historyRows = prepareAndExecute($conn, $querySelect, $params, 's');
+$historyRows = prepareAndExecute($conn, $querySelect, $params, 's', 'selectAll');
 
 $jsonData['linhas'] = $historyRows;
 

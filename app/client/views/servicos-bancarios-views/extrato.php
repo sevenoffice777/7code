@@ -74,12 +74,7 @@
                             </tr>
                         </thead>
                         <tbody id="tbody_add_transactions">
-                            <tr>
-                                <th>12/12/2023</th>
-                                <th>03453456 - João de Almeida</th>
-                                <th>123,00</th>
-                                <th>2500,00</th>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>

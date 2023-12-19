@@ -153,6 +153,10 @@ nav {
     text-align: center;
 }
 
+.transaction-table td {
+    text-align: center;
+}
+
 .transaction-table tbody tr:hover {
     background-color: rgba(245, 245, 245, 0);
 }

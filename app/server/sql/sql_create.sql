@@ -27,6 +27,7 @@ CREATE TABLE bankaccount (
     FOREIGN KEY (cpf) REFERENCES user(cpf)
 );
 
+
 -- Criar tabela USERPHOTO
 CREATE TABLE userphoto (
     id_photo INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -42,6 +43,7 @@ CREATE TABLE historyaccount (
     account_id_destiny INT,
     operation_type VARCHAR(20) NOT NULL,
     value_transaction DECIMAL(10, 2) NOT NULL,
+    saldo_atual DECIMAL(10,2) NOT NULL,
     data_operation TIMESTAMP NOT NULL,
     FOREIGN KEY (account_id) REFERENCES bankaccount(account_id),
     FOREIGN KEY (account_id_destiny) REFERENCES bankaccount(account_id)

@@ -16,7 +16,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
   $params_user = array($emailUser);
 
-  $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
+  $res = prepareAndExecute($conn, $queryLogin, $params_user, "s",'selectOne');
 
   if ($res) {
     if (password_verify($passwordUser, $res['senha'])) {

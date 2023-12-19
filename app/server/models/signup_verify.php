@@ -87,7 +87,7 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
 
     $params_user = array($data['email']);
 
-    $res = prepareAndExecute($conn, $queryLogin, $params_user, "s");
+    $res = prepareAndExecute($conn, $queryLogin, $params_user, "s", "selectOne");
 
     if ($res) {
       $erro = true;
@@ -102,7 +102,7 @@ if ($_SESSION['tokenUser'] == $data['tokenUser']) {
   } else if (strlen($data['CPF']) != 11 || preg_match('/(\d)\1{10}/', $data['CPF']) || !validarCPF($data['CPF'])) {
     $queryCPF = 'SELECT CPF FROM `user` WHERE CPF = ?';
     $params_cpf = array($data['CPF']);
-    $res = prepareAndExecute($conn, $queryCPF, $params_cpf, 'i');
+    $res = prepareAndExecute($conn, $queryCPF, $params_cpf, 'i', 'selectOne');
     if($res < 1) {
       $erro = true;
       $msg .= 'CPF INVALIDO, ';
