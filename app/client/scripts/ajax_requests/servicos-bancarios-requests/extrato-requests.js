@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         '../../../server/models/historyRows.php',
         'POST',
         'JSON',
-        "GET_ROWSHISTORY",
+        null,
         "rowHistory"
     );
 })

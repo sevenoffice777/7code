@@ -8,18 +8,29 @@ session_start();
 
 $jsonData;
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $requestType = $POST["requestType"];
+// PRIMEIRO --> pegar as linhas do extrato e seus lançamentos
 
-    if($requestType == "GET_ROWSHISTORY") {
-        $historyRows = prepareAndExecute($conn, "SELECT data_operation, account_id_destiny, value_transaction, saldo_atual FROM historyaccount WHERE account_id = ?", array($_SESSION['account_id']), 's', 'selectAll');        
-        $jsonData['linhas'] = $historyRows;
-    }
+$rowsHistory = prepareAndExecute($conn, "SELECT * FROM historyaccount WHERE account_id = ?", array($_SESSION['account_id']), "s", "selectAll");
 
+// SEGUNDO --> relacionar os accounts_ids com nome de usuario;
+
+
+foreach ($rowsHistory as $row) {
+    $getCPF_KEY = prepareAndExecute($conn, "SELECT cpf FROM bankaccount WHERE account_id = ?", array($row['account_id_destiny']), "s", "selectOne");
     
- }
+    $cpf = $getCPF_KEY['cpf'];
 
+    $getUsername = prepareAndExecute($conn, "SELECT nome FROM user WHERE cpf = ?", array($cpf), "i", "selectOne");
+    
+    $userName = $getUsername['nome'];
 
+    $jsonData['rows'][] = array(
+        "data" => $row['data_operation'],
+        "value_transaction" => $row['value_transaction'],
+        "saldo_atual" => $row['saldo_atual'],
+        "nome_do_usuario_de_destino" => $userName
+    );
+}
 
 echo json_encode($jsonData);
 
