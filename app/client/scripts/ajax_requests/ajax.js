@@ -58,24 +58,21 @@ function successCallback(response, opt) {
     }
 
     if (opt == "rowHistory") {
-        let tbody = document.querySelector('#tbody_add_transactions');
-    
+        // let tbody = document.querySelector('#tbody_add_transactions');
 
+        console.log(response);
 
-        
-        
-
-        response.linhas.forEach(element => {
-            let newRow = document.createElement('tr');
-            let columnsHTML =
-                `<td>${element.data_operation}</td>
-                <td>${element.account_id_destiny}</td>
-                <td>R$ ${element.value_transaction}</td>
-                <td>R$ ${element.saldo_atual}</td>
-                `;
-            newRow.innerHTML = columnsHTML;
-            tbody.appendChild(newRow);
-        });
+        // response.linhas.forEach(element => {
+        //     let newRow = document.createElement('tr');
+        //     let columnsHTML =
+        //         `<td>${element.data_operation}</td>
+        //         <td>${element.account_id_destiny}</td>
+        //         <td>R$ ${element.value_transaction}</td>
+        //         <td>R$ ${element.saldo_atual}</td>
+        //         `;
+        //     newRow.innerHTML = columnsHTML;
+        //     tbody.appendChild(newRow);
+        // });
 
     }
 }
