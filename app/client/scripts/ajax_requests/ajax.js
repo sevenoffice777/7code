@@ -60,17 +60,23 @@ function successCallback(response, opt) {
     if (opt == "rowHistory") {
         let tbody = document.querySelector('#tbody_add_transactions');
 
-        response.rows.forEach(element => {
-            let newRow = document.createElement('tr');
-            let columnsHTML =
-                `<td>${element.data}</td>
-                <td>${element.nome_do_usuario_de_destino}</td>
-                <td>R$ ${element.value_transaction}</td>
-                <td>R$ ${element.saldo_atual}</td>
-                `;
-            newRow.innerHTML = columnsHTML;
-            tbody.appendChild(newRow);
-        });
+        if(response.rows == "rowsNotFound") {
+            alert("Nenhum Lançamento encontrado!");
+            irPara_localWindow('../7tech-company/index.php');
+        } else {
+            response.rows.forEach(element => {
+                let newRow = document.createElement('tr');
+                let columnsHTML =
+                    `<td>${element.data}</td>
+                    <td>${element.nome_do_usuario_de_destino}</td>
+                    <td>R$ ${element.value_transaction}</td>
+                    <td>R$ ${element.saldo_atual}</td>
+                    `;
+                newRow.innerHTML = columnsHTML;
+                tbody.appendChild(newRow);
+            });
+
+        }
 
     }
 }
