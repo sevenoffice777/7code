@@ -59,12 +59,56 @@
     <div class="container secondScreen">
         <div class="apr_container">
 
-            <h1>Transferencias Bancárias</h1>
-            <p>Aqui você pode fazer uma transferencia apenas usando seu <span>CPF</span></p>
+            <h1>Transferencias <b>Bancárias</b></h1>
+            <p>Aqui, você pode transferir seu dinheiro com total <b>segurança</b>!</p>
 
         </div>
         <div class="start_website">
+            <div class="transferencias_container">
+                <h1>Transferir <b>R$ Dinheiro</b></h1>
+                <div class="transferencias_container_data">
+                    <div class="transferencias_card">
+                        <h2>Dados Da Transação</h2>
+                        <label for="account_id_destiny">Conta de Destino</label>
+                        <input type="text" name="account_id_destiny">
+                        <label for="valor_tranferencia">Valor da Transferencia</label>
+                        <input type="number" name="valor_transferencia" id="vl_transferencia">
+                        <label for="desc_transferencia">Descrição Da Transferencia (opcional)</label>
+                        <textarea name="desc_transferencia"  cols="30" rows="5"></textarea>
+                        
+                    </div>
+                    <img src="../../assets/img/troca.png" alt="troca_img" id="troca_img">
+                    <div class="transferencias_log">
+                        <h2>Confirmação de Transferencia</h2>
+                        <ul>
+                            <li>
+                                <span class="logInfo">Nome Do Usuario - </span>
+                                 <span txtValue="username"></span>
+                            </li>
+                            <li>
+                                <span class="logInfo">Conta do Usuario - </span>
+                                <span txtValue="accountNumber"></span>
+                            </li>
+                            <li>
+                                <span class="logInfo">
+                                    Valor Da Transferencia -
+                                </span>
+                                <span>
+                                    <span thisValue="value_transferencia">
+                                </span>
+                            </li>
+                            <li>
+                                <span class="logInfo">
+                                    Conta De Destino -
+                                </span>
+                                <span thisValue="accountDestiny"></span>
+                            </li>
+                        </ul>
+                        <input type="submit" value="Transferir">
+                    </div>
+                </div>
 
+            </div>
         </div>
     </div>
 

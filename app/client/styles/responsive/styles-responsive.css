@@ -147,3 +147,7 @@ text p {
 .container_extratos_card {
     padding-top: 5%;
 }
+
+.transferencias_container_data {
+    flex-direction: column;
+}
