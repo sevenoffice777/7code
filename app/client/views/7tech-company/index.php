@@ -157,7 +157,7 @@
                         <img src="../../assets/img/logos/extrato.png" alt="EXTRATO" class="optBank-img">
                         <span>EXTRATO</span>
                     </div>
-                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios-views/transferencia.php')">
+                    <div class="optBank" onclick="irPara_localWindow('../servicos-bancarios-views/transferencias.php')">
                         <img src="../../assets/img/logos/transferencia.png" alt="TRANSFERÊNCIA" class="optBank-img">
                         <span>TRANSFERÊNCIA</span>
                     </div>

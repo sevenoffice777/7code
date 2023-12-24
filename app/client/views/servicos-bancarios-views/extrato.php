@@ -67,49 +67,49 @@
                     <table class="transaction-table">
                         <thead id="head_table">
                             <tr>
-                                <th>Data</th> 
+                                <th>Data</th>
                                 <th>Conta de Destino</th>
                                 <th>Valor da Transação</th>
                                 <th>Saldo Atual</th>
                             </tr>
                         </thead>
                         <tbody id="tbody_add_transactions">
-                            
+
                         </tbody>
                     </table>
                 </div>
             </div>
-            
+
         </div>
-        
+
     </div>
 
 
     <footer>
-    <div class="columns">
-      <div class="column">
-        <div class="logo">
-          <img src="../../assets/img/logo_crud.png" alt="logo">
+        <div class="columns">
+            <div class="column">
+                <div class="logo">
+                    <img src="../../assets/img/logo_crud.png" alt="logo">
+                </div>
+                <span> 7Code Hub - Company</span>
+            </div>
+            <div class="column">
+                <ul>
+                    <li>
+                        <h2>Redes Sociais</h2>
+                    </li>
+                    <li><a href="https://br.linkedin.com/in/samuel-seven-88565a242" target="_blank">Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/samuel_seven777/" target="_blank">Instagram</a></li>
+                    <li><a href="https://github.com/SevenOfice777" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Contato</h2>
+                <span>Email : sevenofice777@gmail.com </span>
+                <span>Telefone : +5514997814551</span>
+            </div>
         </div>
-        <span> 7Code Hub - Company</span>
-      </div>
-      <div class="column">
-        <ul>
-          <li>
-            <h2>Redes Sociais</h2>
-          </li>
-          <li><a href="https://br.linkedin.com/in/samuel-seven-88565a242" target="_blank">Linkedin</a></li>
-          <li><a href="https://www.instagram.com/samuel_seven777/" target="_blank">Instagram</a></li>
-          <li><a href="https://github.com/SevenOfice777" target="_blank">Github</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h2>Contato</h2>
-        <span>Email : sevenofice777@gmail.com </span>
-        <span>Telefone : +5514997814551</span>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
     <script>
         document.querySelector('.element-none').addEventListener("click", () => {
