@@ -12,3 +12,4 @@ $('[btn-sbmt]').each(function () {
         ajaxRequest(parent.attr('dataForm'), "POST",'json',formData,'signUserRequest')
     })
 }) // --> e a mesma coisa que o document.querySelector........
+ 

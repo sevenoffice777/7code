@@ -192,6 +192,11 @@ nav {
         
 }
 
+.transferencias_card form {
+    display: flex;
+    flex-direction: column;
+}
+
 .transferencias_container h1 {
     margin: 50px;
 }
@@ -199,7 +204,7 @@ nav {
 .transferencias_card {
     padding: 20px;
     width: 350px;
-    height: 300px;
+    height: 320px;
     border: 1px solid rgb(105, 5, 5);
     display: flex;
     flex-direction: column;
@@ -244,7 +249,7 @@ nav {
 
 .transferencias_log {
     width: 350px;
-    height: 300px;
+    height: 320px;
     border: 1px solid rgb(105, 5, 5);
     padding: 20px;
 

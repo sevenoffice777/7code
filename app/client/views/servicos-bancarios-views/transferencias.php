@@ -69,12 +69,14 @@
                 <div class="transferencias_container_data">
                     <div class="transferencias_card">
                         <h2>Dados Da Transação</h2>
-                        <label for="account_id_destiny">Conta de Destino</label>
-                        <input type="text" name="account_id_destiny">
-                        <label for="valor_tranferencia">Valor da Transferencia</label>
-                        <input type="number" name="valor_transferencia" id="vl_transferencia">
-                        <label for="desc_transferencia">Descrição Da Transferencia (opcional)</label>
-                        <textarea name="desc_transferencia"  cols="30" rows="5"></textarea>
+                        <form  id="dataForm_transferencias">
+                            <label for="account_id_destiny">Conta de Destino</label>
+                            <input type="text" name="account_id_destiny">
+                            <label for="valor_transferencia">Valor da Transferencia</label>
+                            <input type="number" name="valor_transferencia" id="vl_transferencia">
+                            <label for="desc_transferencia">Descrição Da Transferencia (opcional)</label>
+                            <textarea name="desc_transferencia"  cols="30" rows="3"></textarea>
+                        </form>
                         
                     </div>
                     <img src="../../assets/img/troca.png" alt="troca_img" id="troca_img">
@@ -104,7 +106,7 @@
                                 <span thisValue="accountDestiny"></span>
                             </li>
                         </ul>
-                        <input type="submit" value="Transferir">
+                        <input type="submit" value="Transferir" id="btn_transferencia">
                     </div>
                 </div>
 
@@ -144,6 +146,7 @@
         });
     </script>
     <script src="../../scripts/functions/functions.js"></script>
+    <script src="../../scripts/functions/transferencias.js"></script>
     <script src="../../scripts/ajax_requests/ajax.js"></script>
     <script src="../../scripts/ajax_requests/servicos-bancarios-requests/transferencias-requests.js"></script>
     <script src="../../scripts/ajax_requests/servicos-bancarios-requests/loadingUserData.js"></script>
