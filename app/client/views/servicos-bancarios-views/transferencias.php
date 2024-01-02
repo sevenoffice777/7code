@@ -69,15 +69,15 @@
                 <div class="transferencias_container_data">
                     <div class="transferencias_card">
                         <h2>Dados Da Transação</h2>
-                        <form  id="dataForm_transferencias">
-                            <label for="account_id_destiny">Conta de Destino</label>
-                            <input type="text" name="account_id_destiny">
+                        <form id="dataForm_transferencias">
+                            <label for="account_id_destiny">Conta de Destino (9 Digitos)</label>
+                            <input type="text" name="account_id_destiny" maxlength="9">
                             <label for="valor_transferencia">Valor da Transferencia</label>
                             <input type="number" name="valor_transferencia" id="vl_transferencia">
                             <label for="desc_transferencia">Descrição Da Transferencia (opcional)</label>
-                            <textarea name="desc_transferencia"  cols="30" rows="3"></textarea>
+                            <textarea name="desc_transferencia" cols="30" rows="2"></textarea>
                         </form>
-                        
+
                     </div>
                     <img src="../../assets/img/troca.png" alt="troca_img" id="troca_img">
                     <div class="transferencias_log">
@@ -85,7 +85,7 @@
                         <ul>
                             <li>
                                 <span class="logInfo">Nome Do Usuario - </span>
-                                 <span txtValue="username"></span>
+                                <span txtValue="username"></span>
                             </li>
                             <li>
                                 <span class="logInfo">Conta do Usuario - </span>
@@ -96,8 +96,8 @@
                                     Valor Da Transferencia -
                                 </span>
                                 <span>
-                                    <span thisValue="value_transferencia">
-                                </span>
+                                    <span thisValue="valor_transferencia"> R$
+                                    </span>
                             </li>
                             <li>
                                 <span class="logInfo">

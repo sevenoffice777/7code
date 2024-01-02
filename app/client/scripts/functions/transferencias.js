@@ -6,23 +6,25 @@ function inicializarOperacaoDeTransferencia() {
     if (
         input_conta_destino.value == ""
         || input_valor_transferencia.value == "" 
-        || /^\d+$/.test(input_valor_transferencia) === false 
-        || /^\d{9}$/.test(input_conta_destino) === false
-        || input_desc_transferencia == ""
+        || /^\d+$/.test(input_valor_transferencia.value) === false 
+        || /^\d{9}$/.test(input_conta_destino.value) === false
+        || input_desc_transferencia.value == ""
      )
      {
         return false;       
      } // agora como condição contraria verificar se o valor que esta dentro de input_valor é sao apenas numeros
-    
+    else {
+        return true;
+        
+    }
 
 }
 
-function clearInputs(){
-    let input_conta_destino = document.querySelector("[name=account_id_destiny]");
-    let input_valor_transferencia = document.querySelector("[name=valor_transferencia]");
-    let input_desc_transferencia = document.querySelector("[name=desc_transferencia]");
-
-    input_conta_destino.textContent = "";
-    input_valor_transferencia.textContent = "";
-    input_desc_transferencia.textContent = "";
+document.querySelector("[name=account_id_destiny]").onblur = (e) => {
+    document.querySelector("[thisValue=accountDestiny]").textContent = e.target.value; 
 }
+document.querySelector("[name=valor_transferencia]").onblur = (e) => {
+    document.querySelector("[thisValue=valor_transferencia]").textContent = `R$ ${e.target.value}`; 
+}
+
+
