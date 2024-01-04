@@ -73,7 +73,7 @@
                             <label for="account_id_destiny">Conta de Destino (9 Digitos)</label>
                             <input type="text" name="account_id_destiny" maxlength="9">
                             <label for="valor_transferencia">Valor da Transferencia</label>
-                            <input type="number" name="valor_transferencia" id="vl_transferencia">
+                            <input type="text" name="valor_transferencia" id="vl_transferencia">
                             <label for="desc_transferencia">Descrição Da Transferencia (opcional)</label>
                             <textarea name="desc_transferencia" cols="30" rows="2"></textarea>
                         </form>

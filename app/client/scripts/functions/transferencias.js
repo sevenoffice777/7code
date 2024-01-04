@@ -6,7 +6,6 @@ function inicializarOperacaoDeTransferencia() {
     if (
         input_conta_destino.value == ""
         || input_valor_transferencia.value == "" 
-        || /^\d+$/.test(input_valor_transferencia.value) === false 
         || /^\d{9}$/.test(input_conta_destino.value) === false
         || input_desc_transferencia.value == ""
      )
