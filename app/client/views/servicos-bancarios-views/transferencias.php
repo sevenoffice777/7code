@@ -96,8 +96,7 @@
                                     Valor Da Transferencia -
                                 </span>
                                 <span>
-                                    <span thisValue="valor_transferencia"> R$
-                                    </span>
+                                    <span thisValue="valor_transferencia">       </span>
                             </li>
                             <li>
                                 <span class="logInfo">

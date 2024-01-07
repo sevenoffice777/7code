@@ -23,7 +23,18 @@ document.querySelector("[name=account_id_destiny]").onblur = (e) => {
     document.querySelector("[thisValue=accountDestiny]").textContent = e.target.value; 
 }
 document.querySelector("[name=valor_transferencia]").onblur = (e) => {
-    document.querySelector("[thisValue=valor_transferencia]").textContent = `R$ ${e.target.value}`; 
+    document.querySelector("[thisValue=valor_transferencia]").textContent = `${e.target.value}`; 
 }
 
+let input = document.querySelector("[name=valor_transferencia]");
+
+input.addEventListener("input", (e)=>{
+    let valor = input.value.replace(/\D/g, '');
+    valor = (Number(valor) /100).toLocaleString('pt-BR',
+    {
+        style : 'currency',
+        currency : 'BRL'
+    });
+    input.value = valor;
+})
 

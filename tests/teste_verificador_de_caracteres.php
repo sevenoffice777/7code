@@ -15,13 +15,15 @@
     <script>
         var input = document.getElementById("input_teste");
         var response = document.getElementById("responseTest");
-        input.addEventListener("input", (e)=>{
-            let valorAtual = e.target.value;
-            response.textContent =valorAtual + ' ';
 
-            // Continuar testando o input pra prevenir que o usuario digite dados errados
-            
-            
+        input.addEventListener("input", (e)=>{
+            let valor = input.value.replace(/\D/g, '');
+            valor = (Number(valor) /100).toLocaleString('pt-BR',
+            {
+                style : 'currency',
+                currency : 'BRL'
+            });
+            input.value = valor;
         })
     </script>
 </body>
