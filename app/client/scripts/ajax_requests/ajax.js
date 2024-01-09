@@ -81,7 +81,7 @@ function successCallback(response, opt) {
     }
 
     if(opt == "transferenciasResponse") {
-       console.log(response)
+       console.log(response);
     }
 }
 
