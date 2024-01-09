@@ -48,8 +48,7 @@
         <ion-icon name="home" onclick="irPara_localWindow('../7tech-company/index.php')"></ion-icon>
         <nav>
             <div class="user-picture">
-                <span 
-                >R$ </span>
+                <span txtValue="saldo">R$ </span>
                 <ion-icon name="log-out-outline" logout="../../../server/models/logout.php" btn-logout
                     class="logout-icon"></ion-icon>
             </div>
