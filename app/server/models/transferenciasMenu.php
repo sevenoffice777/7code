@@ -9,35 +9,40 @@ $jsonData;
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-function converteValorParaReal($valor) {
-    
-        $valorFormatado = preg_replace("/[^0-9,.]/", "", $valor);
+function converteValorParaReal($valor)
+{
 
-        $valorParaReal = floatval(str_replace(",",".", $valorFormatado));
-    
-        return $valorParaReal;
-        
+    $valorFormatado = preg_replace("/[^0-9,.]/", "", $valor);
+
+    $valorParaReal = floatval(str_replace(",", ".", $valorFormatado));
+
+    return $valorParaReal;
+
 }
 
 $valorTransferencia = converteValorParaReal($dados["valor_transferencia"]);
+// O valor da Transferencia desejado ja esta convertido para numero contavel
 
 $saldoUser_nFormatado = prepareAndExecute($conn, "SELECT saldo FROM bankaccount WHERE account_id = ?", array($_SESSION["account_id"]), "s", "selectOne");
 
-if($saldoUser_nFormatado["saldo"] == "0.00") {
-    $saldoFormatado = 0;
-} 
-else{
-    $saldoFormatado = $saldoUser_nFormatado;
-}
 
-if ($valorTransferencia <= 0 or $valorTransferencia > $saldoFormatado){
-
-    $jsonData["response_erro"] = "undefinedValue";
+if ($saldoUser_nFormatado["saldo"] == "0.00") {
+    $saldoFormatado = 0.00;
 } else {
-    //  CONTINUA POR AQUI...
+    $saldoFormatado = converteValorParaReal($saldoUser_nFormatado["saldo"]);
+    // $jsonData["resposta"] = $saldoFormatado;
+    if ($valorTransferencia >= 0) {
+        // Verificar se o usuario tem saldo suficiente para realizar a transfer
+        if ($valorTransferencia > $saldoFormatado) {
+            echo json_encode("Saldo Insuficiente");
+        } else {
+            $jsonData["resposta"] = "Transação Realizada Com sucesso";
+        }
+
+    }
 }
 
-// $jsonData["valueTest"] = ;
+
 
 
 
