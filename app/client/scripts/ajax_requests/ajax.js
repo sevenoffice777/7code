@@ -81,7 +81,13 @@ function successCallback(response, opt) {
     }
 
     if(opt == "transferenciasResponse") {
-       console.log(response);
+        if(response.resJSON == "undefinedValue") {
+            alert("Erro ao realizar a transferência! Altere as Informações, e tente novamente!");
+
+        } else if(response.resJSON == "successTransaction") {
+            alert("Transação Realizada Com Sucesso!");
+            location.reload(true);
+        }
     }
 }
 
