@@ -82,11 +82,17 @@ function successCallback(response, opt) {
 
     if(opt == "transferenciasResponse") {
         if(response.resJSON == "undefinedValue") {
-            alert("Erro ao realizar a transferência! Altere as Informações, e tente novamente!");
+            document.querySelector("#load_h1").textContent = "Dados Incorretos";
+            setTimeout(()=>{
+                document.querySelector(".load_container").classList.add("display_none");
+            }, 2000);
 
         } else if(response.resJSON == "successTransaction") {
-            alert("Transação Realizada Com Sucesso!");
-            location.reload(true);
+            document.querySelector("#load_h1").textContent = "Sucesso :)";
+            setTimeout(()=>{
+                document.querySelector(".load_container").classList.add("display_none");
+                location.reload(true);
+            }, 2000);
         }
     }
 }

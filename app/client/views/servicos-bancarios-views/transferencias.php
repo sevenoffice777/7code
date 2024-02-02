@@ -27,7 +27,12 @@
 
 
 <body>
-
+    <div class="load_container display_none">
+        <div class="load_transferencia">
+            <h1 id="load_h1">Transferindo</h1>
+            <img src="../../assets/img/load_transferencia_img_nao_cortada.gif" alt="load">
+        </div>
+    </div>
     <!-- Header - responsive -->
     <div class="header-responsive h-r-ngtv-pos">
         <div class="nav-responsive">

@@ -291,3 +291,33 @@ nav {
     margin: 10px 0px;
     font-size: 15pt;
 }
+
+.load_transferencia {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgb(105, 5, 5);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction:column ;
+    justify-content: center;
+    z-index: 996;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.973);
+}
+
+.display_none {
+    display: none;
+}
+
+.load_transferencia img {
+    filter: invert(100%);
+    width: 250px;
+    margin: 30px;
+}
+
+.load_transferencia h1 {
+    font-size: 4em;
+}

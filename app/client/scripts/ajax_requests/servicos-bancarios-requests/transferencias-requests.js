@@ -7,8 +7,9 @@ btn_transferencia.onclick = (e) => {
 
     if(res){
         let optUser = confirm("Tem certeza que deseja realizar essa operação?");
-
+        
         if(optUser) {
+            document.querySelector(".load_container").classList.remove("display_none");
             let formTransferencias = document.querySelector('#dataForm_transferencias');
             let formData = new FormData(formTransferencias);
         
