@@ -18,8 +18,10 @@ Bem-vindo ao meu projeto CRUD, onde transformo dados em ação! Este repositóri
 ## Como Usar 📖
 
 1. Clone o repositório para a sua máquina local. 📥
-2. Configure o ambiente de desenvolvimento de acordo com as tecnologias utilizadas. 🛠️
-3. Execute o aplicativo e comece a usar as funcionalidades CRUD. ▶️
+2. Crie um servidor local como por exemplo XAMPP.
+3.  Importe o arquivo "DEFINE_ROOT_USER.sql" no seu banco de dados (IMPORTANTE).
+4. Depois importe e execute o arquivo "sql_create" no seu bd (MYSQL)
+5.  Acesse o diretório do projeto via navegador (`localhost/7code')
 
 ## Contribuições 🤝
 
